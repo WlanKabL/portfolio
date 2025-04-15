@@ -64,4 +64,17 @@ const slug = route.params.slug as string;
 const project = projects.filter((p) => p.active).find((p) => p.link.endsWith(slug)) as
     | Project
     | undefined;
+
+if (project) {
+    useSeoMeta({
+        title: `${project.title} – WlanKabL`,
+        ogTitle: `${project.title} – WlanKabL`,
+        description: project.shortDescription ?? project.description,
+        ogDescription: project.shortDescription ?? project.description,
+        ogImage: project.image.startsWith("http")
+            ? project.image
+            : project.image.replace("./", "/"),
+        twitterCard: "summary_large_image",
+    });
+}
 </script>

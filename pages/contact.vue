@@ -39,4 +39,19 @@
 
 <script setup lang="ts">
 import { Github as IconGithub, Linkedin as IconLinkedin } from "lucide-vue-next";
+
+definePageMeta({
+    layout: "default",
+});
+
+useSeoMeta({
+    title: "Contact – </WlanKabL>",
+    ogTitle: "Contact – </WlanKabL>",
+    description:
+        "Reach out to WlanKabL – whether it’s for a project, collaboration, or just to connect.",
+    ogDescription:
+        "Reach out to WlanKabL – whether it’s for a project, collaboration, or just to connect.",
+    ogImage: "/Crowd-Nation-Logo-BETTER.png",
+    twitterCard: "summary_large_image",
+});
 </script>

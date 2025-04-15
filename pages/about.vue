@@ -85,4 +85,19 @@
     </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+    layout: "default",
+});
+
+useSeoMeta({
+    title: "About – </WlanKabL>",
+    ogTitle: "About – </WlanKabL>",
+    description:
+        "Learn more about WlanKabL – a passionate full-stack developer, builder of Crowd-Nation and creator of digital experiences.",
+    ogDescription:
+        "Learn more about WlanKabL – a passionate full-stack developer, builder of Crowd-Nation and creator of digital experiences.",
+    ogImage: "/Crowd-Nation-Logo-BETTER.png",
+    twitterCard: "summary_large_image",
+});
+</script>

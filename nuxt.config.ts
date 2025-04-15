@@ -46,4 +46,25 @@ export default defineNuxtConfig({
         },
         plugins: [tailwindcss()],
     },
+    app: {
+        head: {
+            link: [
+                {
+                    rel: "icon",
+                    type: "image/png",
+                    href: "/Crowd-Nation-Logo-BETTER.png", 
+                },
+            ],
+            meta: [
+                { property: "og:title", content: "WlanKabL – Full-Stack Developer" },
+                {
+                    property: "og:description",
+                    content: "Explore my portfolio and featured projects.",
+                },
+                { property: "og:image", content: "/Crowd-Nation-Logo-BETTER.png" }, 
+                { property: "og:url", content: "https://dev.crowd-nation.com" },
+                { property: "og:type", content: "website" },
+            ],
+        },
+    },
 });

@@ -35,4 +35,15 @@ defineProps<{
         message?: string;
     };
 }>();
+
+useSeoMeta({
+    title: "404 – Page Not Found",
+    ogTitle: "404 – Page Not Found",
+    description:
+        "Oops! This page doesn’t exist or might have been moved. Head back to explore more about WlanKabL.",
+    ogDescription:
+        "Oops! This page doesn’t exist or might have been moved. Head back to explore more about WlanKabL.",
+    ogImage: "/Crowd-Nation-Logo-BETTER.png",
+    twitterCard: "summary_large_image",
+});
 </script>

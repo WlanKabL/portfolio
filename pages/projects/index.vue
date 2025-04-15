@@ -23,4 +23,19 @@
 
 <script setup lang="ts">
 import { projects } from "~/data/projects";
+
+definePageMeta({
+    title: "Projects",
+});
+
+useSeoMeta({
+    title: "Projects – </WlanKabL>",
+    ogTitle: "Projects – </WlanKabL>",
+    description:
+        "Explore a curated selection of my work – from full-stack platforms and smart tools to interactive websites and open-source utilities.",
+    ogDescription:
+        "Explore a curated selection of my work – from full-stack platforms and smart tools to interactive websites and open-source utilities.",
+    ogImage: "/Crowd-Nation-Logo-BETTER.png",
+    twitterCard: "summary_large_image",
+});
 </script>
