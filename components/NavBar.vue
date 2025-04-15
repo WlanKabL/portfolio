@@ -15,6 +15,12 @@
                     >Projects</NuxtLink
                 >
                 <NuxtLink
+                    to="/resume"
+                    class="hover:text-indigo-400 transition-colors"
+                    exact-active-class="border-b-2 border-indigo-600 pb-1"
+                    >Resume</NuxtLink
+                >
+                <NuxtLink
                     to="/about"
                     class="hover:text-indigo-400 transition-colors"
                     exact-active-class="border-b-2 border-indigo-600 pb-1"
