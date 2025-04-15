@@ -1,6 +1,6 @@
 <template>
     <PageContainer :title="project?.extendedTitle ?? project?.title ?? ''">
-        <div v-if="project" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div v-if="project" class="max-w-4xl mx-auto space-y-12">
             <article
                 class="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed"
                 v-html="project.extendedText"

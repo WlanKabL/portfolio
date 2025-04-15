@@ -17,7 +17,7 @@
                 :image="project.image"
                 :link="project.link"
                 :tech="project.tech"
-                class="min-w-[320px] min-h-[250px] snap-center md:min-w-0 md:h-auto"
+                class="min-w-[80%] min-h-[250px] snap-center md:min-w-0 md:h-auto mb-2"
             />
             <div class="block md:hidden shrink-0 w-[10vw]" aria-hidden="true" />
         </div>

@@ -4,6 +4,7 @@
         subtitle="Explore a curated selection of my projects – each one
                     crafted with attention to detail, performance, and
                     scalability. From full-stack platforms to sleek UIs."
+        :hideBackButton="true"
     >
         <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 items-stretch">
             <ProjectCardDetailed
