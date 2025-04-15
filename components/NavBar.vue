@@ -3,9 +3,9 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <NuxtLink
                 to="/"
-                class="text-2xl font-semibold tracking-tight hover:text-indigo-400 transition-colors pt-serif-regular"
+                class="text-2xl tracking-tight hover:text-indigo-400 transition-colors"
             >
-                &lt;/WlanKabL&gt;
+                <code> &lt;/WlanKabL&gt; </code>
             </NuxtLink>
             <div class="hidden md:flex gap-6 items-center text-sm font-medium">
                 <NuxtLink

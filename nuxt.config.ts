@@ -23,13 +23,13 @@ export default defineNuxtConfig({
     i18n: {
         strategy: "no_prefix",
         lazy: true,
-        defaultLocale: "de",
+        defaultLocale: "en",
         locales: [
-            {
-                code: "de",
-                file: "de.json",
-                name: "Deutsch",
-            },
+            // {
+            //     code: "de",
+            //     file: "de.json",
+            //     name: "Deutsch",
+            // },
             {
                 code: "en",
                 file: "en.json",

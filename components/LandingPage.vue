@@ -13,10 +13,10 @@
         </div>
         <div class="relative z-10 max-w-3xl mx-auto">
             <h1 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-6">
-                Crafting Digital <br />
-                Experiences
+                Code. Connect. <br />
+                Create Experiences.
             </h1>
-            <p class="text-xl text-gray-300 mb-10">Full-Stack Developer & UI Engineer</p>
+            <p class="text-xl text-gray-300 mb-10">Full-Stack Developer & Platform Engineer</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <NuxtLink
                     to="/projects"

@@ -29,7 +29,7 @@
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
                         Passion Projects like
-                        <span class="text-indigo-400">Crowd-Nation</span>
+                        <code class="text-indigo-400">Crowd-Nation</code>
                     </li>
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
