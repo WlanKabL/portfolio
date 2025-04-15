@@ -12,7 +12,14 @@ export default defineNuxtConfig({
         "@nuxt/fonts",
         "@nuxtjs/i18n",
     ],
-
+    devServer: {
+        port: 3000,
+        // host: "0.0.0.0",
+    },
+    runtimeConfig: {
+        public: {},
+        DISCORD_WEBHOOK_URL: process.env.DISCORD_WEBHOOK_URL,
+    },
     i18n: {
         strategy: "no_prefix",
         lazy: true,
@@ -37,8 +44,6 @@ export default defineNuxtConfig({
         build: {
             minify: true,
         },
-        plugins: [
-            tailwindcss(),
-        ]
+        plugins: [tailwindcss()],
     },
 });

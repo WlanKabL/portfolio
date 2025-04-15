@@ -1,8 +1,26 @@
 <template>
-    <div class="p-8">
-        <h1 class="text-3xl font-bold">Projekte</h1>
-        <p class="text-gray-400 mt-2">Du bist auf der Projektübersicht.</p>
-    </div>
+    <PageContainer
+        title="A glimpse into my work"
+        subtitle="Explore a curated selection of my projects – each one
+                    crafted with attention to detail, performance, and
+                    scalability. From full-stack platforms to sleek UIs."
+    >
+        <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 items-stretch">
+            <ProjectCardDetailed
+                v-for="(project, index) in projects.filter((p) => p.active)"
+                :key="index"
+                :title="project.title"
+                :description="project.description"
+                :image="project.image"
+                :link="project.link"
+                :github="project.github"
+                :tech="project.tech"
+                class="flex flex-col h-full"
+            />
+        </div>
+    </PageContainer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { projects } from "~/data/projects";
+</script>
