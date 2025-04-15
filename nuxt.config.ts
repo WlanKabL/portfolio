@@ -1,7 +1,9 @@
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
     compatibilityDate: "2024-11-01",
     devtools: { enabled: true },
-    css: ["./assets/css/tailwind.css"],
+    css: ["./assets/tailwind.css"],
     modules: [
         "@nuxt/eslint",
         "@nuxt/icon",
@@ -9,8 +11,6 @@ export default defineNuxtConfig({
         "@nuxt/scripts",
         "@nuxt/fonts",
         "@nuxtjs/i18n",
-        "@nuxtjs/tailwindcss",
-        "@tailwindcss/postcss",
     ],
 
     i18n: {
@@ -34,11 +34,11 @@ export default defineNuxtConfig({
         define: {
             "process.env.DEBUG": false,
         },
-    },
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
+        build: {
+            minify: true,
         },
+        plugins: [
+            tailwindcss(),
+        ]
     },
 });
