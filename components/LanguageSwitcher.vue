@@ -1,7 +1,8 @@
 <template>
     <div class="relative inline-block text-left">
         <select
-            v-model="$i18n.locale"
+            v-model="currentLocale"
+            @change="setLocale"
             class="appearance-none bg-zinc-800 text-white font-medium rounded-lg px-4 py-2 pr-10 shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-600"
         >
             <option
@@ -31,8 +32,21 @@
 </template>
 
 <script setup lang="ts">
-const availableLocales = useI18n().locales.value.filter((l) => typeof l !== "string") as {
+const { locale, locales, setLocale: setI18nLocale } = useI18n();
+
+const availableLocales = locales.value.filter((l) => typeof l !== "string") as {
     code: string;
     name: string;
 }[];
+
+const currentLocale = ref(locale.value);
+
+const setLocale = () => {
+    setI18nLocale(currentLocale.value);
+};
+
+// Watch for locale changes from other sources
+watch(locale, (newLocale) => {
+    currentLocale.value = newLocale;
+});
 </script>
