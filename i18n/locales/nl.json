@@ -1,0 +1,181 @@
+{
+    "nav": {
+        "projects": "Projecten",
+        "resume": "CV",
+        "about": "Over mij",
+        "contact": "Contact"
+    },
+    "landing": {
+        "hero_title_part1": "Programmeren. Verbinden.",
+        "hero_title_part2": "Ervaringen Creëren.",
+        "hero_subtitle": "Full-Stack Ontwikkelaar & Platform Engineer",
+        "view_projects": "Bekijk Projecten",
+        "contact_me": "Neem Contact Op"
+    },
+    "about": {
+        "title": "Over Mij",
+        "description": "Hé, ik ben {wlankabl} — een gepassioneerde Full-Stack Ontwikkelaar gedreven door nieuwsgierigheid en een diepe liefde voor code, muziek en motorfietsen. Ik creëer digitale oplossingen die snel, veilig en gebouwd zijn met moderne technologieën zoals {technologies}.",
+        "engineering": "Full-Stack Engineering & Architectuur",
+        "passion_projects": "Passieprojecten zoals {crowdnation}",
+        "scalable_apps": "Snelle, Schaalbare Web-Apps",
+        "creative_coding": "Hacken, Hardware & Creatief Programmeren"
+    },
+    "tech_stack": {
+        "title": "Tech Stack",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Database",
+        "devops": "DevOps",
+        "security": "Beveiliging & Netwerken",
+        "tooling": "Tools & Overig",
+        "infrastructure": "Web-Infrastructuur",
+        "ux": "UX & Communicatie"
+    },
+    "contact": {
+        "title": "Neem Contact Op",
+        "form_title": "Contact me",
+        "email_placeholder": "Jouw e-mail",
+        "message_placeholder": "Jouw bericht",
+        "send_button": "Bericht Versturen",
+        "sending": "Bezig met versturen...",
+        "success": "✅ Bericht succesvol verstuurd!",
+        "error": "❌ Er is iets misgegaan."
+    },
+    "footer": {
+        "made_by": "Handgemaakt",
+        "with_care": "met zorg & cafeïne",
+        "github_link": "→ Bekijk de broncode op GitHub",
+        "easter_egg": "console.log('Hé, nieuwsgierige dev — Laten we samen coderen.');"
+    },
+    "pages": {
+        "about": {
+            "title": "Hé, ik ben WlanKabL",
+            "subtitle": "Gepassioneerde Full-Stack Ontwikkelaar, Motorrijder, Muziekliefhebber en Festival-Enthusiast. Ik bouw digitale oplossingen met doel, persoonlijkheid en prestaties.",
+            "developer_title": "🔧 Ontwikkelaar uit Passie",
+            "developer_text": "Ik ben een Full-Stack Ontwikkelaar gericht op Vue.js, Node.js en C#. Van schaalbare backends tot prachtige frontends – ik programmeer met helderheid en doel. Ik hou van prestaties, geweldige gebruikerservaring en het bouwen van tools die mensen graag gebruiken. Ik duik ook graag in beveiliging, reverse engineering en hou van het verkennen van complexe systemen.",
+            "music_title": "🎵 Aangedreven door Muziek & Adrenaline",
+            "music_text": "Of het nu een nieuwe DJ-set is, een spontane rit op mijn motorfiets, of 's nachts programmeren, muziek is altijd aan mijn zijde. Festivals zoals Defqon.1 en Thunderdome inspireren mijn energie en mijn grootste project: Crowd-Nation, een platform om muziekliefhebbers samen te brengen.",
+            "vision_title": "💼 Zelfgedreven en Visionair",
+            "vision_text": "Ik werk fulltime als ontwikkelaar, maar ben ook freelancer met een langetermijndoel: mijn eigen bedrijf opbouwen rond mijn passies. Mijn projecten zijn niet alleen hobby's – ze zijn onderdeel van een grotere visie.",
+            "tools_title": "⚙️ Tools waar ik van hou",
+            "tools_text": "VSCode, Docker, Nuxt, SurrealDB, Swagger, TailwindCSS, PM2, GitLab CI/CD, Portainer, Let's Encrypt, en alles wat bouwen soepeler & schoner maakt. Ook: ik ben geobsedeerd door automatisering.",
+            "view_work": "Bekijk Mijn Werk",
+            "connect_text": "Wil je iets samen bouwen?",
+            "connect_link": "Laten we contact maken!"
+        },
+        "contact": {
+            "title": "Laten We Contact Maken",
+            "subtitle": "Heb je een projectidee, een vraag, of wil je gewoon een praatje maken? Neem gerust contact op – ik sta altijd open voor nieuwe connecties."
+        },
+        "projects": {
+            "title": "Een blik op mijn werk",
+            "subtitle": "Verken een samengestelde selectie van mijn projecten – elk gemaakt met aandacht voor detail, prestaties en schaalbaarheid. Van full-stack platforms tot elegante UI's.",
+            "tech_stack": "Tech Stack",
+            "project_links": "Project Links",
+            "github_repository": "GitHub Repository",
+            "live_version": "Live Versie",
+            "not_found_title": "🚫 Project niet gevonden",
+            "not_found_description": "Het gevraagde project bestaat niet, is verplaatst of is niet meer beschikbaar.",
+            "back_to_projects": "Terug naar Projecten"
+        },
+        "resume": {
+            "title": "CV",
+            "subtitle": "Overzicht van mijn vaardigheden, werkervaring en opleiding.",
+            "experience": "Ervaring",
+            "education": "Opleiding",
+            "skills": "Vaardigheden & Tools",
+            "languages": "Talen",
+            "hobbies": "Hobby's",
+            "job1_company": "mediaBEAM GmbH",
+            "job1_period": "2021 – Juni 2024",
+            "job1_title": "Opleiding – Applicatieontwikkeling",
+            "job2_company": "Smake IT GmbH",
+            "job2_period": "Sinds Juli 2024",
+            "job2_title": "Full-Stack Ontwikkelaar",
+            "edu1_school": "Anne-Frank Realschule Ahaus",
+            "edu1_year": "2019",
+            "edu1_degree": "Middelbare School Diploma",
+            "edu2_school": "Berufskolleg für Technik Ahaus",
+            "edu2_year": "2021",
+            "edu2_degree": "Technische Hogeschool Toegangskwalificatie – IT & Communicatie",
+            "lang_german": "🇩🇪 Duits – C2 (moedertaal)",
+            "lang_english": "🇬🇧 Engels – B2 (vloeiend)",
+            "hobby_programming": "💻 Programmeren",
+            "hobby_motorcycles": "🏍️ Motorrijden",
+            "hobby_music": "🎶 Muziek & festivals",
+            "hobby_cars": "🚗 Auto-projecten"
+        }
+    },
+    "projects": {
+        "crowd_nation_frontend": {
+            "title": "Crowd-Nation Frontend",
+            "short_description": "Moderne eventplatform met personalisatie en real-time functies.",
+            "description": "Een Vue 3-gebaseerde webapplicatie voor Crowd-Nation met een responsieve UI, event-ontdekking, groepstools en live tracking-integratie.",
+            "extended_title": "Frontend-interface voor Crowd-Nation – moderne technologie gecombineerd met een meeslepende gebruikerservaring.",
+            "extended_text": "<div class=\"space-y-8 text-gray-300\"><p>De <strong class=\"text-indigo-400\">Crowd-Nation Frontend</strong> is de visuele kern van het hele platform, gemaakt met Vue 3, Vite en TailwindCSS. Gebouwd voor muziekliefhebbers, festivalgangers en evenementorganisatoren, biedt het een naadloze ervaring op alle apparaten — van mobiel gebruik op een festival tot desktop-gebaseerde eventplanning.</p><div><h3 class=\"text-lg font-semibold text-white\">Belangrijkste Focusgebieden</h3><ul class=\"list-disc list-inside mt-3 space-y-2\"><li><strong class=\"text-indigo-400\">Personalisatie:</strong> Slimme suggesties gebaseerd op interesses, genres en favoriete artiesten.</li><li><strong class=\"text-indigo-400\">Real-Time Integratie:</strong> Live data-overlays zoals menigtedichtheid en gebruikerspositie aangedreven door het hardware tracking-systeem.</li><li><strong class=\"text-indigo-400\">Donkere, Atmosferische UI:</strong> Een strakke, meeslepende interface met levendige accenten in blauw en paars.</li><li><strong class=\"text-indigo-400\">Modulariteit & Schaalbaarheid:</strong> Volledig component-gebaseerde architectuur met gecentraliseerde state via Pinia.</li><li><strong class=\"text-indigo-400\">Multi-Stage Deployment:</strong> GitLab CI/CD pipelines voor Live, Beta en Preview omgevingen, draaiend op PM2.</li></ul></div><div><h3 class=\"text-lg font-semibold text-white\">Aanvullende Hoogtepunten</h3><ul class=\"list-disc list-inside mt-3 space-y-2\"><li>i18n ondersteuning voor meertalige gebruikers (in ontwikkeling).</li><li>SCSS-gebaseerde styling architectuur voor schone, onderhoudbare UI-componenten.</li><li>Geautomatiseerde tests met <code class=\"text-purple-400\">Vitest</code> en <code class=\"text-purple-400\">Playwright</code>.</li><li>Geoptimaliseerd voor SEO en netwerkprestaties — zelfs in lage-bandbreedte festivalgebieden.</li></ul></div><p><strong class=\"text-indigo-400\">Crowd-Nation Frontend</strong> is meer dan alleen een site — het is jouw interactieve event-metgezel. Of je nu synchroniseert met vrienden, de volgende act checkt, de kaart bekijkt, of deelneemt aan een privé groepschat, dit platform overbrugt de kloof tussen planning en ervaring, aangedreven door muziek, technologie en gemeenschap.</p></div>"
+        },
+        "wow_discord_bot": {
+            "title": "World of Warcraft Discord Bot",
+            "short_description": "Multifunctionele World of Warcraft bot voor gilde-beheer en character-synchronisatie.",
+            "description": "Krachtige Discord bot voor WoW-gildes, met character-synchronisatie, aanmeldingen en API-toegang tot officiële Blizzard-data.",
+            "extended_title": "World of Warcraft Discord Bot",
+            "extended_text": "<div class=\"space-y-8 text-gray-300\"><p>De <strong class=\"text-indigo-400\">World of Warcraft Discord Bot</strong> is een Node.js en TypeScript-gebaseerde bot specifiek gebouwd voor <em>World of Warcraft</em> gildes. Het dient als een centrale hub voor communicatie, gilde-beheer en character-data — allemaal binnen Discord.</p><div><h3 class=\"text-lg font-semibold text-white\">Belangrijkste Functies</h3><ul class=\"list-disc list-inside mt-3 space-y-2\"><li>🔗 <strong class=\"text-indigo-400\">Battle.net Koppeling</strong> via OAuth2 met veilig token-beheer</li><li>📜 <strong class=\"text-indigo-400\">Slash Commands</strong> voor character-queries, aanmeldingen, mount-herinneringen en meer</li><li>📊 <strong class=\"text-indigo-400\">Gilde Statistieken</strong> inclusief klasse-verdeling, gear-scores en lid-rollen</li><li>📝 <strong class=\"text-indigo-400\">Aanmeldingssysteem</strong> direct binnen Discord, compleet met moderatie-beoordeling</li><li>🗃️ <strong class=\"text-indigo-400\">Lokale JSON Opslag</strong> voor gebruikers, gildes en character-data (migratie gepland)</li><li>🌍 <strong class=\"text-indigo-400\">Meertalige Ondersteuning</strong> met ingebouwd i18n-systeem</li></ul></div><div><h3 class=\"text-lg font-semibold text-white\">Technische Hoogtepunten</h3><ul class=\"list-disc list-inside mt-3 space-y-2\"><li>⚙️ Modulair commando-systeem met dynamische loader, robuuste foutafhandeling en geïntegreerde commando-hulp</li><li>📚 Geautomatiseerde typing met <code class=\"text-purple-400\">CharacterDetailsResponseMap</code> en gestructureerde API-maps</li><li>🚀 Snelle ontwikkelingsflow met hot-reloading en interne testtools</li><li>🧠 Slimme API-caching om Blizzard rate-limits te vermijden</li></ul></div><div><h3 class=\"text-lg font-semibold text-white\">Integraties</h3><p class=\"mt-2\">De bot verbindt met de officiële <strong class=\"text-indigo-400\">Blizzard API</strong> om character-statistieken, uitrusting, token-prijzen, mounts en meer op te halen. Het heeft een custom-gebouwd mapping-systeem dat volledige type-veiligheid, autocomplete-ondersteuning en validatie voor elke API-oproep garandeert.</p></div><div><h3 class=\"text-lg font-semibold text-white\">Visie</h3><p class=\"mt-2\">Het uiteindelijke doel is om <strong class=\"text-indigo-400\">de best mogelijke toolkit voor World of Warcraft gildes</strong> te bieden — inclusief soepele werving-workflows, gesynchroniseerde character-tracking en geautomatiseerd statistiek-beheer. Een web-dashboard en externe API-toegang zijn gepland voor toekomstige updates.</p></div><div><h3 class=\"text-lg font-semibold text-white\">Status</h3><p class=\"mt-2\">De bot wordt actief gebruikt in een live gilde en is onder voortdurende ontwikkeling. Foutafhandeling, community-feedback en nieuwe feature-rollouts zijn onderdeel van een doorlopende roadmap.</p></div></div>"
+        },
+        "crowd_nation_backend": {
+            "title": "Crowd-Nation Backend",
+            "short_description": "ASP.NET Core API voor event-beheer, gebruikersafhandeling & data-levering.",
+            "description": "De ruggengraat van het Crowd-Nation platform: een schaalbare C# Web API die events, gebruikers en artiest-data aandrijft.",
+            "extended_title": "Crowd-Nation Backend – De API-Ruggengraat van het Event-Universum",
+            "extended_text": "<div class=\"space-y-8 text-gray-300\"><p>De <strong class=\"text-indigo-400\">Crowd-Nation Backend</strong> dient als de basis van het hele platform. Gebouwd met C# en ASP.NET Core, biedt het een krachtige REST API die alle frontend-componenten voedt met gestructureerde en veilige data.</p><p>Van het beheren van gebruikersdata, events, artiesten en locaties tot het afhandelen van content-moderatie en suggesties — deze backend zorgt ervoor dat alles naadloos en veilig verloopt.</p><div><h3 class=\"text-white text-xl font-semibold\">🔒 Veiligheid Eerst</h3><p class=\"mt-2\">Gebruikersbescherming staat voorop. Wachtwoorden worden verwerkt met een <strong class=\"text-indigo-400\">meerlaags hashing-systeem</strong> dat salt, pepper en een bewezen veilig hashing-algoritme omvat. Sessies worden afgehandeld via <strong class=\"text-indigo-400\">token-gebaseerde authenticatie</strong> om veilige en betrouwbare toegang te garanderen.</p></div><div><h3 class=\"text-white text-xl font-semibold\">🧱 Modulaire Architectuur</h3><ul class=\"list-disc list-inside mt-2 space-y-2\"><li>Gebruikersbeheer met rollen, rechten, login en registratie</li><li>Event-module voor het maken en bewerken van live events</li><li>Artiest-afhandeling inclusief afbeeldingen, biografieën en social media-links</li><li>Genre-, locatie- en type-definities toegankelijk via speciale endpoints</li><li>Community-content tools zoals suggesties en aanbevelingen</li></ul></div><div><h3 class=\"text-white text-xl font-semibold\">🛠️ Dev Ervaring</h3><p class=\"mt-2\">Ontwikkelaars profiteren van volledige <strong class=\"text-indigo-400\">Swagger-integratie</strong> voor live documentatie en endpoint-testen. Configuratie wordt afgehandeld via <code class=\"text-purple-400\">appsettings.json</code>, en deployments zijn gestroomlijnd met <strong class=\"text-indigo-400\">Docker</strong> en <strong class=\"text-indigo-400\">docker-compose</strong>.</p></div><div><h3 class=\"text-white text-xl font-semibold\">🚀 Deployment Pipeline</h3><p class=\"mt-2\">De backend wordt gedeployed via een <strong class=\"text-indigo-400\">CI/CD pipeline</strong> aangedreven door GitHub Actions, en draait op een Linux-gebaseerde Docker host. Het is gebouwd om te schalen en gemakkelijk uit te breiden naarmate het platform groeit.</p></div><p>Met een sterke focus op onderhoudbaarheid, veiligheid en uitbreidbaarheid vormt de <strong class=\"text-indigo-400\">Crowd-Nation Backend</strong> de betrouwbare infrastructuur voor een bloeiend event-platform.</p></div>"
+        },
+        "universal_jenga": {
+            "title": "Universal Jenga",
+            "short_description": "Digitaal Jenga-spel met willekeurige uitdagingen voor koppels of drinkavonden.",
+            "description": "Een veelzijdig feestspel dat klassieke Jenga-mechanica combineert met willekeurig gegenereerde taken voor een unieke ervaring.",
+            "extended_title": "Universal Jenga – Het Digitale Feestspel voor Koppels & Drinkavonden",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">Universal Jenga</strong> is een creatief en technisch zijproject geboren uit het idee om klassieke spel-mechanica opnieuw uit te vinden in een digitaal formaat. Gebouwd met <strong>Vue 3</strong>, <strong>TypeScript</strong> en <strong>Vite</strong>, levert het snelle prestaties en schone structuur.</p><p>In de kern vervangt Universal Jenga handgeschreven blok-taken met genummerde blokken. De uitdagingen zelf worden willekeurig geselecteerd en geschud uit voorgedefinieerde sets op de website. Elk spel is uniek, en dankzij het dynamische systeem kan niemand \"vals spelen\" door nummers te onthouden.</p><div><h3 class=\"text-white text-lg font-semibold\">🎮 Spel Modi</h3><p class=\"mt-2\">Twee uitdaging-sets zijn beschikbaar:</p><ul class=\"list-disc list-inside space-y-2 mt-2\"><li><strong>🥂 Drinken:</strong> Klassiek, gewaagd of wild – met 3 moeilijkheidsgraden:<ul class=\"list-disc list-inside ml-6 space-y-1\"><li><strong>Makkelijk:</strong> Geen seksuele inhoud. Perfect voor casual bijeenkomsten.</li><li><strong>Gemiddeld:</strong> Behelst meer gewaagde taken en fysieke interactie.</li><li><strong>Softporn:</strong> Erotisch en pittig – toegesneden op avontuurlijke volwassenen.</li></ul></li><li><strong>❤️ Koppels:</strong> Ontworpen voor romantische of zeer hechte relaties. Uitdagingen variëren van intiem tot provocatief, waardoor het de perfecte speelse date-night metgezel is.</li></ul></div><div><h3 class=\"text-white text-lg font-semibold\">✨ Waarom Het Opvalt</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li>Spellen kunnen gedeeld worden via <strong>QR-code</strong> of geëxporteerd als <strong>PDF</strong> voor analoog gebruik.</li><li>Perfect als feest-starter, ijsbreker of sociaal spel voor kleinere groepen.</li><li>Ondersteunt <strong>Meertalige inhoud</strong> – klaar voor wereldwijde pret.</li><li>Sessie-data wordt opgeslagen in <strong>LocalStorage</strong>, waardoor gebruikers kunnen hervatten waar ze gebleven waren.</li></ul></div><p>Of je nu op een huisfeest bent, een festival, of een gezellige avond thuis – <strong class=\"text-indigo-400\">Universal Jenga</strong> brengt lachen, verbinding en onvoorspelbaarheid naar de tafel. Het spel is toekomstklaar voor opschaling door marketing, partnerschappen of fysieke integraties zoals feest-boxen of apps.</p></div>"
+        },
+        "crowd_nation_cdn": {
+            "title": "Crowd-Nation CDN",
+            "short_description": "Flexibel CDN-systeem met toegangstokens, rechten-rollen en gedetailleerde toegangscontrole.",
+            "description": "Een geavanceerd content-delivery-systeem voor Crowd-Nation met token-ondersteuning, zichtbaarheidsregels en fijnmazige toegangsrechten.",
+            "extended_title": "Crowd-Nation CDN – Veilige & Flexibele Bestandslevering voor Moderne Platforms",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">Crowd-Nation CDN</strong> is een custom-gebouwd, flexibel content-delivery-systeem ontwikkeld voor zowel intern gebruik bij Crowd-Nation als een krachtige standalone oplossing. Het doel was om een veilig, API-first platform te creëren voor bestandsbeheer en -distributie dat precieze controle mogelijk maakt en zowel publieke als privé toegangsscenario's ondersteunt.</p><p>Centraal staan <strong>toegangstokens</strong>, <strong>gebruikersrollen & rechten</strong> en configureerbare zichtbaarheid door publiek/privé vlaggen. Assets kunnen gedeeld worden met tijdgebonden of permanente toegang via veilige token-gebaseerde URL's, wat volledige controle over zichtbaarheid en bruikbaarheid biedt.</p><div><h3 class=\"text-white text-lg font-semibold\">⚙️ Architectuur & Belangrijkste Functies</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li><strong>Node.js & Express:</strong> Lichtgewicht en modulaire API-backend</li><li><strong>Docker-ready:</strong> Volledig gecontaineriseerd voor naadloze deployment over omgevingen heen</li><li><strong>JWT-stijl tokens:</strong> Token-gebaseerde toegang met optionele vervaltijd-logica</li><li><strong>Single Sign-On:</strong> Synchroniseert automatisch sessie-state van <code>api.crowd-nation.com</code> via cookie-gebaseerde authenticatie</li><li><strong>Granulaire Rechtencontrole:</strong> Ken lees-/schrijftoegang toe per gebruiker of rol voor elk bestand</li><li><strong>Toegangsstatistieken:</strong> Houdt views en downloads per asset bij</li><li><strong>Backend Integratie:</strong> Werkt hand in hand met de Crowd-Nation backend voor dynamische bestandstoegang-structuren</li></ul></div><div><h3 class=\"text-white text-lg font-semibold\">🛠 Geplande Functies</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li>CMS (Content Management System) ondersteuning voor tekst-gebaseerde content-controle binnen Crowd-Nation websites</li><li>Admin-dashboard voor visueel beheer van assets, rollen en toegangstokens</li><li>Geautomatiseerde opruiming voor tijdelijke of verlopen uploads</li></ul></div><div><h3 class=\"text-white text-lg font-semibold\">📦 Gebruiksmogelijkheden</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li>Distributie van SVG's, banners en media-assets voor event- en artiest-pagina's</li><li>Beveiligen van PDF's of video's met tijdgebonden of beperkte toegang</li><li>Intern bestandsbeheer tussen redactionele of moderatie-teams</li></ul></div><p><strong class=\"text-indigo-400\">Crowd-Nation CDN</strong> is niet alleen een utility — het is een uitblinker in het ecosysteem. Met zijn slimme mix van <span class=\"text-white\">veiligheid</span>, <span class=\"text-white\">controle</span> en <span class=\"text-white\">ontwikkelaarservaring</span>, herdefiniëert het hoe een CDN zowel krachtig als gebruikersgericht kan zijn — gemaakt met ❤️ en oog voor detail.</p></div>"
+        },
+        "ihk_nachweis_schreiber": {
+            "title": "IHK Rapport Generator",
+            "short_description": "Geautomatiseerde PDF-creatie voor beroepsopleidings-rapporten.",
+            "description": "Een Node.js-gebaseerde CLI-tool voor het genereren van wekelijkse of maandelijkse IHK-rapporten als drukklare PDF's met ondersteuning voor data-import uit Jira en Untis.",
+            "extended_title": "IHK Rapport Generator",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p>De <strong class=\"text-indigo-400\">IHK Rapport Generator</strong> is een slimme Node.js utility ontworpen om het genereren van wekelijkse of maandelijkse opleidingsrapporten (Berichtshefte) voor leerlingen in IHK-gereguleerde beroepen te automatiseren. Deze tool vermindert handmatige inspanning aanzienlijk door gestructureerde, professionele PDF's te produceren gebaseerd op configureerbare sjablonen en geïmporteerde data.</p><h3 class=\"text-white text-lg font-semibold\">✨ Belangrijkste Functies</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li>Volledig geautomatiseerde PDF-generatie voor wekelijkse/maandelijkse rapportperiodes</li><li>Aanpasbare sjablonen met dynamische placeholders (bijv. naam, afdeling, week, datumbereik)</li><li>Georganiseerde mappenstructuur voor archivering van uitdrukken en digitale kopieën</li><li>Optionele data-import uit <strong>Jira</strong> voor praktische taken en <strong>Untis</strong> voor schoolroosters</li><li>Eenvoudige CLI-interface met interactieve prompts</li></ul><h3 class=\"text-white text-lg font-semibold\">🧪 Tech Stack & Implementatie</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li><strong>Node.js</strong> runtime voor platformonafhankelijke uitvoering</li><li><strong>PDFKit</strong> voor gestructureerde en schone PDF-output</li><li><strong>REST API integraties</strong> (Jira, Untis) voor automatische data-verzameling</li><li><strong>Filesystem logica</strong> om mappen, bestandsnamen en opslaglocaties dynamisch te genereren</li></ul><h3 class=\"text-white text-lg font-semibold\">📘 Echte Gebruikscase</h3><p>De tool ontstond uit noodzaak — het beheren van wekelijkse opleidingsrapporten kan tijdrovend en foutgevoelig zijn, vooral wanneer leerlingen falen om hun werk regelmatig te documenteren. Met geautomatiseerde imports en gestroomlijnde PDF-creatie bespaart deze oplossing tijd en verbetert zowel consistentie als rapportagekwaliteit.</p><h3 class=\"text-white text-lg font-semibold\">✅ Conclusie</h3><p><span class=\"text-indigo-400 font-semibold\">IHK Rapport Generator</span> is meer dan alleen een script — het is een tijdbesparende assistent voor leerlingen, trainers en HR-afdelingen. Dankzij zijn modulaire structuur en API-ready architectuur is het gemakkelijk uitbreidbaar voor toekomstige verbeteringen of custom workflows.</p></div>"
+        },
+        "crowd_nation_tracking": {
+            "title": "Crowd-Nation Tracking",
+            "short_description": "Real-time event-tracking met WiFi-gebaseerde triangulatie.",
+            "description": "Een hardware-aangedreven tracking-systeem dat gebruikerslocaties op eventterreinen bepaalt door WiFi access point-triangulatie.",
+            "extended_title": "Crowd-Nation Tracking – Vrienden Real-Time Hervereniggen bij Events",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">Crowd-Nation Tracking</strong> is een uniek systeem ontworpen om gebruikers real-time te volgen over grote events zoals festivals of concerten — zelfs in gebieden waar GPS faalt. Het concept ontstond uit een eenvoudige frustratie: vrienden verliezen in de menigte en ze niet meer kunnen vinden.</p><p>Met onze eigen <strong>WiFi Access Points</strong> worden mobiele apparaten binnen bereik gedetecteerd. De signaalsterkte tussen elk apparaat en meerdere access points wordt geanalyseerd om de virtuele positie van een gebruiker te schatten. Identificatie is gebaseerd op MAC-adressen, wat geanonimiseerde maar consistente tracking van individuen garandeert.</p><p>Het systeem draait volledig <strong>offline en internetonafhankelijk</strong>. Alle access points zenden dezelfde SSID uit en communiceren lokaal met de event-server. De server voert een triangulatie-algoritme uit en rapporteert de positie van de gebruiker real-time terug naar het Crowd-Nation platform.</p><p>Wanneer gekoppeld aan de <span class=\"text-indigo-400 font-semibold\">Crowd-Nation mobiele app</span>, kunnen gebruikers vrienden toevoegen en hun locaties bekijken op een live kaart. Dit is vooral nuttig in tenten, binnengebieden of drukke zones waar GPS onbetrouwbaar is of volledig faalt.</p><p>Het doel is niet alleen om een tech-gimmick te bieden, maar om een volwaardig <strong class=\"text-indigo-400\">festival-navigatiesysteem</strong> te leveren — een dat sociale interactie bevordert, veiligheid verhoogt en echte waarde toevoegt aan de live event-ervaring.</p><div><h3 class=\"text-white text-lg font-semibold\">🔧 Geplande Functies</h3><ul class=\"list-disc list-inside mt-2 space-y-1\"><li>Volledige integratie in de Crowd-Nation app (iOS & Android)</li><li>Gedetailleerde kartering van eventterreinen en zone-grenzen</li><li>Meldingen bij het betreden of verlaten van aangewezen gebieden (bijv. \"Main Stage\")</li><li>AVG-conforme opt-in/opt-out mechanismen voor gebruikerstoestemming</li></ul></div></div>"
+        },
+        "wow_website": {
+            "title": "World of Warcraft Gilde Website",
+            "short_description": "Landing page en bot-overzicht in Dark-Fantasy stijl van Schatten der Ewigkeit.",
+            "description": "Een stijlvolle website die onze WoW-gilde presenteert samen met gedetailleerde informatie en uitnodigingslinks voor de geïntegreerde Discord bot.",
+            "extended_title": "Schatten der Ewigkeit – Gilde Aanwezigheid met Discord Bot Integratie",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p>De officiële website voor onze <strong class=\"text-indigo-400\">Schatten der Ewigkeit</strong> gilde dient als een moderne, dark-fantasy getinte landing page. Gebouwd met <code>Vue 3</code> en <code>Nuxt 3</code>, biedt het bezoekers en potentiële leden een stijlvol en informatief toegangspunt tot ons gilde-universum.</p><p>De homepage begroet gebruikers met meeslepende <strong>Dark-Fantasy vibes</strong>—perfect passend bij onze gilde-identiteit. Zorgvuldig vervaardigde content, visuals en call-to-actions nodigen bezoekers uit om meer te verkennen zonder hen te overweldigen.</p><p>De website beschikt ook over een speciale <span class=\"text-indigo-400 font-medium\">Discord Bot Subpagina</span>, waar gebruikers meer kunnen leren over onze bot's functionaliteit en integraties:</p><ul class=\"list-disc list-inside ml-4 space-y-1\"><li>Character-koppeling via Battle.net OAuth2</li><li>Automatische rol-toewijzing gebaseerd op characters</li><li>Aanmeldingssysteem direct binnen Discord</li><li>Mount-herinneringen en meer quality-of-life functies</li></ul><p class=\"pt-2\">Bezoekers vinden ook directe toegang tot de belangrijkste links:</p><ul class=\"list-disc list-inside ml-4 space-y-1\"><li><strong>Lid worden van de Discord Server</strong></li><li><strong>De Bot Uitnodigen naar Jouw Server</strong></li></ul><p>Voor de toekomst plannen we de site uit te breiden met meer interactiviteit: opgeslagen gilde-/character-data, een intern aanmeldingsportaal en live interactie met de bot via <code>WebSockets</code>.</p><p>Voor nu is het doel eenvoudig: <span class=\"text-indigo-400 font-semibold\">onze gilde met stijl vertegenwoordigen</span>—en deze site levert precies dat.</p></div>"
+        },
+        "rl_shop_tracking": {
+            "title": "Rocket League Shop Tracker",
+            "short_description": "Dagelijkse scraping van de Rocket League item-shop met checksum-validatie.",
+            "description": "Een geautomatiseerde tool om Rocket League shop-data te archiveren en analyseren met gestructureerde output en deduplicatie-logica.",
+            "extended_title": "Rocket League Shop Tracker",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">RL-Shop-Tracking</strong> is een volledig geautomatiseerde data-scraping tool die dagelijks de Rocket League in-game shop ophaalt. Het archiveert alle items met tijdstempels en metadata voor verdere analyse—ideaal voor trend-detectie, rotatie-tracking en item-zeldzaamheid inzichten.</p><ul class=\"list-disc list-inside ml-4 space-y-1\"><li>Gebruikt <code>Cheerio</code> voor HTML-parsing en het extraheren van gestructureerde data.</li><li>Slaat content op als <code>JSON</code> met tijdstempels en alle relevante item-metadata.</li><li>Genereert <strong>checksums</strong> om dubbele entries te vermijden en data-zuiverheid te garanderen.</li></ul><p>Het proces draait volledig geautomatiseerd op een geplande basis en ondersteunt langetermijn-analytics over item-beschikbaarheid, aanbod-cycli en featured content binnen het Rocket League-ecosysteem.</p><p>Of je nu een data-nerd bent, een verzamelaar, of een ontwikkelaar die aan een tracker werkt—deze tool levert schone en consistente Rocket League shop-snapshots, dag na dag.</p></div>"
+        },
+        "surreal_to_csharp": {
+            "title": "SurrealToCSharp",
+            "short_description": "Converteer SurrealDB-schema's naar C#-klassen voor .NET-projecten.",
+            "description": "Een geautomatiseerde tool die SurrealDB data-dumps transformeert naar getypeerde C#-modelklassen voor gebruik in backend-ontwikkeling.",
+            "extended_title": "SurrealToCSharp – Van SurrealDB naar Sterk Getypeerde .NET-Modellen",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">SurrealToCSharp</strong> is een conversie-utility ontworpen om SurrealDB export-bestanden te transformeren naar volledig gestructureerde <strong>C# klasse-definities</strong>. Het automatiseert het proces van het mappen van database-schema informatie direct naar .NET-vriendelijke datamodellen.</p><ul class=\"list-disc list-inside ml-4 space-y-1\"><li>Parseert complete <code>SurrealDB</code> dumps met tabel- en veld-detectie.</li><li>Leidt veldtypes af en creëert schone, sterk getypeerde <code>C#</code> klasse-bestanden.</li><li>Elimineert de noodzaak om handmatig modelklassen opnieuw te maken voor bekende database-schema's.</li></ul><p>Of je nu een bestaande SurrealDB dataset reverse-engineert of modellen scaffoldt voor een nieuwe .NET backend, <strong>SurrealToCSharp</strong> biedt een snel en betrouwbaar startpunt.</p><p>Het is bijzonder nuttig voor projecten die NoSQL-schema logica willen overbruggen met getypeerde talen zoals C#, en biedt consistentie, onderhoudbaarheid en snelheid in ontwikkeling.</p></div>"
+        }
+    }
+}

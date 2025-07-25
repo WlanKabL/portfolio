@@ -32,6 +32,10 @@ export default defineNuxtConfig({
                 code: "en",
                 name: "English",
             },
+            {
+                code: "nl",
+                name: "Nederlands",
+            },
         ],
         detectBrowserLanguage: {
             useCookie: true,
