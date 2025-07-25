@@ -54,19 +54,15 @@
 
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import { getProjects } from "~/data/projects";
 import type { Project } from "~/types/projects";
 
 const route = useRoute();
 const slug = route.params.slug as string;
-const { t, locale } = useI18n();
 
-// Make the project data reactive to locale changes
-const translatedProjects = computed(() => getProjects(t));
+// Use reactive projects composable for immediate locale switching
+const { activeProjects } = useProjects();
 const project = computed(() => 
-    translatedProjects.value
-        .filter((p) => p.active)
-        .find((p) => p.link.endsWith(slug)) as Project | undefined
+    activeProjects.value.find((p) => p.link.endsWith(slug)) as Project | undefined
 );
 
 // Watch for locale changes and update SEO meta

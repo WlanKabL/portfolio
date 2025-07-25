@@ -39,11 +39,26 @@ const availableLocales = locales.value.filter((l) => typeof l !== "string") as {
     name: string;
 }[];
 
-// Use localStorage to persist the selected language
-const currentLocale = useLocalStorage('portfolio_language', locale.value);
+// Get valid locale codes for validation
+const validLocaleCodes = availableLocales.map(l => l.code);
+
+// Use localStorage to persist the selected language with validation
+const currentLocale = useLocalStorage(
+    'portfolio_language', 
+    'en', // Always default to English
+    (value) => validLocaleCodes.includes(value) // Validate against available locales
+);
 
 const setLocale = () => {
-    setI18nLocale(currentLocale.value);
+    // Ensure we only set valid locales
+    if (validLocaleCodes.includes(currentLocale.value)) {
+        setI18nLocale(currentLocale.value);
+    } else {
+        // Fallback to English if invalid
+        console.warn('Invalid locale detected, falling back to English:', currentLocale.value);
+        currentLocale.value = 'en';
+        setI18nLocale('en');
+    }
 };
 
 // Watch for locale changes from other sources and sync with localStorage
@@ -53,6 +68,12 @@ watch(locale, (newLocale) => {
 
 // Set the locale from localStorage on component mount
 onMounted(() => {
+    // Always ensure we have a valid locale
+    if (!validLocaleCodes.includes(currentLocale.value)) {
+        console.warn('Invalid stored locale, resetting to English:', currentLocale.value);
+        currentLocale.value = 'en';
+    }
+    
     if (currentLocale.value && currentLocale.value !== locale.value) {
         setI18nLocale(currentLocale.value);
     }
