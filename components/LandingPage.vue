@@ -13,7 +13,8 @@
         </div>
         <div class="relative z-10 max-w-3xl mx-auto">
             <h1 class="text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-6">
-                {{ $t("landing.hero_title") }}
+                {{ $t("landing.hero_title_part1") }} <br />
+                {{ $t("landing.hero_title_part2") }}
             </h1>
             <p class="text-xl text-gray-300 mb-10">{{ $t("landing.hero_subtitle") }}</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">

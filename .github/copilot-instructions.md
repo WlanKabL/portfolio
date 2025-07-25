@@ -54,8 +54,8 @@ Each new feature or fix should:
 Copilot should assume usage of **cloned vs server state**, e.g.:
 
 ```ts
-const local = useCloned(serverData.value)
-const hasChanged = !equals(serverData.value, local.value)
+const local = useCloned(serverData.value);
+const hasChanged = !equals(serverData.value, local.value);
 ```
 
 - Always **separate form state from live data**
@@ -82,15 +82,15 @@ Copilot should generate reusable utilities like:
 ```ts
 // ✅ Utility function
 export function hasPermission(user, permission) {
-  return (user.permissions & permission) === permission
+    return (user.permissions & permission) === permission;
 }
 ```
 
 ```ts
 // ✅ Composable service call
 export async function useFetchSomething(id: string) {
-  const response = await useHttp().get(`/api/resource/${id}`)
-  return validateResponse(response)
+    const response = await useHttp().get(`/api/resource/${id}`);
+    return validateResponse(response);
 }
 ```
 
@@ -102,14 +102,14 @@ export async function useFetchSomething(id: string) {
 
 ## 📎 Naming Conventions
 
-| Element        | Naming Pattern     | Example                  |
-|----------------|--------------------|--------------------------|
-| Variables      | `camelCase`        | `userData`, `formState`  |
-| Functions      | `camelCase`        | `fetchToken`, `isAdmin`  |
-| Components     | `PascalCase.vue`   | `UserCard.vue`           |
-| Files & Routes | `kebab-case`       | `user-settings.vue`      |
-| Stores         | `useXyzStore`      | `useAuthStore`           |
-| Composables    | `useXyz()`         | `useSensorLimits()`      |
+| Element        | Naming Pattern   | Example                 |
+| -------------- | ---------------- | ----------------------- |
+| Variables      | `camelCase`      | `userData`, `formState` |
+| Functions      | `camelCase`      | `fetchToken`, `isAdmin` |
+| Components     | `PascalCase.vue` | `UserCard.vue`          |
+| Files & Routes | `kebab-case`     | `user-settings.vue`     |
+| Stores         | `useXyzStore`    | `useAuthStore`          |
+| Composables    | `useXyz()`       | `useSensorLimits()`     |
 
 ---
 
@@ -119,7 +119,7 @@ Copilot should apply the bitflag-based permission model:
 
 ```ts
 if (hasPermission(UserPermissionEnum.ManageSettings)) {
-  // allow UI or action
+    // allow UI or action
 }
 ```
 

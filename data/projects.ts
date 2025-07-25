@@ -1,4 +1,4 @@
-import type { Project } from "~/types/projects";
+import type { LocalizedProject, ProjectConfig } from "~/types/projects";
 
 // Project configurations with i18n keys
 const projectConfigs = {
@@ -94,8 +94,9 @@ const projectConfigs = {
 };
 
 // Function to create projects array with i18n data
-export function getProjects(t: any): Project[] {
-    return Object.values(projectConfigs).map((config) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function getProjects(t: any): LocalizedProject[] {
+    return Object.values(projectConfigs).map((config: ProjectConfig) => ({
         active: config.active,
         showPreview: config.showPreview,
         title: t(`projects.${config.i18nKey}.title`),

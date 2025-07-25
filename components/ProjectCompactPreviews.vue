@@ -25,10 +25,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from "~/types/projects";
+import type { LocalizedProject } from "~/types/projects";
 
 defineProps<{
     title?: string;
-    projects: Project[];
+    projects: Readonly<LocalizedProject[]>;
 }>();
 </script>

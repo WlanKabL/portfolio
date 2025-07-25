@@ -67,9 +67,7 @@ const slug = route.params.slug as string;
 
 // Use reactive projects composable for immediate locale switching
 const { activeProjects } = useProjects();
-const project = computed(
-    () => activeProjects.value.find((p) => p.link.endsWith(slug)),
-);
+const project = computed(() => activeProjects.value.find((p) => p.link.endsWith(slug)));
 
 // Watch for locale changes and update SEO meta
 watchEffect(() => {

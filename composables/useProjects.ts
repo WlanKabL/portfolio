@@ -17,8 +17,8 @@ export function useProjects() {
     );
 
     return {
-        projects: readonly(projects),
-        activeProjects: readonly(activeProjects),
-        featuredProjects: readonly(featuredProjects),
+        projects: projects,
+        activeProjects: activeProjects,
+        featuredProjects: featuredProjects,
     };
 }

@@ -6,7 +6,8 @@
         "contact": "Contact"
     },
     "landing": {
-        "hero_title": "Code. Connect. Create Experiences.",
+        "hero_title_part1": "Code. Connect.",
+        "hero_title_part2": "Create Experiences.",
         "hero_subtitle": "Full-Stack Developer & Platform Engineer",
         "view_projects": "View Projects",
         "contact_me": "Contact Me"

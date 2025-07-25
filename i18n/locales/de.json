@@ -6,7 +6,8 @@
         "contact": "Kontakt"
     },
     "landing": {
-        "hero_title": "Coden. Verbinden. Erlebnisse schaffen.",
+        "hero_title_part1": "Coden. Verbinden.",
+        "hero_title_part2": "Erlebnisse schaffen.",
         "hero_subtitle": "Full-Stack Entwickler & Platform Engineer",
         "view_projects": "Projekte ansehen",
         "contact_me": "Kontakt aufnehmen"
