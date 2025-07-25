@@ -4,7 +4,7 @@
         <ProjectCompactPreviews title="Featured Projects" :projects />
         <AboutMe />
         <TechStack />
-        <ContactForm />
+        <ContactForm :title="$t('contact.title')" />
     </div>
 </template>
 

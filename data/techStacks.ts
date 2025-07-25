@@ -12,6 +12,7 @@ import {
 export const techStacks = [
     {
         title: "Frontend",
+        key: "frontend",
         icon: Monitor,
         skills: [
             "Vue.js",
@@ -27,6 +28,7 @@ export const techStacks = [
     },
     {
         title: "Backend",
+        key: "backend",
         icon: Terminal,
         skills: [
             "Node.js",
@@ -40,16 +42,19 @@ export const techStacks = [
     },
     {
         title: "Database",
+        key: "database",
         icon: Database,
         skills: ["SurrealDB", "MySQL", "MongoDB", "SQL", "ORMs", "Data Modeling"],
     },
     {
         title: "DevOps",
+        key: "devops",
         icon: Cpu,
         skills: ["Docker", "CI/CD", "Portainer", "PM2", "GitLab CI", "Deployment Automation"],
     },
     {
         title: "Security & Networking",
+        key: "security",
         icon: Shield,
         skills: [
             "HTTPS (Let's Encrypt)",
@@ -63,6 +68,7 @@ export const techStacks = [
     },
     {
         title: "Tooling & Misc",
+        key: "tooling",
         icon: Wrench,
         skills: [
             "Visual Studio Code",
@@ -80,6 +86,7 @@ export const techStacks = [
     },
     {
         title: "Web Infrastructure",
+        key: "infrastructure",
         icon: Globe,
         skills: [
             "Domain Management",
@@ -93,6 +100,7 @@ export const techStacks = [
     },
     {
         title: "UX & Communication",
+        key: "ux",
         icon: MessageCircle,
         skills: [
             "Responsive Design",
