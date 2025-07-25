@@ -67,7 +67,6 @@ const setLocale = () => {
         setI18nLocale(currentLocale.value);
     } else {
         // Fallback to English if invalid
-        console.warn("Invalid locale detected, falling back to English:", currentLocale.value);
         currentLocale.value = "en";
         setI18nLocale("en");
     }
@@ -82,7 +81,6 @@ watch(locale, (newLocale) => {
 onMounted(() => {
     // Always ensure we have a valid locale
     if (!validLocaleCodes.includes(currentLocale.value)) {
-        console.warn("Invalid stored locale, resetting to English:", currentLocale.value);
         currentLocale.value = "en";
     }
 
