@@ -6,7 +6,7 @@
     >
         <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 items-stretch">
             <ProjectCardDetailed
-                v-for="(project, index) in projects.filter((p) => p.active)"
+                v-for="(project, index) in translatedProjects.filter((p) => p.active)"
                 :key="index"
                 :title="project.title"
                 :description="project.description"
@@ -21,11 +21,14 @@
 </template>
 
 <script setup lang="ts">
-import { projects } from "~/data/projects";
+import { getProjects } from "~/data/projects";
 
 definePageMeta({
     title: "Projects",
 });
+
+const { t } = useI18n();
+const translatedProjects = getProjects(t);
 
 useSeoMeta({
     title: "Projects – </WlanKabL>",

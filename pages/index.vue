@@ -1,7 +1,7 @@
 <template>
     <div>
         <LandingPage />
-        <ProjectCompactPreviews title="Featured Projects" :projects />
+        <ProjectCompactPreviews title="Featured Projects" :projects="translatedProjects" />
         <AboutMe />
         <TechStack />
         <ContactForm :title="$t('contact.title')" />
@@ -9,11 +9,14 @@
 </template>
 
 <script setup lang="ts">
-import { projects } from "~/data/projects";
+import { getProjects } from "~/data/projects";
 
 definePageMeta({
     layout: "default",
 });
+
+const { t } = useI18n();
+const translatedProjects = getProjects(t);
 
 useSeoMeta({
     title: "</WlanKabL>",
