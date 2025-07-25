@@ -1,9 +1,7 @@
 <template>
     <PageContainer
-        title="A glimpse into my work"
-        subtitle="Explore a curated selection of my projects – each one
-                    crafted with attention to detail, performance, and
-                    scalability. From full-stack platforms to sleek UIs."
+        :title="$t('projects.title')"
+        :subtitle="$t('projects.subtitle')"
         hide-back-button
     >
         <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 items-stretch">
