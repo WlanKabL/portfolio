@@ -94,8 +94,8 @@ const projectConfigs = {
 };
 
 // Function to create projects array with i18n data
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function getProjects(t: any): LocalizedProject[] {
+type TranslationFunction = (key: string) => string;
+export function getProjects(t: TranslationFunction): LocalizedProject[] {
     return Object.values(projectConfigs).map((config: ProjectConfig) => ({
         active: config.active,
         showPreview: config.showPreview,
