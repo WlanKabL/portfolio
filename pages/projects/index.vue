@@ -1,7 +1,7 @@
 <template>
     <PageContainer
-        :title="$t('projects.title')"
-        :subtitle="$t('projects.subtitle')"
+        :title="$t('pages.projects.title')"
+        :subtitle="$t('pages.projects.subtitle')"
         hide-back-button
     >
         <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 items-stretch">

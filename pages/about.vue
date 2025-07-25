@@ -12,44 +12,44 @@
         </div>
         <div class="relative z-10 max-w-5xl mx-auto text-center text-white">
             <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-6">
-                {{ $t('about.page_title') }}
+                {{ $t('pages.about.title') }}
             </h1>
             <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                {{ $t('about.page_description') }}
+                {{ $t('pages.about.subtitle') }}
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
                 <div>
                     <h2 class="text-2xl font-semibold mb-4 text-indigo-400">
-                        {{ $t('about.developer_title') }}
+                        {{ $t('pages.about.developer_title') }}
                     </h2>
                     <p class="text-gray-300 leading-relaxed">
-                        {{ $t('about.developer_text') }}
+                        {{ $t('pages.about.developer_text') }}
                     </p>
                 </div>
 
                 <div>
                     <h2 class="text-2xl font-semibold mb-4 text-indigo-400">
-                        {{ $t('about.music_title') }}
+                        {{ $t('pages.about.music_title') }}
                     </h2>
                     <p class="text-gray-300 leading-relaxed">
-                        <span v-html="$t('about.music_text', { crowdnation: '<strong>Crowd-Nation</strong>' })"></span>
+                        <span v-html="$t('pages.about.music_text', { crowdnation: '<strong>Crowd-Nation</strong>' })"></span>
                     </p>
                 </div>
 
                 <div>
                     <h2 class="text-2xl font-semibold mb-4 text-indigo-400">
-                        {{ $t('about.vision_title') }}
+                        {{ $t('pages.about.vision_title') }}
                     </h2>
                     <p class="text-gray-300 leading-relaxed">
-                        {{ $t('about.vision_text') }}
+                        {{ $t('pages.about.vision_text') }}
                     </p>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-semibold mb-4 text-indigo-400">{{ $t('about.tools_title') }}</h2>
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-400">{{ $t('pages.about.tools_title') }}</h2>
                     <p class="text-gray-300 leading-relaxed">
-                        {{ $t('about.tools_text') }}
+                        {{ $t('pages.about.tools_text') }}
                     </p>
                 </div>
             </div>
@@ -59,14 +59,14 @@
                     to="/projects"
                     class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
                 >
-                    {{ $t('about.view_work') }}
+                    {{ $t('pages.about.view_work') }}
                 </NuxtLink>
             </div>
 
             <p class="mt-16 text-gray-500 text-sm">
-                {{ $t('about.connect_text') }}
+                {{ $t('pages.about.connect_text') }}
                 <NuxtLink to="/contact" class="underline hover:text-indigo-400"
-                    >{{ $t('about.connect_link') }}</NuxtLink
+                    >{{ $t('pages.about.connect_link') }}</NuxtLink
                 >
             </p>
         </div>
