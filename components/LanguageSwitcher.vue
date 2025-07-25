@@ -32,6 +32,8 @@
 </template>
 
 <script setup lang="ts">
+import { useLocalStorage } from "@vueuse/core";
+
 const { locale, locales, setLocale: setI18nLocale } = useI18n();
 
 const availableLocales = locales.value.filter((l) => typeof l !== "string") as {
@@ -40,23 +42,23 @@ const availableLocales = locales.value.filter((l) => typeof l !== "string") as {
 }[];
 
 // Get valid locale codes for validation
-const validLocaleCodes = availableLocales.map(l => l.code);
+const validLocaleCodes = availableLocales.map((l) => l.code);
 
 // Use @vueuse/core useLocalStorage with validation
-const currentLocale = useLocalStorage('portfolio_language', 'en', {
+const currentLocale = useLocalStorage("portfolio_language", "en", {
     writeDefaults: false,
     serializer: {
         read: (value: any) => {
             try {
                 const parsed = JSON.parse(value);
                 // Validate stored value - if invalid, return default 'en'
-                return validLocaleCodes.includes(parsed) ? parsed : 'en';
+                return validLocaleCodes.includes(parsed) ? parsed : "en";
             } catch {
-                return 'en';
+                return "en";
             }
         },
-        write: (value: any) => JSON.stringify(value)
-    }
+        write: (value: any) => JSON.stringify(value),
+    },
 });
 
 const setLocale = () => {
@@ -65,9 +67,9 @@ const setLocale = () => {
         setI18nLocale(currentLocale.value);
     } else {
         // Fallback to English if invalid
-        console.warn('Invalid locale detected, falling back to English:', currentLocale.value);
-        currentLocale.value = 'en';
-        setI18nLocale('en');
+        console.warn("Invalid locale detected, falling back to English:", currentLocale.value);
+        currentLocale.value = "en";
+        setI18nLocale("en");
     }
 };
 
@@ -80,10 +82,10 @@ watch(locale, (newLocale) => {
 onMounted(() => {
     // Always ensure we have a valid locale
     if (!validLocaleCodes.includes(currentLocale.value)) {
-        console.warn('Invalid stored locale, resetting to English:', currentLocale.value);
-        currentLocale.value = 'en';
+        console.warn("Invalid stored locale, resetting to English:", currentLocale.value);
+        currentLocale.value = "en";
     }
-    
+
     if (currentLocale.value && currentLocale.value !== locale.value) {
         setI18nLocale(currentLocale.value);
     }

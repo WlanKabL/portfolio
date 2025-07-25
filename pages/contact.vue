@@ -1,9 +1,9 @@
 <template>
     <section class="py-20 min-h-screen px-4">
         <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-4xl font-bold text-white mb-6">{{ $t('pages.contact.title') }}</h1>
+            <h1 class="text-4xl font-bold text-white mb-6">{{ $t("pages.contact.title") }}</h1>
             <p class="text-gray-400 text-lg mb-12">
-                {{ $t('pages.contact.subtitle') }}
+                {{ $t("pages.contact.subtitle") }}
             </p>
 
             <ContactForm :title="$t('contact.form_title')" />

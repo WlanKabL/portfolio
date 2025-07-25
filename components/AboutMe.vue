@@ -12,29 +12,31 @@
                 />
             </div>
             <div>
-                <h2 class="text-3xl font-bold mb-4 text-white">{{ $t('about.title') }}</h2>
+                <h2 class="text-3xl font-bold mb-4 text-white">{{ $t("about.title") }}</h2>
                 <p class="text-gray-300 mb-6 leading-relaxed">
-                    {{ $t('about.description', { 
-                        wlankabl: 'WlanKabL', 
-                        technologies: 'Vue, Node.js & C#' 
-                    }) }}
+                    {{
+                        $t("about.description", {
+                            wlankabl: "WlanKabL",
+                            technologies: "Vue, Node.js & C#",
+                        })
+                    }}
                 </p>
                 <ul class="space-y-4">
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
-                        {{ $t('about.engineering') }}
+                        {{ $t("about.engineering") }}
                     </li>
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
-                        {{ $t('about.passion_projects', { crowdnation: 'Crowd-Nation' }) }}
+                        {{ $t("about.passion_projects", { crowdnation: "Crowd-Nation" }) }}
                     </li>
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
-                        {{ $t('about.scalable_apps') }}
+                        {{ $t("about.scalable_apps") }}
                     </li>
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
-                        {{ $t('about.creative_coding') }}
+                        {{ $t("about.creative_coding") }}
                     </li>
                 </ul>
             </div>

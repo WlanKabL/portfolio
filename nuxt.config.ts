@@ -35,13 +35,13 @@ export default defineNuxtConfig({
         ],
         detectBrowserLanguage: {
             useCookie: true,
-            cookieKey: 'i18n_locale',
+            cookieKey: "i18n_locale",
             cookieSecure: false,
-            cookieSameSite: 'lax',
-            redirectOn: 'root',
+            cookieSameSite: "lax",
+            redirectOn: "root",
             alwaysRedirect: false,
-            fallbackLocale: 'en'
-        }
+            fallbackLocale: "en",
+        },
     },
     vite: {
         define: {
@@ -58,7 +58,7 @@ export default defineNuxtConfig({
                 {
                     rel: "icon",
                     type: "image/png",
-                    href: "/Crowd-Nation-Logo-BETTER.png", 
+                    href: "/Crowd-Nation-Logo-BETTER.png",
                 },
             ],
             meta: [
@@ -67,7 +67,7 @@ export default defineNuxtConfig({
                     property: "og:description",
                     content: "Explore my portfolio and featured projects.",
                 },
-                { property: "og:image", content: "/Crowd-Nation-Logo-BETTER.png" }, 
+                { property: "og:image", content: "/Crowd-Nation-Logo-BETTER.png" },
                 { property: "og:url", content: "https://dev.crowd-nation.com" },
                 { property: "og:type", content: "website" },
             ],

@@ -24,15 +24,15 @@
                     type="submit"
                     class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
-                    {{ loading ? $t('contact.sending') : $t('contact.send_button') }}
+                    {{ loading ? $t("contact.sending") : $t("contact.send_button") }}
                 </button>
             </form>
 
             <p v-if="success" class="text-green-400 text-sm mt-4 text-center">
-                {{ $t('contact.success') }}
+                {{ $t("contact.success") }}
             </p>
             <p v-if="error" class="text-red-400 text-sm mt-4 text-center">
-                {{ $t('contact.error') }}
+                {{ $t("contact.error") }}
             </p>
         </div>
     </section>
