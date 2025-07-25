@@ -12,25 +12,25 @@
                     to="/projects"
                     class="hover:text-indigo-400 transition-colors"
                     exact-active-class="border-b-2 border-indigo-600 pb-1"
-                    >Projects</NuxtLink
+                    >{{ $t("nav.projects") }}</NuxtLink
                 >
                 <NuxtLink
                     to="/resume"
                     class="hover:text-indigo-400 transition-colors"
                     exact-active-class="border-b-2 border-indigo-600 pb-1"
-                    >Resume</NuxtLink
+                    >{{ $t("nav.resume") }}</NuxtLink
                 >
                 <NuxtLink
                     to="/about"
                     class="hover:text-indigo-400 transition-colors"
                     exact-active-class="border-b-2 border-indigo-600 pb-1"
-                    >About</NuxtLink
+                    >{{ $t("nav.about") }}</NuxtLink
                 >
                 <NuxtLink
                     to="/contact"
                     class="hover:text-indigo-400 transition-colors"
                     exact-active-class="border-b-2 border-indigo-600 pb-1"
-                    >Contact</NuxtLink
+                    >{{ $t("nav.contact") }}</NuxtLink
                 >
                 <LanguageSwitcher />
             </div>
@@ -62,25 +62,25 @@
                 to="/projects"
                 class="block hover:text-indigo-400 transition-colors"
                 exact-active-class="border-b-2 border-indigo-600 pb-1"
-                >Projects</NuxtLink
+                >{{ $t("nav.projects") }}</NuxtLink
             >
             <NuxtLink
                 to="/resume"
                 class="hover:text-indigo-400 transition-colors"
                 exact-active-class="border-b-2 border-indigo-600 pb-1"
-                >Resume</NuxtLink
+                >{{ $t("nav.resume") }}</NuxtLink
             >
             <NuxtLink
                 to="/about"
                 class="block hover:text-indigo-400 transition-colors"
                 exact-active-class="border-b-2 border-indigo-600 pb-1"
-                >About</NuxtLink
+                >{{ $t("nav.about") }}</NuxtLink
             >
             <NuxtLink
                 to="/contact"
                 class="block hover:text-indigo-400 transition-colors"
                 exact-active-class="border-b-2 border-indigo-600 pb-1"
-                >Contact</NuxtLink
+                >{{ $t("nav.contact") }}</NuxtLink
             >
             <LanguageSwitcher />
         </div>

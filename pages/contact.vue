@@ -1,13 +1,12 @@
 <template>
     <section class="py-20 min-h-screen px-4">
         <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-4xl font-bold text-white mb-6">Let's Get In Touch</h1>
+            <h1 class="text-4xl font-bold text-white mb-6">{{ $t("pages.contact.title") }}</h1>
             <p class="text-gray-400 text-lg mb-12">
-                You’ve got a project idea, a question, or just want to vibe? Feel free to reach out
-                – I’m always open for new connections.
+                {{ $t("pages.contact.subtitle") }}
             </p>
 
-            <ContactForm title="Contact me" />
+            <ContactForm :title="$t('contact.form_title')" />
 
             <div class="flex flex-col sm:flex-row justify-center gap-6 text-white text-lg mt-12">
                 <a

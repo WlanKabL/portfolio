@@ -6,28 +6,33 @@
                 v-html="project.extendedText"
             />
             <section v-if="project.tech?.length">
-                <h2 class="text-xl font-semibold text-white mb-4">Tech Stack</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">
+                    {{ $t("pages.projects.tech_stack") }}
+                </h2>
                 <div class="flex flex-wrap gap-2">
                     <ItemTag v-for="(item, index) in project.tech" :key="index" :name="item" />
                 </div>
             </section>
             <section v-if="project.github || project.externalLink">
-                <h2 class="text-xl font-semibold text-white mb-4">Project Links</h2>
+                <h2 class="text-xl font-semibold text-white mb-4">
+                    {{ $t("pages.projects.project_links") }}
+                </h2>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <LinkItem v-if="project.github" :to="project.github" external>
-                        GitHub Repository
+                        {{ $t("pages.projects.github_repository") }}
                     </LinkItem>
                     <LinkItem v-if="project.externalLink" :to="project.externalLink" external>
-                        Live Version
+                        {{ $t("pages.projects.live_version") }}
                     </LinkItem>
                 </div>
             </section>
         </div>
         <div v-else class="text-center py-32 space-y-6">
-            <h1 class="text-4xl font-bold text-white">🚫 Projekt nicht gefunden</h1>
+            <h1 class="text-4xl font-bold text-white">
+                {{ $t("pages.projects.not_found_title") }}
+            </h1>
             <p class="text-gray-400">
-                Das angeforderte Projekt existiert nicht, wurde verschoben oder ist nicht mehr
-                verfügbar.
+                {{ $t("pages.projects.not_found_description") }}
             </p>
             <NuxtLink
                 to="/projects"
@@ -47,7 +52,7 @@
                         d="M15 19l-7-7 7-7"
                     />
                 </svg>
-                Zur Projektübersicht
+                {{ $t("pages.projects.back_to_projects") }}
             </NuxtLink>
         </div>
     </PageContainer>
@@ -55,26 +60,27 @@
 
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import { projects } from "~/data/projects";
-import type { Project } from "~/types/projects";
 
 const route = useRoute();
 const slug = route.params.slug as string;
 
-const project = projects.filter((p) => p.active).find((p) => p.link.endsWith(slug)) as
-    | Project
-    | undefined;
+// Use reactive projects composable for immediate locale switching
+const { activeProjects } = useProjects();
+const project = computed(() => activeProjects.value.find((p) => p.link.endsWith(slug)));
 
-if (project) {
-    useSeoMeta({
-        title: `${project.title} – WlanKabL`,
-        ogTitle: `${project.title} – WlanKabL`,
-        description: project.shortDescription ?? project.description,
-        ogDescription: project.shortDescription ?? project.description,
-        ogImage: project.image.startsWith("http")
-            ? project.image
-            : project.image.replace("./", "/"),
-        twitterCard: "summary_large_image",
-    });
-}
+// Watch for locale changes and update SEO meta
+watchEffect(() => {
+    if (project.value) {
+        useSeoMeta({
+            title: `${project.value.title} – WlanKabL`,
+            ogTitle: `${project.value.title} – WlanKabL`,
+            description: project.value.shortDescription ?? project.value.description,
+            ogDescription: project.value.shortDescription ?? project.value.description,
+            ogImage: project.value.image.startsWith("http")
+                ? project.value.image
+                : project.value.image.replace("./", "/"),
+            twitterCard: "summary_large_image",
+        });
+    }
+});
 </script>

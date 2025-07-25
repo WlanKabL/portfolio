@@ -1,19 +1,20 @@
 <template>
     <div>
         <LandingPage />
-        <ProjectCompactPreviews title="Featured Projects" :projects />
+        <ProjectCompactPreviews title="Featured Projects" :projects="featuredProjects" />
         <AboutMe />
         <TechStack />
-        <ContactForm />
+        <ContactForm :title="$t('contact.title')" />
     </div>
 </template>
 
 <script setup lang="ts">
-import { projects } from "~/data/projects";
-
 definePageMeta({
     layout: "default",
 });
+
+// Use reactive projects composable for immediate locale switching
+const { featuredProjects } = useProjects();
 
 useSeoMeta({
     title: "</WlanKabL>",

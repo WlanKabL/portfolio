@@ -58,19 +58,20 @@ Now visit `http://localhost:3000` to see the site in action.
 This project is fully dockerized and ready for production.
 
 ### 1. Build Docker Image
+
 Use Docker Compose (recommended for more control):
 
 ### `docker-compose.yml`
 
 ```yaml
 services:
-  portfolio:
-    build: .
-    ports:
-      - "3000:3000"
-    env_file:
-      - .env
-    restart: unless-stopped
+    portfolio:
+        build: .
+        ports:
+            - "3000:3000"
+        env_file:
+            - .env
+        restart: unless-stopped
 ```
 
 Then run:

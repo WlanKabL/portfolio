@@ -10,13 +10,13 @@
                     v-model="email"
                     type="email"
                     required
-                    placeholder="Your email"
+                    :placeholder="$t('contact.email_placeholder')"
                     class="w-full p-3 rounded-lg bg-zinc-800 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
                 <textarea
                     v-model="message"
                     required
-                    placeholder="Your message"
+                    :placeholder="$t('contact.message_placeholder')"
                     rows="5"
                     class="w-full p-3 rounded-lg bg-zinc-800 text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
@@ -24,15 +24,15 @@
                     type="submit"
                     class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
-                    {{ loading ? "Sending..." : "Send Message" }}
+                    {{ loading ? $t("contact.sending") : $t("contact.send_button") }}
                 </button>
             </form>
 
             <p v-if="success" class="text-green-400 text-sm mt-4 text-center">
-                ✅ Message sent successfully!
+                {{ $t("contact.success") }}
             </p>
             <p v-if="error" class="text-red-400 text-sm mt-4 text-center">
-                ❌ Something went wrong.
+                {{ $t("contact.error") }}
             </p>
         </div>
     </section>

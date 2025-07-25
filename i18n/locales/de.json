@@ -1,3 +1,181 @@
 {
-    "project_title": "A"
+    "nav": {
+        "projects": "Projekte",
+        "resume": "Lebenslauf",
+        "about": "Über mich",
+        "contact": "Kontakt"
+    },
+    "landing": {
+        "hero_title_part1": "Coden. Verbinden.",
+        "hero_title_part2": "Erlebnisse schaffen.",
+        "hero_subtitle": "Full-Stack Entwickler & Platform Engineer",
+        "view_projects": "Projekte ansehen",
+        "contact_me": "Kontakt aufnehmen"
+    },
+    "about": {
+        "title": "Über mich",
+        "description": "Hey, ich bin {wlankabl} — ein leidenschaftlicher Full-Stack Entwickler, angetrieben von Neugier und einer tiefen Liebe für Code, Musik und Motorräder. Ich erstelle digitale Lösungen, die schnell, sicher und mit modernen Technologien wie {technologies} gebaut sind.",
+        "engineering": "Full-Stack Engineering & Architektur",
+        "passion_projects": "Leidenschaftsprojekte wie {crowdnation}",
+        "scalable_apps": "Schnelle, skalierbare Web-Apps",
+        "creative_coding": "Hacking, Hardware & kreatives Programmieren"
+    },
+    "tech_stack": {
+        "title": "Tech Stack",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Datenbank",
+        "devops": "DevOps",
+        "security": "Sicherheit & Netzwerk",
+        "tooling": "Tools & Sonstiges",
+        "infrastructure": "Web-Infrastruktur",
+        "ux": "UX & Kommunikation"
+    },
+    "contact": {
+        "title": "Kontakt aufnehmen",
+        "form_title": "Schreib mir",
+        "email_placeholder": "Deine E-Mail",
+        "message_placeholder": "Deine Nachricht",
+        "send_button": "Nachricht senden",
+        "sending": "Wird gesendet...",
+        "success": "✅ Nachricht erfolgreich gesendet!",
+        "error": "❌ Etwas ist schiefgelaufen."
+    },
+    "footer": {
+        "made_by": "Von Hand gemacht",
+        "with_care": "mit Liebe & Koffein",
+        "github_link": "→ Schau dir den Quellcode auf GitHub an",
+        "easter_egg": "console.log('Hey, neugieriger Dev — Lass uns mal zusammen coden.');"
+    },
+    "pages": {
+        "about": {
+            "title": "Hey, ich bin WlanKabL",
+            "subtitle": "Leidenschaftlicher Full-Stack Entwickler, Motorradfahrer, Musik-Süchtiger und Festival-Enthusiast. Baue digitale Lösungen mit Zweck, Persönlichkeit und Performance.",
+            "developer_title": "🔧 Entwickler aus Leidenschaft",
+            "developer_text": "Ich bin ein Full-Stack Entwickler mit Fokus auf Vue.js, Node.js und C#. Von skalierbaren Backends bis zu schönen Frontends – ich programmiere mit Klarheit und Zweck. Ich liebe Performance, großartige Benutzererfahrung und das Erstellen von Tools, die Menschen gerne nutzen. Außerdem tauche ich gerne in Sicherheit, Reverse Engineering ein und erkunde komplexe Systeme.",
+            "music_title": "🎵 Angetrieben von Musik & Adrenalin",
+            "music_text": "Ob es ein neues DJ-Set ist, eine spontane Fahrt mit meinem Motorrad oder nächtliches Programmieren, Musik ist immer an meiner Seite. Festivals wie Defqon.1 und Thunderdome inspirieren meine Energie und mein größtes Projekt: Crowd-Nation, eine Plattform, um Musikliebhaber zusammenzubringen.",
+            "vision_title": "💼 Selbstbestimmt und Visionär",
+            "vision_text": "Ich arbeite Vollzeit als Entwickler, bin aber auch Freelancer mit einem langfristigen Ziel: ein eigenes Unternehmen rund um meine Leidenschaften aufzubauen. Meine Projekte sind nicht nur Hobbys – sie sind Teil einer größeren Vision.",
+            "tools_title": "⚙️ Tools, die ich liebe",
+            "tools_text": "VSCode, Docker, Nuxt, SurrealDB, Swagger, TailwindCSS, PM2, GitLab CI/CD, Portainer, Let's Encrypt und alles, was das Entwickeln reibungsloser & sauberer macht. Außerdem: Ich bin besessen von Automatisierung.",
+            "view_work": "Meine Arbeit ansehen",
+            "connect_text": "Möchtest du etwas zusammen bauen?",
+            "connect_link": "Lass uns connecten!"
+        },
+        "contact": {
+            "title": "Lass uns in Kontakt treten",
+            "subtitle": "Du hast eine Projektidee, eine Frage oder willst einfach abhängen? Melde dich gerne – ich bin immer offen für neue Verbindungen."
+        },
+        "projects": {
+            "title": "Ein Einblick in meine Arbeit",
+            "subtitle": "Erkunde eine kuratierte Auswahl meiner Projekte – jedes mit Liebe zum Detail, Performance und Skalierbarkeit erstellt. Von Full-Stack Plattformen bis zu eleganten UIs.",
+            "tech_stack": "Tech Stack",
+            "project_links": "Projekt-Links",
+            "github_repository": "GitHub Repository",
+            "live_version": "Live-Version",
+            "not_found_title": "🚫 Projekt nicht gefunden",
+            "not_found_description": "Das angeforderte Projekt existiert nicht, wurde verschoben oder ist nicht mehr verfügbar.",
+            "back_to_projects": "Zur Projektübersicht"
+        },
+        "resume": {
+            "title": "Lebenslauf",
+            "subtitle": "Überblick über meine Fähigkeiten, Berufserfahrung und Ausbildung.",
+            "experience": "Berufserfahrung",
+            "education": "Ausbildung",
+            "skills": "Fähigkeiten & Tools",
+            "languages": "Sprachen",
+            "hobbies": "Hobbys",
+            "job1_company": "mediaBEAM GmbH",
+            "job1_period": "2021 – Juni 2024",
+            "job1_title": "Ausbildung – Anwendungsentwicklung",
+            "job2_company": "Smake IT GmbH",
+            "job2_period": "Seit Juli 2024",
+            "job2_title": "Full-Stack Entwickler",
+            "edu1_school": "Anne-Frank Realschule Ahaus",
+            "edu1_year": "2019",
+            "edu1_degree": "Mittlere Reife",
+            "edu2_school": "Berufskolleg für Technik Ahaus",
+            "edu2_year": "2021",
+            "edu2_degree": "Fachhochschulreife – IT & Kommunikation",
+            "lang_german": "🇩🇪 Deutsch – C2 (Muttersprache)",
+            "lang_english": "🇬🇧 Englisch – B2 (fließend)",
+            "hobby_programming": "💻 Programmieren",
+            "hobby_motorcycles": "🏍️ Motorradfahren",
+            "hobby_music": "🎶 Musik & Festivals",
+            "hobby_cars": "🚗 Auto-Projekte"
+        }
+    },
+    "projects": {
+        "crowd_nation_frontend": {
+            "title": "Crowd-Nation Frontend",
+            "short_description": "Moderne Event-Plattform mit Personalisierung und Echtzeit-Features.",
+            "description": "Eine Vue 3-basierte Web-Anwendung für Crowd-Nation mit responsiver UI, Event-Discovery, Gruppen-Tools und Live-Tracking-Integration.",
+            "extended_title": "Frontend-Interface für Crowd-Nation – moderne Technologie trifft auf immersive Benutzererfahrung.",
+            "extended_text": "<div class=\"space-y-8 text-gray-300\"><p>Das <strong class=\"text-indigo-400\">Crowd-Nation Frontend</strong> ist der visuelle Kern der gesamten Plattform, entwickelt mit Vue 3, Vite und TailwindCSS. Gebaut für Musikliebhaber, Festival-Besucher und Event-Organisatoren, bietet es eine nahtlose Erfahrung auf allen Geräten — von der mobilen Nutzung auf einem Festival bis zur Desktop-basierten Event-Planung.</p><div><h3 class=\"text-lg font-semibold text-white\">Hauptfokus-Bereiche</h3><ul class=\"list-disc list-inside mt-3 space-y-2\"><li><strong class=\"text-indigo-400\">Personalisierung:</strong> Intelligente Vorschläge basierend auf Interessen, Genres und Lieblings-Künstlern.</li><li><strong class=\"text-indigo-400\">Echtzeit-Integration:</strong> Live-Daten-Overlays wie Crowd-Dichte und Benutzer-Positionierung, angetrieben vom Hardware-Tracking-System.</li><li><strong class=\"text-indigo-400\">Dunkle, atmosphärische UI:</strong> Ein elegantes, immersives Interface mit lebendigen Akzenten in Blau und Lila.</li><li><strong class=\"text-indigo-400\">Modularität & Skalierbarkeit:</strong> Vollständig komponentenbasierte Architektur mit zentralisiertem State via Pinia.</li><li><strong class=\"text-indigo-400\">Multi-Stage Deployment:</strong> GitLab CI/CD-Pipelines für Live-, Beta- und Preview-Umgebungen, laufend auf PM2.</li></ul></div><div><h3 class=\"text-lg font-semibold text-white\">Zusätzliche Highlights</h3><ul class=\"list-disc list-inside mt-3 space-y-2\"><li>i18n-Unterstützung für mehrsprachige Benutzer (in Arbeit).</li><li>SCSS-basierte Styling-Architektur für saubere, wartbare UI-Komponenten.</li><li>Automatisierte Tests mit <code class=\"text-purple-400\">Vitest</code> und <code class=\"text-purple-400\">Playwright</code>.</li><li>Optimiert für SEO und Netzwerk-Performance — auch in Bereichen mit geringer Bandbreite auf Festivals.</li></ul></div><p><strong class=\"text-indigo-400\">Crowd-Nation Frontend</strong> ist mehr als nur eine Website — es ist dein interaktiver Event-Begleiter. Ob du dich mit Freunden synchronisierst, den nächsten Act checkst, die Karte durchsuchst oder einem privaten Gruppen-Chat beitrittst, diese Plattform überbrückt die Lücke zwischen Planung und Erleben, angetrieben von Musik, Technologie und Gemeinschaft.</p></div>"
+        },
+        "wow_discord_bot": {
+            "title": "World of Warcraft Discord Bot",
+            "short_description": "Multifunktionaler World of Warcraft Bot für Gilden-Management und Charakter-Sync.",
+            "description": "Mächtiger Discord Bot für WoW-Gilden, der Charakter-Synchronisation, Bewerbungen und API-Zugriff auf offizielle Blizzard-Daten bietet.",
+            "extended_title": "World of Warcraft Discord Bot",
+            "extended_text": "<div class=\"space-y-8 text-gray-300\"><p>Der <strong class=\"text-indigo-400\">World of Warcraft Discord Bot</strong> ist ein Node.js- und TypeScript-basierter Bot, der speziell für <em>World of Warcraft</em>-Gilden entwickelt wurde. Er dient als zentrale Drehscheibe für Kommunikation, Gilden-Management und Charakter-Daten — alles innerhalb von Discord.</p><div><h3 class=\"text-lg font-semibold text-white\">Hauptfunktionen</h3><ul class=\"list-disc list-inside mt-3 space-y-2\"><li>🔗 <strong class=\"text-indigo-400\">Battle.net-Verknüpfung</strong> via OAuth2 mit sicherem Token-Management</li><li>📜 <strong class=\"text-indigo-400\">Slash Commands</strong> für Charakter-Abfragen, Bewerbungen, Mount-Erinnerungen und mehr</li><li>📊 <strong class=\"text-indigo-400\">Gilden-Statistiken</strong> inklusive Klassen-Verteilung, Ausrüstungs-Werte und Mitglieder-Rollen</li><li>📝 <strong class=\"text-indigo-400\">Bewerbungssystem</strong> direkt in Discord, komplett mit Moderations-Review</li><li>🗃️ <strong class=\"text-indigo-400\">Lokale JSON-Speicherung</strong> für Benutzer, Gilden und Charakter-Daten (Migration geplant)</li><li>🌍 <strong class=\"text-indigo-400\">Mehrsprachige Unterstützung</strong> mit integriertem i18n-System</li></ul></div><div><h3 class=\"text-lg font-semibold text-white\">Technische Highlights</h3><ul class=\"list-disc list-inside mt-3 space-y-2\"><li>⚙️ Modulares Command-System mit dynamischem Loader, robuster Fehlerbehandlung und integrierter Command-Hilfe</li><li>📚 Automatisierte Typisierung mit <code class=\"text-purple-400\">CharacterDetailsResponseMap</code> und strukturierten API-Maps</li><li>🚀 Schneller Entwicklungsflow mit Hot-Reloading und internen Test-Tools</li><li>🧠 Intelligentes API-Caching zur Vermeidung von Blizzard-Rate-Limits</li></ul></div><div><h3 class=\"text-lg font-semibold text-white\">Integrationen</h3><p class=\"mt-2\">Der Bot verbindet sich mit der offiziellen <strong class=\"text-indigo-400\">Blizzard API</strong>, um Charakter-Stats, Ausrüstung, Token-Preise, Mounts und mehr abzurufen. Er verfügt über ein custom-entwickeltes Mapping-System, das vollständige Type-Safety, Autocomplete-Unterstützung und Validierung für jeden API-Call gewährleistet.</p></div><div><h3 class=\"text-lg font-semibold text-white\">Vision</h3><p class=\"mt-2\">Das ultimative Ziel ist es, <strong class=\"text-indigo-400\">das bestmögliche Toolkit für World of Warcraft-Gilden</strong> zu bieten — inklusive reibungsloser Rekrutierungs-Workflows, synchronisierter Charakter-Verfolgung und automatisiertem Stats-Management. Ein Web-Dashboard und externer API-Zugang sind für zukünftige Updates geplant.</p></div><div><h3 class=\"text-lg font-semibold text-white\">Status</h3><p class=\"mt-2\">Der Bot wird aktiv in einer Live-Gilde verwendet und steht unter kontinuierlicher Entwicklung. Fehlerbehandlung, Community-Feedback und neue Feature-Rollouts sind Teil einer laufenden Roadmap.</p></div></div>"
+        },
+        "crowd_nation_backend": {
+            "title": "Crowd-Nation Backend",
+            "short_description": "ASP.NET Core API für Event-Management, Benutzer-Verwaltung & Daten-Bereitstellung.",
+            "description": "Das Rückgrat der Crowd-Nation-Plattform: eine skalierbare C# Web API, die Events, Benutzer und Künstler-Daten antreibt.",
+            "extended_title": "Crowd-Nation Backend – Das API-Rückgrat des Event-Universums",
+            "extended_text": "<div class=\"space-y-8 text-gray-300\"><p>Das <strong class=\"text-indigo-400\">Crowd-Nation Backend</strong> dient als Fundament der gesamten Plattform. Gebaut mit C# und ASP.NET Core, stellt es eine mächtige REST API bereit, die alle Frontend-Komponenten mit strukturierten und sicheren Daten versorgt.</p><p>Von der Verwaltung von Benutzerdaten, Events, Künstlern und Standorten bis hin zur Handhabung von Content-Moderation und Vorschlägen — dieses Backend sorgt dafür, dass alles nahtlos und sicher fließt.</p><div><h3 class=\"text-white text-xl font-semibold\">🔒 Sicherheit zuerst</h3><p class=\"mt-2\">Benutzerschutz steht an oberster Stelle. Passwörter werden mit einem <strong class=\"text-indigo-400\">mehrstufigen Hashing-System</strong> verarbeitet, das Salt, Pepper und einen bewährten sicheren Hashing-Algorithmus umfasst. Sessions werden über <strong class=\"text-indigo-400\">token-basierte Authentifizierung</strong> gehandhabt, um sicheren und zuverlässigen Zugang zu gewährleisten.</p></div><div><h3 class=\"text-white text-xl font-semibold\">🧱 Modulare Architektur</h3><ul class=\"list-disc list-inside mt-2 space-y-2\"><li>Benutzerverwaltung mit Rollen, Berechtigungen, Login und Registrierung</li><li>Event-Modul für das Erstellen und Bearbeiten von Live-Events</li><li>Künstler-Verwaltung inklusive Bilder, Biografien und Social-Media-Links</li><li>Genre-, Standort- und Typ-Definitionen, zugänglich über dedizierte Endpunkte</li><li>Community-Content-Tools wie Vorschläge und Empfehlungen</li></ul></div><div><h3 class=\"text-white text-xl font-semibold\">🛠️ Entwickler-Erfahrung</h3><p class=\"mt-2\">Entwickler profitieren von vollständiger <strong class=\"text-indigo-400\">Swagger-Integration</strong> für Live-Dokumentation und Endpunkt-Tests. Konfiguration wird über <code class=\"text-purple-400\">appsettings.json</code> gehandhabt, und Deployments werden mit <strong class=\"text-indigo-400\">Docker</strong> und <strong class=\"text-indigo-400\">docker-compose</strong> optimiert.</p></div><div><h3 class=\"text-white text-xl font-semibold\">🚀 Deployment-Pipeline</h3><p class=\"mt-2\">Das Backend wird über eine <strong class=\"text-indigo-400\">CI/CD-Pipeline</strong> deployed, die von GitHub Actions angetrieben wird, und läuft auf einem Linux-basierten Docker-Host. Es ist darauf ausgelegt zu skalieren und sich leicht zu erweitern, während die Plattform wächst.</p></div><p>Mit starkem Fokus auf Wartbarkeit, Sicherheit und Erweiterbarkeit bildet das <strong class=\"text-indigo-400\">Crowd-Nation Backend</strong> die zuverlässige Infrastruktur für eine blühende Event-Plattform.</p></div>"
+        },
+        "universal_jenga": {
+            "title": "Universal Jenga",
+            "short_description": "Digitales Jenga-Spiel mit randomisierten Challenges für Paare oder Trinknächte.",
+            "description": "Ein vielseitiges Party-Spiel, das klassische Jenga-Mechaniken mit zufällig generierten Aufgaben für ein einzigartiges Erlebnis kombiniert.",
+            "extended_title": "Universal Jenga – Das digitale Party-Spiel für Paare & Trinknächte",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">Universal Jenga</strong> ist ein kreatives und technisches Nebenprojekt, das aus der Idee entstanden ist, klassische Spiel-Mechaniken in einem digitalen Format neu zu erfinden. Gebaut mit <strong>Vue 3</strong>, <strong>TypeScript</strong> und <strong>Vite</strong>, liefert es schnelle Performance und saubere Struktur.</p><p>Im Kern ersetzt Universal Jenga handgeschriebene Block-Aufgaben durch nummerierte Blöcke. Die Challenges selbst werden zufällig aus vordefinierten Sets auf der Website ausgewählt und gemischt. Jedes Spiel ist einzigartig, und dank des dynamischen Systems kann niemand \"schummeln\", indem er sich Nummern merkt.</p><div><h3 class=\"text-white text-lg font-semibold\">🎮 Spiel-Modi</h3><p class=\"mt-2\">Zwei Challenge-Sets sind verfügbar:</p><ul class=\"list-disc list-inside space-y-2 mt-2\"><li><strong>🥂 Trinken:</strong> Klassisch, gewagt oder wild – mit 3 Schwierigkeitsgraden:<ul class=\"list-disc list-inside ml-6 space-y-1\"><li><strong>Einfach:</strong> Kein sexueller Inhalt. Perfekt für entspannte Zusammenkünfte.</li><li><strong>Mittel:</strong> Beinhaltet gewagtere Aufgaben und körperliche Interaktion.</li><li><strong>Softporn:</strong> Erotisch und pikant – zugeschnitten auf abenteuerlustige Erwachsene.</li></ul></li><li><strong>❤️ Paare:</strong> Entworfen für romantische oder sehr enge Beziehungen. Challenges reichen von intim bis provokativ und machen es zum perfekten spielerischen Date-Night-Begleiter.</li></ul></div><div><h3 class=\"text-white text-lg font-semibold\">✨ Was es auszeichnet</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li>Spiele können via <strong>QR-Code</strong> geteilt oder als <strong>PDF</strong> für analoge Nutzung exportiert werden.</li><li>Perfekt als Party-Starter, Eisbrecher oder Gesellschaftsspiel für kleinere Gruppen.</li><li>Unterstützt <strong>mehrsprachige Inhalte</strong> – bereit für globalen Spaß.</li><li>Session-Daten werden im <strong>LocalStorage</strong> gespeichert, sodass Benutzer dort weitermachen können, wo sie aufgehört haben.</li></ul></div><p>Ob du auf einer Hausparty, einem Festival oder an einem gemütlichen Abend zu Hause bist – <strong class=\"text-indigo-400\">Universal Jenga</strong> bringt Lachen, Verbindung und Unvorhersagbarkeit auf den Tisch. Das Spiel ist zukunftsbereit für Skalierung durch Marketing, Partnerschaften oder physische Integrationen wie Party-Boxen oder Apps.</p></div>"
+        },
+        "crowd_nation_cdn": {
+            "title": "Crowd-Nation CDN",
+            "short_description": "Flexibles CDN-System mit Access-Tokens, Berechtigungs-Rollen und detaillierter Zugriffskontrolle.",
+            "description": "Ein fortschrittliches Content-Delivery-System für Crowd-Nation mit Token-Unterstützung, Sichtbarkeits-Regeln und fein abgestimmten Zugriffsberechtigungen.",
+            "extended_title": "Crowd-Nation CDN – Sichere & Flexible File-Bereitstellung für moderne Plattformen",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">Crowd-Nation CDN</strong> ist ein custom-entwickeltes, flexibles Content-Delivery-System, das sowohl für den internen Gebrauch bei Crowd-Nation als auch als mächtige Standalone-Lösung entwickelt wurde. Das Ziel war es, eine sichere, API-first Plattform für File-Management und -Distribution zu schaffen, die präzise Kontrolle ermöglicht und sowohl öffentliche als auch private Zugriffs-Szenarien unterstützt.</p><p>Im Kern stehen <strong>Access-Tokens</strong>, <strong>Benutzer-Rollen & Berechtigungen</strong> und konfigurierbare Sichtbarkeit durch öffentliche/private Flags. Assets können mit zeitlich begrenztem oder permanentem Zugang über sichere token-basierte URLs geteilt werden, was vollständige Kontrolle über Sichtbarkeit und Nutzbarkeit bietet.</p><div><h3 class=\"text-white text-lg font-semibold\">⚙️ Architektur & Hauptfunktionen</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li><strong>Node.js & Express:</strong> Leichtgewichtiges und modulares API-Backend</li><li><strong>Docker-ready:</strong> Vollständig containerisiert für nahtloses Deployment über Umgebungen hinweg</li><li><strong>JWT-style Tokens:</strong> Token-basierter Zugang mit optionaler Ablauf-Logik</li><li><strong>Single Sign-On:</strong> Synchronisiert automatisch Session-State von <code>api.crowd-nation.com</code> via cookie-basierter Authentifizierung</li><li><strong>Granulare Berechtigungskontrolle:</strong> Weise Lese-/Schreib-Zugang pro Benutzer oder Rolle für jede Datei zu</li><li><strong>Zugriffs-Statistiken:</strong> Verfolgt Views und Downloads pro Asset</li><li><strong>Backend-Integration:</strong> Arbeitet Hand in Hand mit dem Crowd-Nation Backend für dynamische File-Access-Strukturen</li></ul></div><div><h3 class=\"text-white text-lg font-semibold\">🛠 Geplante Features</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li>CMS (Content Management System)-Unterstützung für textbasierte Content-Kontrolle innerhalb von Crowd-Nation-Websites</li><li>Admin-Dashboard für visuelles Verwalten von Assets, Rollen und Access-Tokens</li><li>Automatisierte Bereinigung für temporäre oder abgelaufene Uploads</li></ul></div><div><h3 class=\"text-white text-lg font-semibold\">📦 Anwendungsfälle</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li>Verteilung von SVGs, Bannern und Media-Assets für Event- und Künstler-Seiten</li><li>Absicherung von PDFs oder Videos mit zeitlich begrenztem oder eingeschränktem Zugang</li><li>Internes File-Management zwischen redaktionellen oder Moderations-Teams</li></ul></div><p><strong class=\"text-indigo-400\">Crowd-Nation CDN</strong> ist nicht nur ein Utility — es ist ein herausragender Teil des Ökosystems. Mit seinem intelligenten Mix aus <span class=\"text-white\">Sicherheit</span>, <span class=\"text-white\">Kontrolle</span> und <span class=\"text-white\">Entwickler-Erfahrung</span> definiert es neu, wie ein CDN sowohl mächtig als auch benutzerzentriert sein kann — gemacht mit ❤️ und Liebe zum Detail.</p></div>"
+        },
+        "ihk_nachweis_schreiber": {
+            "title": "IHK Nachweis-Generator",
+            "short_description": "Automatisierte PDF-Erstellung für Berufsausbildungs-Nachweise.",
+            "description": "Ein Node.js-basiertes CLI-Tool zur Generierung wöchentlicher oder monatlicher IHK-Nachweise als druckfertige PDFs mit Unterstützung für Datenimport aus Jira und Untis.",
+            "extended_title": "IHK Nachweis-Generator",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p>Der <strong class=\"text-indigo-400\">IHK Nachweis-Generator</strong> ist ein intelligentes Node.js-Utility, das entwickelt wurde, um die Generierung wöchentlicher oder monatlicher Ausbildungsnachweise (Berichtshefte) für Auszubildende in IHK-regulierten Berufen zu automatisieren. Dieses Tool reduziert den manuellen Aufwand erheblich, indem es strukturierte, professionelle PDFs basierend auf konfigurierbaren Templates und importierten Daten produziert.</p><h3 class=\"text-white text-lg font-semibold\">✨ Hauptfunktionen</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li>Vollständig automatisierte PDF-Generierung für wöchentliche/monatliche Berichtszeiträume</li><li>Anpassbare Templates mit dynamischen Platzhaltern (z.B. Name, Abteilung, Woche, Datumsbereich)</li><li>Organisierte Ordnerstruktur für Archivierung von Ausdrucken und digitalen Kopien</li><li>Optionaler Datenimport aus <strong>Jira</strong> für praktische Aufgaben und <strong>Untis</strong> für Schulpläne</li><li>Einfache CLI-Oberfläche mit interaktiven Prompts</li></ul><h3 class=\"text-white text-lg font-semibold\">🧪 Tech Stack & Implementierung</h3><ul class=\"list-disc list-inside space-y-2 mt-2\"><li><strong>Node.js</strong> Runtime für plattformunabhängige Ausführung</li><li><strong>PDFKit</strong> für strukturierte und saubere PDF-Ausgabe</li><li><strong>REST API-Integrationen</strong> (Jira, Untis) für automatische Datensammlung</li><li><strong>Filesystem-Logik</strong> zur dynamischen Generierung von Ordnern, Dateinamen und Speicherorten</li></ul><h3 class=\"text-white text-lg font-semibold\">📘 Realer Anwendungsfall</h3><p>Das Tool entstand aus der Notwendigkeit — die Verwaltung wöchentlicher Ausbildungsnachweise kann zeitaufwändig und fehleranfällig sein, besonders wenn Auszubildende versäumen, ihre Arbeit regelmäßig zu dokumentieren. Mit automatisierten Importen und optimierter PDF-Erstellung spart diese Lösung Zeit und verbessert sowohl Konsistenz als auch Berichtsqualität.</p><h3 class=\"text-white text-lg font-semibold\">✅ Fazit</h3><p><span class=\"text-indigo-400 font-semibold\">IHK Nachweis-Generator</span> ist mehr als nur ein Skript — es ist ein zeitsparender Assistent für Auszubildende, Ausbilder und HR-Abteilungen gleichermaßen. Dank seiner modularen Struktur und API-bereiten Architektur ist es leicht erweiterbar für zukünftige Verbesserungen oder custom Workflows.</p></div>"
+        },
+        "crowd_nation_tracking": {
+            "title": "Crowd-Nation Tracking",
+            "short_description": "Echtzeit-Event-Tracking mit WiFi-basierter Triangulation.",
+            "description": "Ein hardware-betriebenes Tracking-System, das Benutzer-Standorte auf Event-Gelände durch WiFi-Access-Point-Triangulation bestimmt.",
+            "extended_title": "Crowd-Nation Tracking – Freunde in Echtzeit bei Events wiederfinden",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">Crowd-Nation Tracking</strong> ist ein einzigartiges System, das entwickelt wurde, um Benutzer in Echtzeit über große Events wie Festivals oder Konzerte zu verfolgen — auch in Bereichen, wo GPS versagt. Das Konzept entstand aus einer einfachen Frustration: Freunde in der Menge zu verlieren und sie nicht wiederfinden zu können.</p><p>Mit unseren eigenen <strong>WiFi-Access-Points</strong> werden mobile Geräte in Reichweite erkannt. Die Signalstärke zwischen jedem Gerät und mehreren Access-Points wird analysiert, um die virtuelle Position eines Benutzers zu schätzen. Identifikation basiert auf MAC-Adressen und gewährleistet anonymisiertes, aber konsistentes Tracking von Individuen.</p><p>Das System läuft vollständig <strong>offline und internetunabhängig</strong>. Alle Access-Points senden dieselbe SSID und kommunizieren lokal mit dem Event-Server. Der Server führt einen Triangulations-Algorithmus durch und meldet die Position des Benutzers in Echtzeit an die Crowd-Nation-Plattform zurück.</p><p>In Kombination mit der <span class=\"text-indigo-400 font-semibold\">Crowd-Nation Mobile App</span> können Benutzer Freunde hinzufügen und ihre Standorte auf einer Live-Karte anzeigen. Dies ist besonders nützlich in Zelten, Innenbereichen oder überfüllten Zonen, wo GPS unzuverlässig ist oder komplett versagt.</p><p>Das Ziel ist nicht nur, einen Tech-Gimmick zu bieten, sondern ein vollwertiges <strong class=\"text-indigo-400\">Festival-Navigationssystem</strong> zu liefern — eines, das soziale Interaktion fördert, die Sicherheit erhöht und echten Mehrwert für das Live-Event-Erlebnis bietet.</p><div><h3 class=\"text-white text-lg font-semibold\">🔧 Geplante Features</h3><ul class=\"list-disc list-inside mt-2 space-y-1\"><li>Vollständige Integration in die Crowd-Nation App (iOS & Android)</li><li>Detaillierte Kartierung von Event-Gelände und Zonen-Grenzen</li><li>Benachrichtigungen beim Betreten oder Verlassen bestimmter Bereiche (z.B. \"Main Stage\")</li><li>DSGVO-konforme Opt-in/Opt-out-Mechanismen für Benutzer-Zustimmung</li></ul></div></div>"
+        },
+        "wow_website": {
+            "title": "World of Warcraft Gilden-Website",
+            "short_description": "Landing Page und Bot-Übersicht im Dark-Fantasy-Stil der Schatten der Ewigkeit.",
+            "description": "Eine stilvolle Website, die unsere WoW-Gilde präsentiert, zusammen mit detaillierten Informationen und Einladungslinks für den integrierten Discord Bot.",
+            "extended_title": "Schatten der Ewigkeit – Gilden-Präsenz mit Discord Bot-Integration",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p>Die offizielle Website für unsere <strong class=\"text-indigo-400\">Schatten der Ewigkeit</strong>-Gilde dient als moderne, dark-fantasy-themierte Landing Page. Gebaut mit <code>Vue 3</code> und <code>Nuxt 3</code>, bietet sie Besuchern und potenziellen Mitgliedern einen stilvollen und informativen Einstiegspunkt in unser Gilden-Universum.</p><p>Die Homepage begrüßt Benutzer mit immersiven <strong>Dark-Fantasy-Vibes</strong> — perfekt passend zur Identität unserer Gilde. Sorgfältig gestaltete Inhalte, Visuals und Call-to-Actions laden Besucher ein, mehr zu erkunden, ohne sie zu überlasten.</p><p>Die Website verfügt auch über eine dedizierte <span class=\"text-indigo-400 font-medium\">Discord Bot-Unterseite</span>, wo Benutzer mehr über die Funktionalität und Integrationen unseres Bots erfahren können:</p><ul class=\"list-disc list-inside ml-4 space-y-1\"><li>Charakter-Verknüpfung via Battle.net OAuth2</li><li>Automatische Rollen-Zuweisung basierend auf Charakteren</li><li>Bewerbungssystem direkt in Discord</li><li>Mount-Erinnerungen und weitere Quality-of-Life-Features</li></ul><p class=\"pt-2\">Besucher finden auch direkten Zugang zu den wichtigsten Links:</p><ul class=\"list-disc list-inside ml-4 space-y-1\"><li><strong>Discord Server beitreten</strong></li><li><strong>Bot zu deinem Server einladen</strong></li></ul><p>Für die Zukunft planen wir, die Seite mit mehr Interaktivität zu erweitern: gespeicherte Gilden-/Charakter-Daten, ein internes Bewerbungsportal und Live-Interaktion mit dem Bot über <code>WebSockets</code>.</p><p>Vorerst ist das Ziel einfach: <span class=\"text-indigo-400 font-semibold\">unsere Gilde mit Stil repräsentieren</span> — und diese Seite liefert genau das.</p></div>"
+        },
+        "rl_shop_tracking": {
+            "title": "Rocket League Shop Tracker",
+            "short_description": "Tägliches Scraping des Rocket League Item-Shops mit Checksum-Validierung.",
+            "description": "Ein automatisiertes Tool zur Archivierung und Analyse von Rocket League Shop-Daten mit strukturierter Ausgabe und Deduplizierungs-Logik.",
+            "extended_title": "Rocket League Shop Tracker",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">RL-Shop-Tracking</strong> ist ein vollständig automatisiertes Data-Scraping-Tool, das täglich den Rocket League In-Game-Shop abruft. Es archiviert alle Items mit Zeitstempeln und Metadaten für weitere Analysen — ideal für Trend-Erkennung, Rotations-Tracking und Item-Seltenheits-Einblicke.</p><ul class=\"list-disc list-inside ml-4 space-y-1\"><li>Nutzt <code>Cheerio</code> für HTML-Parsing und Extraktion strukturierter Daten.</li><li>Speichert Inhalte als <code>JSON</code> mit Zeitstempeln und allen relevanten Item-Metadaten.</li><li>Generiert <strong>Checksums</strong>, um doppelte Einträge zu vermeiden und Daten-Sauberkeit zu gewährleisten.</li></ul><p>Der Prozess läuft vollständig automatisiert auf einer geplanten Basis und unterstützt langfristige Analysen zur Item-Verfügbarkeit, Angebots-Zyklen und Featured Content innerhalb des Rocket League-Ökosystems.</p><p>Ob du ein Daten-Nerd, ein Sammler oder ein Entwickler bist, der an einem Tracker arbeitet — dieses Tool liefert saubere und konsistente Rocket League Shop-Snapshots, Tag für Tag.</p></div>"
+        },
+        "surreal_to_csharp": {
+            "title": "SurrealToCSharp",
+            "short_description": "Konvertiere SurrealDB-Schemas in C#-Klassen für .NET-Projekte.",
+            "description": "Ein automatisiertes Tool, das SurrealDB-Daten-Dumps in typisierte C#-Modell-Klassen für die Backend-Entwicklung transformiert.",
+            "extended_title": "SurrealToCSharp – Von SurrealDB zu stark typisierten .NET-Modellen",
+            "extended_text": "<div class=\"space-y-6 text-gray-300\"><p><strong class=\"text-indigo-400\">SurrealToCSharp</strong> ist ein Konvertierungs-Utility, das entwickelt wurde, um SurrealDB-Export-Dateien in vollständig strukturierte <strong>C#-Klassen-Definitionen</strong> zu transformieren. Es automatisiert den Prozess der Zuordnung von Datenbank-Schema-Informationen direkt in .NET-freundliche Datenmodelle.</p><ul class=\"list-disc list-inside ml-4 space-y-1\"><li>Parst vollständige <code>SurrealDB</code>-Dumps mit Tabellen- und Feld-Erkennung.</li><li>Leitet Feldtypen ab und erstellt saubere, stark typisierte <code>C#</code>-Klassen-Dateien.</li><li>Eliminiert die Notwendigkeit, Modell-Klassen für bekannte Datenbank-Schemas manuell neu zu erstellen.</li></ul><p>Ob du ein bestehendes SurrealDB-Dataset reverse-engineerst oder Modelle für ein neues .NET-Backend scaffoldest, <strong>SurrealToCSharp</strong> bietet einen schnellen und zuverlässigen Startpunkt.</p><p>Es ist besonders nützlich für Projekte, die darauf abzielen, NoSQL-Schema-Logik mit typisierten Sprachen wie C# zu überbrücken und Konsistenz, Wartbarkeit und Geschwindigkeit in der Entwicklung zu bieten.</p></div>"
+        }
+    }
 }

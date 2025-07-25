@@ -1,14 +1,12 @@
 <template>
     <PageContainer
-        title="A glimpse into my work"
-        subtitle="Explore a curated selection of my projects – each one
-                    crafted with attention to detail, performance, and
-                    scalability. From full-stack platforms to sleek UIs."
+        :title="$t('pages.projects.title')"
+        :subtitle="$t('pages.projects.subtitle')"
         hide-back-button
     >
         <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 items-stretch">
             <ProjectCardDetailed
-                v-for="(project, index) in projects.filter((p) => p.active)"
+                v-for="(project, index) in activeProjects"
                 :key="index"
                 :title="project.title"
                 :description="project.description"
@@ -23,11 +21,12 @@
 </template>
 
 <script setup lang="ts">
-import { projects } from "~/data/projects";
-
 definePageMeta({
     title: "Projects",
 });
+
+// Use reactive projects composable for immediate locale switching
+const { activeProjects } = useProjects();
 
 useSeoMeta({
     title: "Projects – </WlanKabL>",

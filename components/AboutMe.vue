@@ -12,32 +12,31 @@
                 />
             </div>
             <div>
-                <h2 class="text-3xl font-bold mb-4 text-white">About Me</h2>
+                <h2 class="text-3xl font-bold mb-4 text-white">{{ $t("about.title") }}</h2>
                 <p class="text-gray-300 mb-6 leading-relaxed">
-                    Hey, I'm
-                    <span class="text-indigo-400 font-medium">WlanKabL</span> — a passionate
-                    Full-Stack Developer driven by curiosity and a deep love for code, music, and
-                    motorcycles. I create digital solutions that are fast, secure, and built with
-                    modern technologies like
-                    <span class="text-indigo-400 font-medium">Vue, Node.js & C#</span>.
+                    {{
+                        $t("about.description", {
+                            wlankabl: "WlanKabL",
+                            technologies: "Vue, Node.js & C#",
+                        })
+                    }}
                 </p>
                 <ul class="space-y-4">
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
-                        Full-Stack Engineering & Architecture
+                        {{ $t("about.engineering") }}
                     </li>
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
-                        Passion Projects like
-                        <code class="text-indigo-400">Crowd-Nation</code>
+                        {{ $t("about.passion_projects", { crowdnation: "Crowd-Nation" }) }}
                     </li>
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
-                        Fast, Scalable Web Apps
+                        {{ $t("about.scalable_apps") }}
                     </li>
                     <li class="flex items-center gap-3 text-gray-200">
                         <IconZap class="w-5 h-5 text-indigo-400" />
-                        Hacking, Hardware & Creative Coding
+                        {{ $t("about.creative_coding") }}
                     </li>
                 </ul>
             </div>
