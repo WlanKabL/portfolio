@@ -39,14 +39,22 @@ const availableLocales = locales.value.filter((l) => typeof l !== "string") as {
     name: string;
 }[];
 
-const currentLocale = ref(locale.value);
+// Use localStorage to persist the selected language
+const currentLocale = useLocalStorage('portfolio_language', locale.value);
 
 const setLocale = () => {
     setI18nLocale(currentLocale.value);
 };
 
-// Watch for locale changes from other sources
+// Watch for locale changes from other sources and sync with localStorage
 watch(locale, (newLocale) => {
     currentLocale.value = newLocale;
+});
+
+// Set the locale from localStorage on component mount
+onMounted(() => {
+    if (currentLocale.value && currentLocale.value !== locale.value) {
+        setI18nLocale(currentLocale.value);
+    }
 });
 </script>
