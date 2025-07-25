@@ -42,12 +42,22 @@ const availableLocales = locales.value.filter((l) => typeof l !== "string") as {
 // Get valid locale codes for validation
 const validLocaleCodes = availableLocales.map(l => l.code);
 
-// Use localStorage to persist the selected language with validation
-const currentLocale = useLocalStorage(
-    'portfolio_language', 
-    'en', // Always default to English
-    (value) => validLocaleCodes.includes(value) // Validate against available locales
-);
+// Use @vueuse/core useLocalStorage with validation
+const currentLocale = useLocalStorage('portfolio_language', 'en', {
+    writeDefaults: false,
+    serializer: {
+        read: (value: any) => {
+            try {
+                const parsed = JSON.parse(value);
+                // Validate stored value - if invalid, return default 'en'
+                return validLocaleCodes.includes(parsed) ? parsed : 'en';
+            } catch {
+                return 'en';
+            }
+        },
+        write: (value: any) => JSON.stringify(value)
+    }
+});
 
 const setLocale = () => {
     // Ensure we only set valid locales
