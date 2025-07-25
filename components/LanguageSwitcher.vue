@@ -48,16 +48,16 @@ const validLocaleCodes = availableLocales.map((l) => l.code);
 const currentLocale = useLocalStorage("portfolio_language", "en", {
     writeDefaults: false,
     serializer: {
-        read: (value: any) => {
+        read: (value: string | null) => {
             try {
-                const parsed = JSON.parse(value);
+                const parsed = value ? JSON.parse(value) : null;
                 // Validate stored value - if invalid, return default 'en'
                 return validLocaleCodes.includes(parsed) ? parsed : "en";
             } catch {
                 return "en";
             }
         },
-        write: (value: any) => JSON.stringify(value),
+        write: (value: string) => JSON.stringify(value),
     },
 });
 
