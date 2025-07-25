@@ -60,7 +60,7 @@
 
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import type { Project } from "~/types/projects";
+import type { LocalizedProject } from "~/types/projects";
 
 const route = useRoute();
 const slug = route.params.slug as string;
