@@ -1,9 +1,9 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-[#0D1117] text-zinc-100">
-        <NavBar class="bg-[#161B22]/95 shadow-sm backdrop-blur-sm" />
-        <main class="flex-1 bg-[#0D1117]">
+    <div class="min-h-screen flex flex-col tech-grid">
+        <NavBar class="glass-strong fixed top-0 left-0 right-0 z-50 shadow-lg" />
+        <main class="flex-1 pt-20">
             <NuxtPage />
         </main>
-        <PageFooter class="bg-[#161B22]" />
+        <PageFooter class="glass border-t border-purple-500/20" />
     </div>
 </template>

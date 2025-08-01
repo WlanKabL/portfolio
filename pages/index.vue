@@ -16,6 +16,9 @@ definePageMeta({
 // Use reactive projects composable for immediate locale switching
 const { featuredProjects } = useProjects();
 
+// Initialize scroll animations
+useScrollAnimation()
+
 useSeoMeta({
     title: "</WlanKabL>",
     ogTitle: "</WlanKabL>",
