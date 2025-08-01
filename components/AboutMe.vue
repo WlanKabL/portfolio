@@ -23,12 +23,12 @@
 
                     <!-- Floating Tech Icons -->
                     <div
-                        class="absolute -top-4 -right-4 w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center shadow-lg animate-float"
+                        class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center shadow-lg animate-float"
                         style="animation-delay: 0.5s"
                     >
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path
-                                d="M12 0l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-3.01L12 0z"
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-3.01L12 2z"
                             />
                         </svg>
                     </div>

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="p-8 rounded-2xl glass group hover:scale-105 hover:-rotate-1 transition-all duration-500 text-center relative overflow-hidden border border-purple-500/20"
+        class="p-8 rounded-2xl glass group text-center relative overflow-hidden border border-purple-500/20 hover:scale-[1.02] transition-all duration-500"
     >
         <!-- Glow Effect -->
         <div

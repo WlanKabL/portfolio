@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex flex-col justify-between rounded-2xl overflow-hidden glass hover:scale-105 hover:rotate-1 transition-all duration-500 group relative border border-purple-500/20"
+        class="flex flex-col justify-between rounded-2xl overflow-hidden glass group relative border border-purple-500/20 hover:scale-[1.02] transition-all duration-500"
     >
         <!-- Glow Effect -->
         <div
