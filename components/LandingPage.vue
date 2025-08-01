@@ -13,19 +13,21 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)] via-transparent to-transparent" />
             
             <!-- Animated particles -->
-            <div class="absolute inset-0">
-                <div 
-                    v-for="i in 50" 
-                    :key="i"
-                    class="absolute w-1 h-1 bg-purple-400/30 rounded-full animate-float"
-                    :style="{
-                        left: Math.random() * 100 + '%',
-                        top: Math.random() * 100 + '%',
-                        animationDelay: Math.random() * 3 + 's',
-                        animationDuration: (3 + Math.random() * 2) + 's'
-                    }"
-                />
-            </div>
+            <ClientOnly>
+                <div class="absolute inset-0">
+                    <div 
+                        v-for="i in 50" 
+                        :key="i"
+                        class="absolute w-1 h-1 bg-purple-400/30 rounded-full animate-float"
+                        :style="{
+                            left: Math.random() * 100 + '%',
+                            top: Math.random() * 100 + '%',
+                            animationDelay: Math.random() * 3 + 's',
+                            animationDuration: (3 + Math.random() * 2) + 's'
+                        }"
+                    />
+                </div>
+            </ClientOnly>
         </div>
 
         <!-- Main Content -->
