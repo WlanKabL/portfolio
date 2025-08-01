@@ -1,8 +1,16 @@
 <template>
-    <section class="py-20 min-h-screen px-4">
-        <div class="max-w-3xl mx-auto text-center">
-            <h1 class="text-4xl font-bold text-white mb-6">{{ $t("pages.contact.title") }}</h1>
-            <p class="text-gray-400 text-lg mb-12">
+    <section class="relative py-20 min-h-screen px-4">
+        <!-- Professional Background with Purple Theme -->
+        <div class="absolute inset-0">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-black/90 via-purple-900/30 to-black/95"
+            />
+            <div class="absolute inset-0 tech-grid opacity-5"></div>
+        </div>
+
+        <div class="relative z-10 max-w-3xl mx-auto text-center">
+            <h1 class="text-4xl font-bold text-gradient mb-6">{{ $t("pages.contact.title") }}</h1>
+            <p class="text-gray-300 text-lg mb-12">
                 {{ $t("pages.contact.subtitle") }}
             </p>
 
@@ -13,7 +21,7 @@
                     href="https://www.linkedin.com/in/philipp-stecher-aab167258/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 hover:text-indigo-400 transition-colors"
+                    class="glass rounded-xl px-6 py-3 flex items-center gap-3 hover:text-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(168,85,247,0.3)]"
                 >
                     <IconLinkedin class="w-5 h-5" /> LinkedIn
                 </a>
@@ -22,15 +30,17 @@
                     href="https://github.com/WlanKabL"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 hover:text-indigo-400 transition-colors"
+                    class="glass rounded-xl px-6 py-3 flex items-center gap-3 hover:text-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(168,85,247,0.3)]"
                 >
                     <IconGithub class="w-5 h-5" /> GitHub
                 </a>
 
-                <p class="flex items-center gap-2 hover:text-indigo-400 transition-colors">
+                <div
+                    class="glass rounded-xl px-6 py-3 flex items-center gap-3 hover:text-purple-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(168,85,247,0.3)]"
+                >
                     <img src="/discord.svg" alt="Discord" class="w-5 h-5" />
                     wlankabl
-                </p>
+                </div>
             </div>
         </div>
     </section>
