@@ -5,63 +5,63 @@
    ============================================================================= */
 
 :root {
-  /* Purple Color Palette - Primary Brand Colors */
-  --color-primary-50: #faf5ff;
-  --color-primary-100: #f3e8ff;
-  --color-primary-200: #e9d5ff;
-  --color-primary-300: #d8b4fe;
-  --color-primary-400: #c084fc;
-  --color-primary-500: #a855f7;
-  --color-primary-600: #9333ea;
-  --color-primary-700: #7c3aed;
-  --color-primary-800: #6b21a8;
-  --color-primary-900: #581c87;
-  --color-primary-950: #3b0764;
+    /* Purple Color Palette - Primary Brand Colors */
+    --color-primary-50: #faf5ff;
+    --color-primary-100: #f3e8ff;
+    --color-primary-200: #e9d5ff;
+    --color-primary-300: #d8b4fe;
+    --color-primary-400: #c084fc;
+    --color-primary-500: #a855f7;
+    --color-primary-600: #9333ea;
+    --color-primary-700: #7c3aed;
+    --color-primary-800: #6b21a8;
+    --color-primary-900: #581c87;
+    --color-primary-950: #3b0764;
 
-  /* Accent Colors */
-  --color-accent-purple: #8b5cf6;
-  --color-accent-violet: #7c3aed;
-  --color-accent-fuchsia: #d946ef;
-  
-  /* Background Colors */
-  --color-bg-primary: #0a0a0b;
-  --color-bg-secondary: #121214;
-  --color-bg-tertiary: #1a1a1d;
-  --color-bg-glass: rgba(26, 26, 29, 0.8);
-  --color-bg-glass-hover: rgba(26, 26, 29, 0.9);
-  
-  /* Text Colors */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #e4e4e7;
-  --color-text-tertiary: #a1a1aa;
-  --color-text-muted: #71717a;
-  
-  /* Border Colors */
-  --color-border-primary: rgba(168, 85, 247, 0.2);
-  --color-border-secondary: rgba(255, 255, 255, 0.1);
-  --color-border-muted: rgba(255, 255, 255, 0.05);
-  
-  /* Shadows */
-  --shadow-glow-primary: 0 0 30px rgba(168, 85, 247, 0.3);
-  --shadow-glow-hover: 0 0 40px rgba(168, 85, 247, 0.4);
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
-  --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
-  
-  /* Glass Effects */
-  --backdrop-blur: blur(20px);
-  --backdrop-blur-strong: blur(40px);
-  
-  /* Animation Durations */
-  --duration-fast: 0.2s;
-  --duration-normal: 0.3s;
-  --duration-slow: 0.5s;
-  --duration-slower: 0.8s;
-  
-  /* Bezier Curves - Apple-like easing */
-  --ease-apple: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-apple-in: cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  --ease-apple-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-apple-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+    /* Accent Colors */
+    --color-accent-purple: #8b5cf6;
+    --color-accent-violet: #7c3aed;
+    --color-accent-fuchsia: #d946ef;
+
+    /* Background Colors */
+    --color-bg-primary: #0a0a0b;
+    --color-bg-secondary: #121214;
+    --color-bg-tertiary: #1a1a1d;
+    --color-bg-glass: rgba(26, 26, 29, 0.8);
+    --color-bg-glass-hover: rgba(26, 26, 29, 0.9);
+
+    /* Text Colors */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #e4e4e7;
+    --color-text-tertiary: #a1a1aa;
+    --color-text-muted: #71717a;
+
+    /* Border Colors */
+    --color-border-primary: rgba(168, 85, 247, 0.2);
+    --color-border-secondary: rgba(255, 255, 255, 0.1);
+    --color-border-muted: rgba(255, 255, 255, 0.05);
+
+    /* Shadows */
+    --shadow-glow-primary: 0 0 30px rgba(168, 85, 247, 0.3);
+    --shadow-glow-hover: 0 0 40px rgba(168, 85, 247, 0.4);
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    /* Glass Effects */
+    --backdrop-blur: blur(20px);
+    --backdrop-blur-strong: blur(40px);
+
+    /* Animation Durations */
+    --duration-fast: 0.2s;
+    --duration-normal: 0.3s;
+    --duration-slow: 0.5s;
+    --duration-slower: 0.8s;
+
+    /* Bezier Curves - Apple-like easing */
+    --ease-apple: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-apple-in: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    --ease-apple-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-apple-in-out: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 /* =============================================================================
@@ -69,17 +69,17 @@
    ============================================================================= */
 
 * {
-  transition-timing-function: var(--ease-apple);
+    transition-timing-function: var(--ease-apple);
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--color-bg-primary);
-  color: var(--color-text-primary);
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
 }
 
 /* =============================================================================
@@ -87,22 +87,22 @@ body {
    ============================================================================= */
 
 .glass {
-  background: var(--color-bg-glass);
-  backdrop-filter: var(--backdrop-blur);
-  border: 1px solid var(--color-border-secondary);
-  transition: all var(--duration-normal) var(--ease-apple);
+    background: var(--color-bg-glass);
+    backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--color-border-secondary);
+    transition: all var(--duration-normal) var(--ease-apple);
 }
 
 .glass:hover {
-  background: var(--color-bg-glass-hover);
-  border-color: var(--color-border-primary);
-  box-shadow: var(--shadow-glow-primary);
+    background: var(--color-bg-glass-hover);
+    border-color: var(--color-border-primary);
+    box-shadow: var(--shadow-glow-primary);
 }
 
 .glass-strong {
-  background: rgba(26, 26, 29, 0.95);
-  backdrop-filter: var(--backdrop-blur-strong);
-  border: 1px solid var(--color-border-primary);
+    background: rgba(26, 26, 29, 0.95);
+    backdrop-filter: var(--backdrop-blur-strong);
+    border: 1px solid var(--color-border-primary);
 }
 
 /* =============================================================================
@@ -111,63 +111,65 @@ body {
 
 /* Fade in animation */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Scale in animation */
 @keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Glow pulse animation */
 @keyframes glowPulse {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
-  }
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+    }
 }
 
 /* Floating animation */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Animation classes */
 .animate-fade-in-up {
-  animation: fadeInUp var(--duration-slow) var(--ease-apple) forwards;
+    animation: fadeInUp var(--duration-slow) var(--ease-apple) forwards;
 }
 
 .animate-scale-in {
-  animation: scaleIn var(--duration-normal) var(--ease-apple) forwards;
+    animation: scaleIn var(--duration-normal) var(--ease-apple) forwards;
 }
 
 .animate-glow-pulse {
-  animation: glowPulse 3s var(--ease-apple) infinite;
+    animation: glowPulse 3s var(--ease-apple) infinite;
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 /* =============================================================================
@@ -175,51 +177,51 @@ body {
    ============================================================================= */
 
 .apple-hover {
-  transition: all var(--duration-normal) var(--ease-apple);
+    transition: all var(--duration-normal) var(--ease-apple);
 }
 
 .apple-hover:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: var(--shadow-card-hover);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .apple-button {
-  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  transition: all var(--duration-normal) var(--ease-apple);
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
-  position: relative;
-  overflow: hidden;
+    background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all var(--duration-normal) var(--ease-apple);
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 .apple-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
-  opacity: 0;
-  transition: opacity var(--duration-normal) var(--ease-apple);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-apple);
 }
 
 .apple-button:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .apple-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
 }
 
 .apple-button span {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 /* =============================================================================
@@ -227,14 +229,14 @@ body {
    ============================================================================= */
 
 .scroll-hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all var(--duration-slower) var(--ease-apple);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all var(--duration-slower) var(--ease-apple);
 }
 
 .scroll-visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* =============================================================================
@@ -242,10 +244,10 @@ body {
    ============================================================================= */
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-primary-400), var(--color-accent-fuchsia));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, var(--color-primary-400), var(--color-accent-fuchsia));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* =============================================================================
@@ -253,13 +255,13 @@ body {
    ============================================================================= */
 
 .tech-grid {
-  background-image: 
-    linear-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168, 85, 247, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+    background-image:
+        linear-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
 }
 
 .tech-dots {
-  background-image: radial-gradient(circle, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
+    background-image: radial-gradient(circle, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
 }

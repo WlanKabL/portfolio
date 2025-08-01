@@ -17,7 +17,7 @@ definePageMeta({
 const { featuredProjects } = useProjects();
 
 // Initialize scroll animations
-useScrollAnimation()
+useScrollAnimation();
 
 useSeoMeta({
     title: "</WlanKabL>",
