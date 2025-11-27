@@ -1,7 +1,7 @@
 
 <template>
     <section
-        class="relative min-h-screen flex items-center justify-center text-center px-4 py-20 md:py-0 overflow-hidden"
+        class="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden"
     >
         <!-- Fade mask at bottom -->
         <div
