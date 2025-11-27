@@ -1,7 +1,17 @@
 <template>
     <section class="py-32 relative overflow-hidden">
+        <!-- Fade masks for smooth transitions -->
+        <div
+            class="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none"
+        />
+        <div
+            class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none"
+        />
+
         <!-- Background -->
-        <div class="hidden sm:block absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black" />
+        <div
+            class="hidden sm:block absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black"
+        />
         <div
             class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]"
         />

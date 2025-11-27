@@ -1,5 +1,11 @@
 <template>
     <section class="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <!-- Optional fade mask for homepage -->
+        <div
+            v-if="showTopFade"
+            class="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none"
+        />
+
         <div
             class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.15),transparent_50%)]"
         />
@@ -103,12 +109,16 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-defineProps({
-    title: {
-        type: String,
-        default: "Get in Touch",
+withDefaults(
+    defineProps<{
+        title?: string;
+        showTopFade?: boolean;
+    }>(),
+    {
+        title: "Get in Touch",
+        showTopFade: false,
     },
-});
+);
 
 const email = ref("");
 const message = ref("");
