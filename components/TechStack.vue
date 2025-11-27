@@ -1,7 +1,7 @@
 <template>
     <section class="py-32 relative overflow-hidden">
         <!-- Background -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black" />
+        <div class="hidden sm:block absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black" />
         <div
             class="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.1),transparent_50%)]"
         />
