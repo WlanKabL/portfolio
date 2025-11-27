@@ -1,4 +1,3 @@
-
 <template>
     <section
         class="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden"
