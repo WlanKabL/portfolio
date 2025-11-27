@@ -11,6 +11,7 @@ export default defineNuxtConfig({
         "@nuxt/scripts",
         "@nuxt/fonts",
         "@nuxtjs/i18n",
+        "@nuxtjs/sitemap",
     ],
     devServer: {
         port: 3000,
