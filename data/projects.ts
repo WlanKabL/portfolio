@@ -14,7 +14,7 @@ const projectConfigs = {
     },
     wowDiscordBot: {
         active: true,
-        showPreview: true,
+        showPreview: false,
         image: "./discord.png",
         link: "/projects/wow-discordbot",
         externalLink: "https://sde.crowd-nation.com/discord-bot/",
@@ -40,7 +40,7 @@ const projectConfigs = {
     },
     crowdNationCDN: {
         active: true,
-        showPreview: true,
+        showPreview: false,
         image: "./cdn.avif",
         link: "/projects/crowd-nation-cdn",
         tech: ["Node.js", "Express", "Docker", "EJS", "Axios", "JavaScript"],
@@ -91,6 +91,15 @@ const projectConfigs = {
         tech: ["Node.js", "C#", "SurrealDB"],
         i18nKey: "surreal_to_csharp",
     },
+    criticaldevs: {
+        active: true,
+        showPreview: true,
+        image: "./criticaldevs.png",
+        link: "/projects/criticaldevs",
+        externalLink: "https://criticaldevs.de",
+        tech: ["Open-Source", "Community", "Development", "Collaboration"],
+        i18nKey: "criticaldevs",
+    }
 };
 
 // Function to create projects array with i18n data
