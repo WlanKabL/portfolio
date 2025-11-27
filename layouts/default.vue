@@ -7,7 +7,7 @@
                 hideOnMobile ? '-translate-y-full md:translate-y-0' : 'translate-y-0',
             ]"
         />
-        <main class="flex-1 bg-black">
+        <main class="flex-1 bg-black" :class="{ 'pt-20': !noTopPadding }">
             <div class="animate-[fade-in_0.6s_ease-out]">
                 <NuxtPage />
             </div>
@@ -17,11 +17,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 
+const route = useRoute();
 const scrolled = ref(false);
 const hideOnMobile = ref(false);
 let lastScrollY = 0;
+
+// Check if current page is homepage (no top padding needed)
+const noTopPadding = computed(() => route.path === "/");
 
 const handleScroll = () => {
     const currentScrollY = window.scrollY;
