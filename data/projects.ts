@@ -99,7 +99,7 @@ const projectConfigs = {
         externalLink: "https://criticaldevs.de",
         tech: ["Open-Source", "Community", "Development", "Collaboration"],
         i18nKey: "criticaldevs",
-    }
+    },
 };
 
 // Function to create projects array with i18n data

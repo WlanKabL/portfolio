@@ -10,7 +10,9 @@
         "hero_title_part2": "Create Experiences.",
         "hero_subtitle": "Full-Stack Developer & Platform Engineer",
         "view_projects": "View Projects",
-        "contact_me": "Contact Me"
+        "contact_me": "Contact Me",
+        "availability": "Available for work",
+        "scroll_down": "Scroll"
     },
     "about": {
         "title": "About Me",

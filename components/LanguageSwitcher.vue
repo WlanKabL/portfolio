@@ -1,21 +1,21 @@
 <template>
-    <div class="relative inline-block text-left">
+    <div class="relative inline-block text-left group">
         <select
             v-model="currentLocale"
+            class="appearance-none glass border border-white/10 text-white font-medium rounded-lg px-4 py-2 pr-10 shadow-lg focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer"
             @change="setLocale"
-            class="appearance-none bg-zinc-800 text-white font-medium rounded-lg px-4 py-2 pr-10 shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-600"
         >
             <option
-                v-for="locale in availableLocales"
-                :key="locale.code"
-                :value="locale.code"
+                v-for="loc in availableLocales"
+                :key="loc.code"
+                :value="loc.code"
                 class="bg-zinc-900 text-white"
             >
-                {{ locale.name }}
+                {{ loc.name }}
             </option>
         </select>
         <svg
-            class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none"
+            class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/60 pointer-events-none group-focus-within:text-indigo-400 transition-colors"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -64,7 +64,7 @@ const currentLocale = useLocalStorage("portfolio_language", "en", {
 const setLocale = () => {
     // Ensure we only set valid locales
     if (validLocaleCodes.includes(currentLocale.value)) {
-        setI18nLocale(currentLocale.value);
+        setI18nLocale(currentLocale.value as "de" | "en" | "nl");
     } else {
         // Fallback to English if invalid
         currentLocale.value = "en";
@@ -85,7 +85,7 @@ onMounted(() => {
     }
 
     if (currentLocale.value && currentLocale.value !== locale.value) {
-        setI18nLocale(currentLocale.value);
+        setI18nLocale(currentLocale.value as "de" | "en" | "nl");
     }
 });
 </script>
