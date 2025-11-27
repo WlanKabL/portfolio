@@ -1,6 +1,7 @@
+
 <template>
     <section
-        class="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden"
+        class="relative min-h-screen flex items-center justify-center text-center px-4 py-20 md:py-0 overflow-hidden"
     >
         <!-- Fade mask at bottom -->
         <div
@@ -34,7 +35,7 @@
         <div class="relative z-10 max-w-4xl mx-auto">
             <!-- Badge -->
             <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 mb-8 animate-[fade-in-up_0.6s_ease-out]"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 mb-6 md:mb-8 animate-[fade-in-up_0.6s_ease-out]"
             >
                 <span class="relative flex h-2 w-2">
                     <span
@@ -47,7 +48,7 @@
 
             <!-- Main heading with gradient -->
             <h1
-                class="text-5xl sm:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-6 animate-[fade-in-up_0.8s_ease-out_0.1s_both]"
+                class="text-4xl sm:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-4 md:mb-6 animate-[fade-in-up_0.8s_ease-out_0.1s_both]"
             >
                 <span
                     class="bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent"
@@ -64,7 +65,7 @@
 
             <!-- Subtitle -->
             <p
-                class="text-xl sm:text-2xl text-white/60 mb-12 max-w-2xl mx-auto animate-[fade-in-up_1s_ease-out_0.2s_both]"
+                class="text-lg sm:text-2xl text-white/60 mb-8 md:mb-12 max-w-2xl mx-auto animate-[fade-in-up_1s_ease-out_0.2s_both]"
             >
                 {{ $t("landing.hero_subtitle") }}
             </p>
