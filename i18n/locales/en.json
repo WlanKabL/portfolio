@@ -78,7 +78,11 @@
             "live_version": "Live Version",
             "not_found_title": "🚫 Project not found",
             "not_found_description": "The requested project does not exist, has been moved or is no longer available.",
-            "back_to_projects": "Back to Projects"
+            "back_to_projects": "Back to Projects",
+            "bottom_cta_heading": "Like what you see?",
+            "bottom_cta": "I'm always open to discussing new projects, creative ideas, or opportunities.",
+            "lets_work_together": "Let's Work Together",
+            "view_resume": "View Resume"
         },
         "resume": {
             "title": "Résumé",

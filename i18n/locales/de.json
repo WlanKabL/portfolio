@@ -78,7 +78,11 @@
             "live_version": "Live-Version",
             "not_found_title": "🚫 Projekt nicht gefunden",
             "not_found_description": "Das angeforderte Projekt existiert nicht, wurde verschoben oder ist nicht mehr verfügbar.",
-            "back_to_projects": "Zur Projektübersicht"
+            "back_to_projects": "Zur Projektübersicht",
+            "bottom_cta_heading": "Gefällt dir was du siehst?",
+            "bottom_cta": "Ich bin immer offen für neue Projekte, kreative Ideen oder Möglichkeiten zur Zusammenarbeit.",
+            "lets_work_together": "Lass uns zusammenarbeiten",
+            "view_resume": "Lebenslauf ansehen"
         },
         "resume": {
             "title": "Lebenslauf",

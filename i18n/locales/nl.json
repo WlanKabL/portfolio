@@ -77,8 +77,12 @@
             "github_repository": "GitHub Repository",
             "live_version": "Live Versie",
             "not_found_title": "🚫 Project niet gevonden",
-            "not_found_description": "Het gevraagde project bestaat niet, is verplaatst of is niet meer beschikbaar.",
-            "back_to_projects": "Terug naar Projecten"
+            "not_found_description": "Het gevraagde project bestaat niet, is verplaatst of is niet langer beschikbaar.",
+            "back_to_projects": "Terug naar Projecten",
+            "bottom_cta_heading": "Bevalt wat je ziet?",
+            "bottom_cta": "Ik sta altijd open voor het bespreken van nieuwe projecten, creatieve ideeën of samenwerkingsmogelijkheden.",
+            "lets_work_together": "Laten we samenwerken",
+            "view_resume": "Bekijk CV"
         },
         "resume": {
             "title": "CV",
