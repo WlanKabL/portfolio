@@ -1,5 +1,5 @@
 <template>
-    <PageContainer :title="project?.extendedTitle ?? project?.title ?? ''">
+    <PageContainer :title="project?.extendedTitle ?? project?.title ?? ''" :allow-html-title="true">
         <div v-if="project" class="max-w-4xl mx-auto space-y-12">
             <article
                 class="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed"

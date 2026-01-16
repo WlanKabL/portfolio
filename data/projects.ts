@@ -93,12 +93,22 @@ const projectConfigs = {
     },
     criticaldevs: {
         active: true,
-        showPreview: true,
+        showPreview: false,
         image: "./criticaldevs.png",
         link: "/projects/criticaldevs",
         externalLink: "https://criticaldevs.de",
         tech: ["Open-Source", "Community", "Development", "Collaboration"],
         i18nKey: "criticaldevs",
+    },
+    conformityGate: {
+        active: true,
+        showPreview: true,
+        image: "./conformity-gate.png",
+        link: "/projects/conformity-gate",
+        github: "https://github.com/WlanKabL/conformity-gate",
+        externalLink: "https://conformity-gate.com",
+        tech: ["Nuxt 4", "Vue 3", "TypeScript", "Tailwind CSS 4", "Pinia", "JWT", "Docker"],
+        i18nKey: "conformity_gate",
     },
 };
 

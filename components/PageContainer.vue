@@ -24,14 +24,24 @@
         </div>
         <div class="bg-black p-6 rounded-2xl">
             <div class="text-center max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-                <h2 v-if="title" class="text-4xl sm:text-5xl font-bold text-white mb-4">
-                    {{ title }}
+                <h2
+                    v-if="allowHtmlTitle && title"
+                    class="text-4xl sm:text-5xl font-bold text-white mb-4"
+                    v-html="title"
+                />
+                <h2 v-else-if="title" class="text-4xl sm:text-5xl font-bold text-white mb-4">
+                    {{ !allowHtmlTitle ? title : "" }}
                 </h2>
                 <div
                     v-if="title"
                     class="h-1 w-24 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-6"
                 />
-                <p v-if="subtitle" class="text-white/60 text-lg">
+                <p
+                    v-if="allowHtmlSubtitle && subtitle"
+                    class="text-white/60 text-lg"
+                    v-html="subtitle"
+                />
+                <p v-else-if="subtitle" class="text-white/60 text-lg">
                     {{ subtitle }}
                 </p>
             </div>
@@ -45,6 +55,8 @@ defineProps<{
     title?: string;
     subtitle?: string;
     hideBackButton?: boolean;
+    allowHtmlTitle?: boolean;
+    allowHtmlSubtitle?: boolean;
 }>();
 
 const route = useRoute();
