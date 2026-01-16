@@ -13,7 +13,7 @@
                     <li>
                         <div class="flex justify-between text-sm text-gray-400 mb-1">
                             <span>mediaBEAM GmbH</span>
-                            <span>2021 – June 2024</span>
+                            <span> {{ $t("pages.resume.job1_period") }}</span>
                         </div>
                         <p class="text-white font-medium">
                             {{ $t("pages.resume.job1_title") }}
@@ -22,9 +22,16 @@
                     <li>
                         <div class="flex justify-between text-sm text-gray-400 mb-1">
                             <span>Smake IT GmbH</span>
-                            <span>Since July 2024</span>
+                            <span> {{ $t("pages.resume.job2_period") }}</span>
                         </div>
                         <p class="text-white font-medium">{{ $t("pages.resume.job2_title") }}</p>
+                    </li>
+                    <li>
+                        <div class="flex justify-between text-sm text-gray-400 mb-1">
+                            <span>Lindner Group -> tibe.io</span>
+                            <span> {{ $t("pages.resume.job3_period") }}</span>
+                        </div>
+                        <p class="text-white font-medium">{{ $t("pages.resume.job3_title") }}</p>
                     </li>
                 </ul>
             </div>
