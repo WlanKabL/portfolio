@@ -1,10 +1,13 @@
 import type { LocalizedProject, ProjectConfig } from "~/types/projects";
+import { PreviewSlot as PS } from "~/types/projects";
 
 // Project configurations with i18n keys
 const projectConfigs = {
     crowdNationFrontend: {
         active: true,
-        showPreview: true,
+        featured: true,
+        previewSlot: PS.FIRST,
+        lastChangedAt: "2026-01-12",
         image: "./Crowd-Nation-Logo-BETTER.png",
         link: "/projects/crowd-nation",
         github: "https://github.com/CrowdNation",
@@ -14,7 +17,7 @@ const projectConfigs = {
     },
     wowDiscordBot: {
         active: true,
-        showPreview: false,
+        lastChangedAt: "2026-01-16",
         image: "./discord.png",
         link: "/projects/wow-discordbot",
         externalLink: "https://sde.crowd-nation.com/discord-bot/",
@@ -23,7 +26,7 @@ const projectConfigs = {
     },
     crowdNationBackend: {
         active: true,
-        showPreview: true,
+        lastChangedAt: "2026-01-11",
         image: "./REST_socialmedia.webp",
         link: "/projects/crowd-nation-backend",
         tech: ["C#", ".NET Core", "REST API", "Docker", "Swagger", "SurrealDB"],
@@ -31,16 +34,17 @@ const projectConfigs = {
     },
     universalJenga: {
         active: true,
-        showPreview: false,
+        previewSlot: PS.SECOND,
+        lastChangedAt: "2026-01-18",
         image: "./universal-jenga.png",
         link: "/projects/universal-jenga",
         externalLink: "https://jenga.crowd-nation.com",
-        tech: ["Vue 3", "TypeScript", "Vite"],
+        tech: ["Nuxt 3", "Vue 3", "TypeScript", "Tailwind CSS", "Pinia", "i18n"],
         i18nKey: "universal_jenga",
     },
     crowdNationCDN: {
         active: true,
-        showPreview: false,
+        lastChangedAt: "2026-01-14",
         image: "./cdn.avif",
         link: "/projects/crowd-nation-cdn",
         tech: ["Node.js", "Express", "Docker", "EJS", "Axios", "JavaScript"],
@@ -48,7 +52,7 @@ const projectConfigs = {
     },
     ihkNachweisSchreiber: {
         active: true,
-        showPreview: false,
+        lastChangedAt: "2026-01-09",
         image: "./ihk-nachweis-schreiber.png",
         link: "/projects/ihk-nachweis-schreiber",
         github: "https://github.com/WlanKabL/IHK-Nachweis-Schreiber",
@@ -57,7 +61,7 @@ const projectConfigs = {
     },
     crowdNationTracking: {
         active: true,
-        showPreview: false,
+        lastChangedAt: "2026-01-13",
         image: "./crowd-nation-tracking.png",
         link: "/projects/crowd-nation-tracking",
         tech: ["WiFi", "Node.js", "Crowd-Nation API", "Triangulation", "Mobile App"],
@@ -65,7 +69,7 @@ const projectConfigs = {
     },
     wowWebsite: {
         active: true,
-        showPreview: false,
+        lastChangedAt: "2026-01-15",
         image: "./SdE-Logo.jpg",
         link: "/projects/wow-website",
         github: "https://github.com/WlanKabL/sde-wow-website",
@@ -75,7 +79,7 @@ const projectConfigs = {
     },
     rlShopTracking: {
         active: true,
-        showPreview: false,
+        lastChangedAt: "2026-01-08",
         image: "./mass-data-tracking.webp",
         link: "/projects/rl-shop-tracking",
         github: "https://github.com/WlanKabL/RL-Shop-Tracking",
@@ -84,7 +88,7 @@ const projectConfigs = {
     },
     surrealToCSharp: {
         active: true,
-        showPreview: false,
+        lastChangedAt: "2026-01-10",
         image: "./SurrealToCSharp.png",
         link: "/projects/surreal-to-csharp",
         github: "https://github.com/WlanKabL/SurrealToCSharp",
@@ -93,7 +97,7 @@ const projectConfigs = {
     },
     criticaldevs: {
         active: true,
-        showPreview: false,
+        lastChangedAt: "2026-01-17",
         image: "./criticaldevs.png",
         link: "/projects/criticaldevs",
         externalLink: "https://criticaldevs.de",
@@ -102,7 +106,8 @@ const projectConfigs = {
     },
     conformityGate: {
         active: true,
-        showPreview: true,
+        previewSlot: PS.THIRD,
+        lastChangedAt: "2026-01-19",
         image: "./conformity-gate.png",
         link: "/projects/conformity-gate",
         github: "https://github.com/WlanKabL/conformity-gate",
@@ -117,7 +122,9 @@ const projectConfigs = {
 export function getProjects(t: any): LocalizedProject[] {
     return Object.values(projectConfigs).map((config: ProjectConfig) => ({
         active: config.active,
-        showPreview: config.showPreview,
+        featured: config.featured,
+        previewSlot: config.previewSlot,
+        lastChangedAt: config.lastChangedAt,
         title: t(`projects.${config.i18nKey}.title`),
         shortDescription: t(`projects.${config.i18nKey}.short_description`),
         description: t(`projects.${config.i18nKey}.description`),

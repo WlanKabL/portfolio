@@ -1,7 +1,7 @@
 <template>
     <div>
         <LandingPage />
-        <ProjectCompactPreviews title="Featured Projects" :projects="featuredProjects" />
+        <ProjectCompactPreviews title="Featured Projects" :projects="previewProjects" />
         <AboutMe />
         <TechStack />
         <ContactForm :title="$t('contact.title')" :show-top-fade="true" />
@@ -14,7 +14,7 @@ definePageMeta({
 });
 
 // Use reactive projects composable for immediate locale switching
-const { featuredProjects } = useProjects();
+const { previewProjects } = useProjects();
 
 useSeoMeta({
     title: "</WlanKabL>",

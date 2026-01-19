@@ -40,9 +40,7 @@
                 >
                     <div class="block md:hidden shrink-0 w-[10vw]" aria-hidden="true" />
                     <ProjectCardCompact
-                        v-for="(project, index) in projects
-                            .filter((p) => p.active && p.showPreview)
-                            .slice(0, 3)"
+                        v-for="(project, index) in projects.slice(0, 3)"
                         :key="index"
                         :title="project.title"
                         :description="project.shortDescription"

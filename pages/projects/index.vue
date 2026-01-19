@@ -240,13 +240,12 @@ definePageMeta({
 });
 
 // Use reactive projects composable for immediate locale switching
-const { activeProjects } = useProjects();
+const { activeProjects, featuredProject } = useProjects();
 
-// Featured project (first one)
-const featuredProject = computed(() => activeProjects.value[0]);
-
-// Remaining projects for bento grid
-const remainingProjects = computed(() => activeProjects.value.slice(1));
+// Remaining projects sorted by lastChangedAt (newest first), excluding the featured project
+const remainingProjects = computed(() =>
+    activeProjects.value.filter((project) => project !== featuredProject.value),
+);
 
 useSeoMeta({
     title: "Projects - </WlanKabL>",

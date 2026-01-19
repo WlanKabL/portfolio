@@ -1,6 +1,14 @@
+export enum PreviewSlot {
+    FIRST = 1,
+    SECOND = 2,
+    THIRD = 3,
+}
+
 export interface ProjectConfig {
     active: boolean;
-    showPreview: boolean;
+    featured?: boolean;
+    previewSlot?: PreviewSlot;
+    lastChangedAt: string; // ISO date string for sorting
     image: string;
     link: string;
     github?: string;
@@ -11,7 +19,9 @@ export interface ProjectConfig {
 
 export interface LocalizedProject {
     active: boolean;
-    showPreview: boolean;
+    featured?: boolean;
+    previewSlot?: PreviewSlot;
+    lastChangedAt: string;
     title: string;
     shortDescription: string;
     description: string;
