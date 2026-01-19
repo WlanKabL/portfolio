@@ -30,7 +30,7 @@
                 />
 
                 <img
-                    src="https://downloads.crowd-nation.com/Portfolio.png"
+                    src="https://downloads.crowd-nation.com/Portfolio2.jpeg"
                     alt="Portrait"
                     class="relative w-64 h-64 rounded-3xl object-cover shadow-2xl group-hover:scale-105 transition-all duration-500 border border-white/10"
                 />
