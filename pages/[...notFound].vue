@@ -1,25 +1,34 @@
 <template>
-    <div
-        class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-[#0D1117] text-zinc-100"
-    >
-        <h1 class="text-7xl sm:text-8xl font-extrabold text-indigo-500 mb-4 animate-pulse">
-            {{ error?.statusCode || 404 }}
-        </h1>
-        <p class="text-lg sm:text-xl mb-6 text-zinc-400 max-w-md">
-            {{ error?.statusMessage || "Oops. This page doesn't exist anymore or has been moved." }}
-        </p>
+    <div class="min-h-screen flex items-center bg-bg text-ink px-5 sm:px-8">
+        <div class="max-w-2xl mx-auto w-full">
+            <!-- Terminal trace -->
+            <div
+                class="border border-line bg-surface font-mono text-xs sm:text-sm p-5 sm:p-6 mb-10 animate-[fade-in_0.6s_ease-out_both]"
+            >
+                <p class="text-faint mb-2">
+                    <span class="text-accent">$</span> curl https://wlankabl.com{{ route.path }}
+                </p>
+                <p class="text-red-600">HTTP/1.1 404 Not Found</p>
+            </div>
 
-        <NuxtLink
-            to="/"
-            class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg transition-all shadow-md hover:shadow-lg"
-        >
-            Back to Homepage
-            <span class="animate-bounce">🏠</span>
-        </NuxtLink>
+            <h1
+                class="font-display font-bold tracking-tight text-[clamp(4rem,15vw,9rem)] leading-none text-ink mb-6 animate-[fade-in_0.8s_ease-out_0.2s_both]"
+            >
+                404<span class="text-accent">.</span>
+            </h1>
+            <p
+                class="text-muted text-lg leading-relaxed mb-12 animate-[fade-in_0.8s_ease-out_0.35s_both]"
+            >
+                {{ $t("pages.not_found.description") }}
+            </p>
 
-        <p class="mt-10 text-xs text-zinc-600/50 italic">
-            Error code: {{ error?.statusCode || 404 }}
-        </p>
+            <NuxtLink to="/" class="btn-primary group animate-[fade-in_0.8s_ease-out_0.5s_both]">
+                {{ $t("pages.not_found.back_home") }}
+                <span class="transition-transform duration-300 group-hover:translate-x-1.5"
+                    >&rarr;</span
+                >
+            </NuxtLink>
+        </div>
     </div>
 </template>
 
@@ -28,21 +37,15 @@ definePageMeta({
     layout: false,
 });
 
-defineProps<{
-    error: {
-        statusCode?: number;
-        statusMessage?: string;
-        message?: string;
-    };
-}>();
+const route = useRoute();
 
 useSeoMeta({
-    title: "404 – Page Not Found",
-    ogTitle: "404 – Page Not Found",
+    title: "404 | Page Not Found",
+    ogTitle: "404 | Page Not Found",
     description:
-        "Oops! This page doesn’t exist or might have been moved. Head back to explore more about WlanKabL.",
+        "Oops! This page doesn't exist or might have been moved. Head back to explore more about WlanKabL.",
     ogDescription:
-        "Oops! This page doesn’t exist or might have been moved. Head back to explore more about WlanKabL.",
+        "Oops! This page doesn't exist or might have been moved. Head back to explore more about WlanKabL.",
     ogImage: "/Crowd-Nation-Logo-BETTER.png",
     twitterCard: "summary_large_image",
 });

@@ -1,92 +1,75 @@
 <template>
-    <section class="py-32 relative overflow-hidden">
-        <!-- Fade masks for smooth transitions -->
-        <div
-            class="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none"
-        />
-        <div
-            class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none"
-        />
+    <section class="py-24 md:py-32 border-t border-line">
+        <div class="max-w-6xl mx-auto px-5 sm:px-8">
+            <SectionHeading
+                index="03"
+                :label="$t('sections.about_label')"
+                :title="$t('about.title')"
+                link-to="/about"
+                :link-label="$t('sections.about_link')"
+            />
 
-        <!-- Background elements -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black" />
-        <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(99,102,241,0.1),transparent_50%)]"
-        />
-
-        <div
-            class="relative grid grid-cols-1 md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto px-4"
-        >
-            <!-- Image with animated border -->
-            <div class="relative group w-fit mx-auto md:mx-0 animate-[fade-in-up_0.8s_ease-out]">
-                <!-- Animated gradient border -->
-                <div
-                    class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500 animate-gradient"
-                />
-
-                <!-- Glow effect -->
-                <div
-                    class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl"
-                />
-
-                <img
-                    src="https://downloads.crowd-nation.com/Portfolio2.jpeg"
-                    alt="Portrait"
-                    class="relative w-64 h-64 rounded-3xl object-cover shadow-2xl group-hover:scale-105 transition-all duration-500 border border-white/10"
-                />
-            </div>
-
-            <!-- Content -->
-            <div class="space-y-6 animate-[fade-in-up_1s_ease-out_0.2s_both]">
-                <h2 class="text-4xl md:text-5xl font-bold text-white">
-                    {{ $t("about.title") }}
-                </h2>
-
-                <p class="text-white/70 text-lg leading-relaxed">
-                    {{
-                        $t("about.description", {
-                            wlankabl: "WlanKabL",
-                            technologies: "Vue, Node.js & C#",
-                        })
-                    }}
-                </p>
-
-                <ul class="space-y-4 pt-4">
-                    <li
-                        v-for="(item, index) in features"
-                        :key="index"
-                        class="flex items-center gap-4 p-4 rounded-xl glass border border-white/5 hover:border-white/10 hover:bg-white/5 transition-all duration-300 group/item animate-[slide-in-right_0.6s_ease-out_both]"
-                        :style="{ animationDelay: `${0.4 + index * 0.1}s` }"
+            <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
+                <!-- Photo, slightly off-axis like everything personal here -->
+                <div v-reveal class="md:col-span-5 relative w-full max-w-sm">
+                    <div
+                        class="relative bg-white border border-line rounded-sm p-3 rotate-[2deg] hover:rotate-0 transition-transform duration-500 shadow-[0_24px_60px_-30px_rgba(24,19,23,0.5)]"
                     >
-                        <div
-                            class="p-2 rounded-lg bg-gradient-to-br from-indigo-500/20 to-purple-500/20 group-hover/item:from-indigo-500/30 group-hover/item:to-purple-500/30 transition-all duration-300"
-                        >
-                            <IconZap
-                                class="w-5 h-5 text-indigo-400 group-hover/item:text-indigo-300 transition-colors"
-                            />
-                        </div>
+                        <img
+                            src="https://downloads.crowd-nation.com/Portfolio.png"
+                            alt="Philipp aka WlanKabL"
+                            loading="lazy"
+                            class="w-full aspect-square object-cover object-top"
+                        />
                         <span
-                            class="text-white/80 group-hover/item:text-white transition-colors flex-1"
+                            class="absolute -top-3 right-8 w-20 h-5 bg-highlight/85 rotate-[4deg] shadow-sm"
+                            aria-hidden="true"
+                        />
+                    </div>
+                    <p class="font-mono text-[11px] text-faint mt-5 ml-2">
+                        <span class="text-accent">&plus;</span> Philipp &middot; online: WlanKabL
+                    </p>
+                </div>
+
+                <!-- Text -->
+                <div class="md:col-span-7 flex flex-col gap-8">
+                    <p v-reveal class="text-lg sm:text-xl text-muted leading-relaxed">
+                        {{
+                            $t("about.description", {
+                                wlankabl: "WlanKabL",
+                                technologies: "Vue, Node.js & C#",
+                            })
+                        }}
+                    </p>
+
+                    <ul class="flex flex-col">
+                        <li
+                            v-for="(item, index) in features"
+                            :key="item"
+                            v-reveal="index * 90"
+                            class="flex items-baseline gap-4 border-t border-line py-4 last:border-b"
                         >
-                            {{ item }}
-                        </span>
-                    </li>
-                </ul>
+                            <span class="font-mono text-xs text-accent shrink-0">
+                                {{ String(index + 1).padStart(2, "0") }}
+                            </span>
+                            <span class="text-ink/85">{{ item }}</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script setup lang="ts">
-import { Zap as IconZap } from "lucide-vue-next";
 import { computed } from "vue";
 
 const { t } = useI18n();
 
 const features = computed(() => [
+    t("about.founder"),
     t("about.engineering"),
     t("about.passion_projects", { crowdnation: "Crowd-Nation" }),
-    t("about.scalable_apps"),
     t("about.creative_coding"),
 ]);
 </script>

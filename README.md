@@ -10,15 +10,24 @@
 
 ## Design Philosophy
 
-A clean, minimalist portfolio focused on performance and user experience. Every animation, transition, and visual effect is crafted to feel premium and professional.
+An "Engineered Studio" design system: this is not a developer portfolio, it's the site of a
+product builder. A cool technical off-white canvas keeps the studio professional and approachable,
+while every product keeps its **own brand world** — dark showcase panels in the product's own
+color (ZentraX purple, KeeperLog green, Conformity Gate red).
 
 ### Core Design Principles:
 
-- **Pure Black Theme** (`#000000`) – True depth and contrast
-- **Glassmorphism** – Subtle backdrop blur effects with transparency
-- **Smooth Animations** – Staggered fade-ins, scale effects, gradient shifts
-- **Typography Excellence** – Carefully balanced hierarchy and spacing
-- **Responsive Perfection** – Flawless experience from mobile to 4K displays
+- **Technical Off-White Canvas** (`#f4f3f0`) – Light and business-ready, never paper-romantic
+- **Violet & Yellow** – Violet (`#6d28d9`) as the personal brand color, yellow (`#fdd23a`) as the
+  complementary eye-catcher: CTAs with hard offset shadows, highlighter swipes, stickers
+- **Products Keep Their Brands** – Each product uses its own colors via `--brand` /
+  `--project-accent` CSS variables
+- **Asymmetry & Character** – Staggered card columns, rotated polaroid & stickers, hairline
+  accents that grow on hover — composed, not grid-templated
+- **Tech Typography** – Bricolage Grotesque display, Archivo body, IBM Plex Mono for labels,
+  indices and metrics (the dev DNA)
+- **Intentional Motion** – Choreographed hero entrance, scroll reveals via IntersectionObserver,
+  full `prefers-reduced-motion` support
 
 Built for speed, clarity, and impact.
 
@@ -36,10 +45,11 @@ Built for speed, clarity, and impact.
 
 ### Visual Excellence
 
-- **Custom Animation System** – 4 keyframe animations (fade-in-up, scale-in, slide-in-right, gradient-shift)
-- **Glassmorphism UI** – Backdrop blur effects throughout
-- **Interactive Components** – Hover effects, smooth transitions, micro-animations
-- **Gradient Accents** – Subtle color gradients for visual interest
+- **Scroll Reveal System** – `v-reveal` directive with stagger support and reduced-motion fallback
+- **Choreographed Hero** – Masked line reveals plus a metrics strip with real numbers
+- **Brand Panels** – Each product showcased in its own dark brand world with logo plate and glow
+- **Per-Product Accents** – Project cards and case-study pages inherit the product's brand color
+- **Blueprint Grid** – Subtle engineering texture on light sections
 - **Custom Scrollbar** – Styled for consistency across browsers
 
 ### Performance & DX
@@ -147,19 +157,26 @@ docker-compose up -d (--build)
 
 ### Custom Design System
 
-```typescript
-// Animations
-- fade-in-up      → Smooth entrance from bottom
-- scale-in        → Zoom effect for cards
-- slide-in-right  → Horizontal slide for lists
-- gradient-shift  → Animated gradient borders
+```css
+/* Tokens (assets/tailwind.css, Tailwind 4 @theme) */
+--color-bg: #f4f3f0; /* technical off-white canvas */
+--color-ink: #181317; /* deep ink text */
+--color-accent: #6d28d9; /* violet — the personal brand color */
+--color-highlight: #fdd23a; /* yellow — the eye-catcher (CTAs, markers) */
+--font-display: "Bricolage Grotesque"; /* characterful tech display */
+--font-sans: "Archivo"; /* body & UI */
+--font-mono: "IBM Plex Mono"; /* labels, indices, metrics */
+```
 
-// Glassmorphism
-.glass {
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
+```typescript
+// Brand system
+- data/projects.ts   → each product defines brand: { color, panel }
+- --brand            → drives panel accents, card hovers, CTAs
+- --project-accent   → recolors case-study articles per product
+
+// Motion
+- rise-up            → Masked line reveal for the hero headline
+- [data-reveal]      → Scroll-triggered reveals via the v-reveal directive
 ```
 
 ---
@@ -171,18 +188,24 @@ portfolio/
 ├── 📁 assets/             # Global styles & assets
 │   └── tailwind.css       # Custom animations & utilities
 │
-├── 📁 components/         # Vue components (17 total)
-│   ├── NavBar.vue         # Gradient logo, animated menu
-│   ├── LandingPage.vue    # Hero with availability badge
-│   ├── AboutMe.vue        # Animated portrait, glass cards
-│   ├── TechStack.vue      # Tech stack showcase
-│   ├── ContactForm.vue    # Discord-integrated form
-│   ├── ProjectCardCompact.vue
-│   ├── ProjectCardDetailed.vue
-│   └── PageFooter.vue
+├── 📁 components/         # Vue components
+│   ├── NavBar.vue         # WlanKabL Digital brand, animated links
+│   ├── LandingPage.vue    # Choreographed hero with metrics strip
+│   ├── ProductShowcase.vue # Brand panels — each product in its own world
+│   ├── ServicesSection.vue # "What I build for you" offer
+│   ├── ProjectCardModern.vue # Gallery card with per-product brand accent
+│   ├── SectionHeading.vue # Numbered section headings
+│   ├── AboutMe.vue        # Portrait & founder story
+│   ├── TechStack.vue      # Definition-list stack overview
+│   ├── ContactForm.vue    # Discord-integrated line-input form
+│   └── PageFooter.vue     # Dark footer with big CTA
 │
 ├── 📁 composables/        # Reusable logic
 │   └── useProjects.ts     # Project data management
+│
+├── 📁 plugins/            # Nuxt plugins
+│   ├── reveal.ts          # v-reveal scroll animation directive
+│   └── locale-domain.ts   # .de domain defaults to German
 │
 ├── 📁 data/               # Static data
 │   ├── projects.ts        # Project metadata & descriptions
@@ -238,31 +261,29 @@ Perfect for quick responses without email clutter.
 
 ### LandingPage
 
-- **Hero Section** with availability badge
-- **Staggered Animations** (0.6s - 1.2s delays)
-- **Scroll Indicator** with bounce animation
-- **Gradient Text Effects** for emphasis
+- **Masked Line Reveals** – Headline lines rise out of overflow masks, key phrase gets a
+  yellow highlighter swipe
+- **Entrepreneur Positioning** – "I build digital products. My own — and yours."
+- **Polaroid & Stickers** – Rotated portrait with tape, floating personality chips and a
+  yellow badge — asymmetric on purpose
+- **Metrics Row** – Real numbers: live products, automated tests, solo full stack
 
-### TechStack
+### ProductShowcase
 
-- **Glassmorphism Cards** with hover effects
-- **Shine Effect** on card hover
-- **Scroll Indicators** for horizontal scrolling
-- **Animated Icons** with scale transitions
+- **Brand Panels** – Each product gets a dark panel in its own brand color with logo plate
+- **Brand Glow** – Soft color bloom that intensifies on hover
+- **Scroll Reveals** – Each panel animates in via `v-reveal`
+
+### ServicesSection
+
+- **Clear Offer** – Web apps & SaaS MVPs, automation & integrations, platforms & infrastructure
+- **Conversion CTA** – "Start a project" leading straight to contact
 
 ### ContactForm
 
-- **Modern Input Fields** with focus glows
-- **Gradient Submit Button** with hover scale
-- **Animated Feedback** (success/error messages)
+- **Line Inputs** – Minimal underline fields with numbered mono labels
+- **Status Feedback** – `[ok]` / `[error]` messages
 - **Discord Integration** via webhook
-
-### ProjectCards
-
-- **Compact & Detailed Views**
-- **Glass Design** with backdrop blur
-- **Image Overlay** effects on hover
-- **Staggered Tag Animations**
 
 ---
 

@@ -1,123 +1,173 @@
 <template>
-    <section
-        class="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden"
-    >
-        <!-- Fade mask at bottom -->
+    <section class="relative min-h-screen flex flex-col justify-center overflow-hidden">
+        <!-- Soft violet bloom, off-center on purpose -->
         <div
-            class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none"
+            class="pointer-events-none absolute -top-32 right-[-10%] w-[42rem] h-[42rem] rounded-full bg-accent-bright/10 blur-3xl"
+            aria-hidden="true"
         />
 
-        <!-- Animated Background -->
         <div
-            class="absolute inset-0 bg-cover bg-center z-0"
-            style="
-                background-image: url(&quot;https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072&quot;);
-            "
+            class="relative max-w-6xl mx-auto w-full px-5 sm:px-8 pt-32 pb-16 grid lg:grid-cols-12 gap-14 lg:gap-8 items-center"
         >
-            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black" />
-            <!-- Animated gradient overlay -->
-            <div
-                class="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 via-transparent to-purple-500/10 animate-gradient"
-            />
-        </div>
-
-        <!-- Subtle grid pattern -->
-        <div
-            class="absolute inset-0 z-0 opacity-[0.02]"
-            style="
-                background-image: radial-gradient(circle, white 1px, transparent 1px);
-                background-size: 50px 50px;
-            "
-        />
-
-        <!-- Content with staggered animations -->
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <!-- Badge -->
-            <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 mb-6 md:mb-8 animate-[fade-in-up_0.6s_ease-out]"
-            >
-                <span class="relative flex h-2 w-2">
-                    <span
-                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"
-                    />
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500" />
-                </span>
-                <span class="text-sm text-white/70">{{ $t("landing.availability") }}</span>
-            </div>
-
-            <!-- Main heading with gradient -->
-            <h1
-                class="text-4xl sm:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-4 md:mb-6 animate-[fade-in-up_0.8s_ease-out_0.1s_both]"
-            >
-                <span
-                    class="bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent"
+            <!-- ── Left: the core message (F-pattern scan edge) ── -->
+            <div class="lg:col-span-7">
+                <p
+                    class="font-mono text-xs sm:text-sm text-muted mb-8 animate-[fade-in_0.8s_ease-out_both]"
                 >
-                    {{ $t("landing.hero_title_part1") }}
-                </span>
-                <br />
-                <span
-                    class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-                >
-                    {{ $t("landing.hero_title_part2") }}
-                </span>
-            </h1>
-
-            <!-- Subtitle -->
-            <p
-                class="text-lg sm:text-2xl text-white/60 mb-8 md:mb-12 max-w-2xl mx-auto animate-[fade-in-up_1s_ease-out_0.2s_both]"
-            >
-                {{ $t("landing.hero_subtitle") }}
-            </p>
-
-            <!-- CTA Buttons -->
-            <div
-                class="flex flex-col sm:flex-row gap-4 justify-center animate-[fade-in-up_1.2s_ease-out_0.3s_both]"
-            >
-                <NuxtLink
-                    to="/projects"
-                    class="group relative px-8 py-4 bg-white text-black font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20"
-                >
-                    <span class="relative z-10">{{ $t("landing.view_projects") }}</span>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    />
-                    <span
-                        class="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-semibold"
-                    >
-                        {{ $t("landing.view_projects") }}
+                    <span class="text-accent font-semibold">WlanKabL Digital</span>
+                    <span class="mx-3 text-faint">/</span>
+                    <span class="inline-flex items-baseline gap-2">
+                        <span class="relative inline-flex h-2 w-2 self-center">
+                            <span
+                                class="absolute inline-flex h-full w-full rounded-full bg-accent-bright opacity-50 animate-ping"
+                            />
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+                        </span>
+                        {{ $t("landing.availability") }}
                     </span>
-                </NuxtLink>
-                <NuxtLink
-                    to="/contact"
-                    class="px-8 py-4 glass border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105"
-                >
-                    {{ $t("landing.contact_me") }}
-                </NuxtLink>
-            </div>
-        </div>
+                </p>
 
-        <!-- Scroll indicator - outside content container, relative to section -->
-        <div
-            class="hidden md:flex absolute bottom-20 left-1/2 -translate-x-1/2 z-20 animate-[fade-in_1.5s_ease-out_0.5s_both]"
-        >
-            <div class="flex flex-col items-center gap-2 text-white/40">
-                <span class="text-xs uppercase tracking-wider">{{
-                    $t("landing.scroll_down")
-                }}</span>
-                <svg
-                    class="w-5 h-5 animate-bounce"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                <h1
+                    class="font-display font-bold text-ink leading-[1.06] tracking-tight mb-8 sm:mb-10"
                 >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                    />
-                </svg>
+                    <span class="block overflow-hidden">
+                        <span
+                            class="block text-[clamp(2.25rem,5.5vw,4.5rem)] animate-[rise-up_0.9s_var(--ease-out-quart)_0.15s_both]"
+                        >
+                            {{ $t("landing.hero_line1_pre") }}
+                            <span class="marker">{{ $t("landing.hero_line1_mark") }}</span>
+                        </span>
+                    </span>
+                    <span class="block overflow-hidden">
+                        <span
+                            class="block text-[clamp(2.25rem,5.5vw,4.5rem)] text-accent animate-[rise-up_0.9s_var(--ease-out-quart)_0.3s_both]"
+                        >
+                            {{ $t("landing.hero_line2") }}
+                        </span>
+                    </span>
+                </h1>
+
+                <p
+                    class="max-w-xl text-base sm:text-lg text-muted leading-relaxed mb-10 animate-[fade-in_1s_ease-out_0.7s_both]"
+                >
+                    {{ $t("landing.hero_subtitle") }}
+                </p>
+
+                <div
+                    class="flex flex-wrap items-center gap-6 sm:gap-8 mb-12 animate-[fade-in_1s_ease-out_0.9s_both]"
+                >
+                    <NuxtLink to="/projects" class="btn-primary group">
+                        {{ $t("landing.view_products") }}
+                        <span class="transition-transform duration-300 group-hover:translate-x-1.5"
+                            >&rarr;</span
+                        >
+                    </NuxtLink>
+                    <NuxtLink to="/contact" class="btn-secondary">
+                        {{ $t("landing.start_project") }}
+                    </NuxtLink>
+                </div>
+
+                <!-- Metrics — left-aligned row, deliberately not a tidy grid -->
+                <dl
+                    class="flex flex-wrap gap-x-12 gap-y-5 border-t border-line pt-7 animate-[fade-in_1s_ease-out_1.1s_both]"
+                >
+                    <div v-for="stat in stats" :key="stat.label">
+                        <dd class="font-display font-bold text-2xl text-accent">
+                            {{ stat.value }}
+                        </dd>
+                        <dt class="font-mono text-[11px] uppercase tracking-[0.15em] text-faint">
+                            {{ $t(stat.label) }}
+                        </dt>
+                    </div>
+                </dl>
+            </div>
+
+            <!-- ── Right: polaroid + sticker collage — the person behind the studio ── -->
+            <div
+                class="lg:col-span-5 relative flex justify-center lg:justify-end animate-[fade-in_1s_ease-out_0.6s_both]"
+            >
+                <div class="relative w-64 sm:w-72">
+                    <!-- Polaroid -->
+                    <div
+                        class="polaroid relative bg-white border border-line rounded-sm p-3 pb-12 rotate-[-3deg] shadow-[0_30px_60px_-25px_rgba(24,19,23,0.45)]"
+                    >
+                        <img
+                            src="https://downloads.crowd-nation.com/Portfolio2.jpeg"
+                            alt="Philipp aka WlanKabL"
+                            class="w-full aspect-square object-cover"
+                        />
+                        <p
+                            class="absolute bottom-3.5 left-0 right-0 text-center font-mono text-xs text-muted"
+                        >
+                            Philipp &middot; aka WlanKabL
+                        </p>
+                        <!-- Tape -->
+                        <span
+                            class="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-highlight/85 rotate-[-5deg] shadow-sm"
+                            aria-hidden="true"
+                        />
+                    </div>
+
+                    <!-- Round yellow badge, overlapping the corner -->
+                    <span
+                        class="float-chip absolute -bottom-7 -left-9 w-21 h-21 rounded-full bg-highlight border border-ink/80 flex items-center justify-center text-center font-mono text-[10px] font-semibold uppercase tracking-wide text-ink rotate-[10deg] shadow-[3px_3px_0_var(--color-ink)]"
+                        :style="{ '--float-rotate': '10deg' }"
+                    >
+                        {{ $t("landing.badge_since") }}
+                    </span>
+
+                    <!-- Personality stickers -->
+                    <span
+                        v-for="(chip, index) in chips"
+                        :key="chip.label"
+                        class="float-chip sticker absolute"
+                        :class="chip.position"
+                        :style="{
+                            '--float-rotate': chip.rotate,
+                            animationDelay: `${index * 0.7}s`,
+                        }"
+                    >
+                        <span class="text-accent">&plus;</span>
+                        {{ $t(chip.label) }}
+                    </span>
+                </div>
             </div>
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+const stats = [
+    { value: "6+", label: "landing.stat_products" },
+    { value: "3.000+", label: "landing.stat_tests" },
+    { value: "1", label: "landing.stat_solo" },
+];
+
+// Scattered around the polaroid — rotation and offsets are deliberately uneven
+const chips = [
+    {
+        label: "landing.chip_code",
+        position: "top-12 -left-8 sm:-top-5 sm:-left-16",
+        rotate: "-4deg",
+    },
+    {
+        label: "landing.chip_festivals",
+        position: "-top-4 -right-2 sm:top-14 sm:-right-24",
+        rotate: "3deg",
+    },
+    { label: "landing.chip_bikes", position: "bottom-24 -right-6 sm:-right-12", rotate: "-2deg" },
+];
+</script>
+
+<style scoped>
+.float-chip {
+    animation: float-soft 6s ease-in-out infinite;
+    transform: rotate(var(--float-rotate, 0deg));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .float-chip {
+        animation: none;
+    }
+}
+</style>

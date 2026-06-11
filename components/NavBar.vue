@@ -1,52 +1,45 @@
 <template>
-    <nav class="w-full px-6 py-4 text-white/90">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <NuxtLink
-                to="/"
-                class="text-2xl font-semibold tracking-tight hover:text-white transition-all duration-300 hover:scale-105"
-            >
-                <code
-                    class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"
+    <nav class="w-full px-5 sm:px-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center h-16">
+            <NuxtLink to="/" class="group flex items-baseline gap-2.5">
+                <span
+                    class="font-mono text-sm font-medium tracking-tight text-ink group-hover:text-accent transition-colors duration-300"
                 >
-                    &lt;/WlanKabL&gt;
-                </code>
+                    <span class="text-faint group-hover:text-accent/50 transition-colors"
+                        >&lt;/</span
+                    >WlanKabL<span class="text-faint group-hover:text-accent/50 transition-colors"
+                        >&gt;</span
+                    >
+                </span>
+                <span
+                    class="hidden sm:inline font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-ink bg-highlight px-1.5 py-0.5 rotate-[-2deg] group-hover:rotate-0 transition-transform duration-300"
+                >
+                    Digital
+                </span>
             </NuxtLink>
-            <div class="hidden md:flex gap-1 items-center text-sm font-medium">
+
+            <div class="hidden md:flex items-center gap-7">
                 <NuxtLink
-                    to="/projects"
-                    class="px-4 py-2 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200"
-                    exact-active-class="bg-white/10 text-white"
-                    >{{ $t("nav.projects") }}</NuxtLink
+                    v-for="item in navItems"
+                    :key="item.to"
+                    :to="item.to"
+                    class="nav-link font-mono text-xs uppercase tracking-[0.18em] text-muted hover:text-ink transition-colors duration-300"
+                    active-class="nav-link-active"
                 >
-                <NuxtLink
-                    to="/resume"
-                    class="px-4 py-2 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200"
-                    exact-active-class="bg-white/10 text-white"
-                    >{{ $t("nav.resume") }}</NuxtLink
-                >
-                <NuxtLink
-                    to="/about"
-                    class="px-4 py-2 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200"
-                    exact-active-class="bg-white/10 text-white"
-                    >{{ $t("nav.about") }}</NuxtLink
-                >
-                <NuxtLink
-                    to="/contact"
-                    class="px-4 py-2 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200"
-                    exact-active-class="bg-white/10 text-white"
-                    >{{ $t("nav.contact") }}</NuxtLink
-                >
-                <div class="ml-2">
-                    <LanguageSwitcher />
-                </div>
+                    {{ $t(item.label) }}
+                </NuxtLink>
+                <LanguageSwitcher class="ml-2" />
             </div>
+
             <button
-                class="md:hidden text-white/90 focus:outline-none p-2 hover:bg-white/10 rounded-lg transition-all duration-200"
+                class="md:hidden p-2 -mr-2 text-muted hover:text-ink transition-colors"
+                :aria-expanded="menuOpen"
+                aria-label="Toggle navigation"
                 @click="menuOpen = !menuOpen"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 transition-transform duration-300"
+                    class="h-5 w-5 transition-transform duration-300"
                     :class="{ 'rotate-90': menuOpen }"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -55,61 +48,42 @@
                     <path
                         v-if="!menuOpen"
                         stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"
+                        stroke-width="1.5"
+                        d="M4 7h16M4 12h16M4 17h10"
                     />
                     <path
                         v-else
                         stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        stroke-width="1.5"
                         d="M6 18L18 6M6 6l12 12"
                     />
                 </svg>
             </button>
         </div>
+
         <Transition
             enter-active-class="transition duration-300 ease-out"
-            enter-from-class="opacity-0 -translate-y-4"
+            enter-from-class="opacity-0 -translate-y-3"
             enter-to-class="opacity-100 translate-y-0"
             leave-active-class="transition duration-200 ease-in"
             leave-from-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 -translate-y-4"
+            leave-to-class="opacity-0 -translate-y-3"
         >
             <div
                 v-if="menuOpen"
-                class="md:hidden mt-4 space-y-1 text-sm font-medium px-2 flex flex-col glass rounded-lg p-2"
+                class="md:hidden bg-surface border border-line rounded-xl shadow-lg mt-1 mb-4 p-2 flex flex-col"
             >
                 <NuxtLink
-                    to="/projects"
-                    class="block px-4 py-3 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200"
-                    exact-active-class="bg-white/10 text-white"
+                    v-for="item in navItems"
+                    :key="item.to"
+                    :to="item.to"
+                    class="px-4 py-3 rounded-lg font-mono text-sm uppercase tracking-[0.15em] text-muted hover:text-ink hover:bg-sunken transition-colors duration-200"
+                    active-class="text-accent"
                     @click="menuOpen = false"
-                    >{{ $t("nav.projects") }}</NuxtLink
                 >
-                <NuxtLink
-                    to="/resume"
-                    class="block px-4 py-3 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200"
-                    exact-active-class="bg-white/10 text-white"
-                    @click="menuOpen = false"
-                    >{{ $t("nav.resume") }}</NuxtLink
-                >
-                <NuxtLink
-                    to="/about"
-                    class="block px-4 py-3 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200"
-                    exact-active-class="bg-white/10 text-white"
-                    @click="menuOpen = false"
-                    >{{ $t("nav.about") }}</NuxtLink
-                >
-                <NuxtLink
-                    to="/contact"
-                    class="block px-4 py-3 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200"
-                    exact-active-class="bg-white/10 text-white"
-                    @click="menuOpen = false"
-                    >{{ $t("nav.contact") }}</NuxtLink
-                >
-                <div class="pt-2 border-t border-white/10">
+                    {{ $t(item.label) }}
+                </NuxtLink>
+                <div class="px-4 pt-3 pb-2 border-t border-line mt-1">
                     <LanguageSwitcher />
                 </div>
             </div>
@@ -121,4 +95,40 @@
 import { ref } from "vue";
 
 const menuOpen = ref(false);
+
+const navItems = [
+    { to: "/projects", label: "nav.projects" },
+    { to: "/resume", label: "nav.resume" },
+    { to: "/about", label: "nav.about" },
+    { to: "/contact", label: "nav.contact" },
+];
 </script>
+
+<style scoped>
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s var(--ease-out-quart);
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-link-active {
+    color: var(--color-ink);
+}
+</style>

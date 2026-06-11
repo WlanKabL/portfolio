@@ -1,58 +1,53 @@
 <template>
-    <div class="relative inline-block text-left group">
-        <select
-            v-model="currentLocale"
-            class="appearance-none glass border border-white/10 text-white font-medium rounded-lg px-4 py-2 pr-10 shadow-lg focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer"
-            @change="setLocale"
-        >
-            <option
-                v-for="loc in availableLocales"
-                :key="loc.code"
-                :value="loc.code"
-                class="bg-zinc-900 text-white"
+    <div
+        class="inline-flex items-center font-mono text-xs"
+        role="group"
+        :aria-label="$t('nav.language')"
+    >
+        <template v-for="(loc, index) in availableLocales" :key="loc.code">
+            <span v-if="index > 0" class="text-faint/50 select-none px-1.5">/</span>
+            <!-- $i18n.locale is the exact source $t renders from, so the
+                 active state can never drift from the visible language -->
+            <button
+                class="uppercase tracking-[0.15em] transition-colors duration-300 cursor-pointer"
+                :class="loc.code === $i18n.locale ? 'text-accent' : 'text-faint hover:text-ink'"
+                :aria-pressed="loc.code === $i18n.locale"
+                @click="selectLocale(loc.code)"
             >
-                {{ loc.name }}
-            </option>
-        </select>
-        <svg
-            class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/60 pointer-events-none group-focus-within:text-indigo-400 transition-colors"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-        >
-            <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-            />
-        </svg>
+                {{ loc.code }}
+            </button>
+        </template>
     </div>
 </template>
 
 <script setup lang="ts">
 import { useLocalStorage } from "@vueuse/core";
 
-const { locale, locales, setLocale: setI18nLocale } = useI18n();
+type LocaleCode = "de" | "en" | "nl";
 
-const availableLocales = locales.value.filter((l) => typeof l !== "string") as {
-    code: string;
+// Work on the global nuxt-i18n instance, but keep the local name distinct:
+// destructuring `$i18n` here would shadow the template injection of the same
+// name, whose `.locale` string drives the active state in the template.
+const nuxtI18n = useNuxtApp().$i18n;
+
+const availableLocales = nuxtI18n.locales.value.filter((l) => typeof l !== "string") as {
+    code: LocaleCode;
     name: string;
 }[];
 
-// Get valid locale codes for validation
 const validLocaleCodes = availableLocales.map((l) => l.code);
 
-// Use @vueuse/core useLocalStorage with validation
-const currentLocale = useLocalStorage("portfolio_language", "en", {
+const isValidLocale = (value: string): value is LocaleCode =>
+    (validLocaleCodes as string[]).includes(value);
+
+// Persisted preference, only used to replay an explicit choice on the next visit
+const storedLocale = useLocalStorage<LocaleCode>("portfolio_language", "en", {
     writeDefaults: false,
     serializer: {
         read: (value: string | null) => {
             try {
-                const parsed = value ? JSON.parse(value) : null;
-                // Validate stored value - if invalid, return default 'en'
-                return validLocaleCodes.includes(parsed) ? parsed : "en";
+                const parsed: unknown = value ? JSON.parse(value) : null;
+                return typeof parsed === "string" && isValidLocale(parsed) ? parsed : "en";
             } catch {
                 return "en";
             }
@@ -61,31 +56,18 @@ const currentLocale = useLocalStorage("portfolio_language", "en", {
     },
 });
 
-const setLocale = () => {
-    // Ensure we only set valid locales
-    if (validLocaleCodes.includes(currentLocale.value)) {
-        setI18nLocale(currentLocale.value as "de" | "en" | "nl");
-    } else {
-        // Fallback to English if invalid
-        currentLocale.value = "en";
-        setI18nLocale("en");
-    }
+const selectLocale = (code: LocaleCode) => {
+    storedLocale.value = code;
+    void nuxtI18n.setLocale(code);
 };
 
-// Watch for locale changes from other sources and sync with localStorage
-watch(locale, (newLocale) => {
-    currentLocale.value = newLocale;
-});
-
-// Set the locale from localStorage on component mount
 onMounted(() => {
-    // Always ensure we have a valid locale
-    if (!validLocaleCodes.includes(currentLocale.value)) {
-        currentLocale.value = "en";
-    }
+    // Only replay a stored preference if the visitor actually made one,
+    // otherwise the domain/browser-based default (plugins/locale-domain.ts) wins
+    const hasStoredPreference = localStorage.getItem("portfolio_language") !== null;
 
-    if (currentLocale.value && currentLocale.value !== locale.value) {
-        setI18nLocale(currentLocale.value as "de" | "en" | "nl");
+    if (hasStoredPreference && storedLocale.value !== nuxtI18n.locale.value) {
+        void nuxtI18n.setLocale(storedLocale.value);
     }
 });
 </script>

@@ -1,19 +1,12 @@
-import {
-    Monitor,
-    Terminal,
-    Database,
-    Cpu,
-    Shield,
-    Wrench,
-    Globe,
-    MessageCircle,
-} from "lucide-vue-next";
+export interface TechStackGroup {
+    /** i18n key under `tech_stack.*` */
+    key: string;
+    skills: string[];
+}
 
-export const techStacks = [
+export const techStacks: TechStackGroup[] = [
     {
-        title: "Frontend",
         key: "frontend",
-        icon: Monitor,
         skills: [
             "Vue.js",
             "TypeScript",
@@ -27,9 +20,7 @@ export const techStacks = [
         ],
     },
     {
-        title: "Backend",
         key: "backend",
-        icon: Terminal,
         skills: [
             "Node.js",
             "Express",
@@ -41,21 +32,15 @@ export const techStacks = [
         ],
     },
     {
-        title: "Database",
         key: "database",
-        icon: Database,
         skills: ["SurrealDB", "MySQL", "MongoDB", "SQL", "ORMs", "Data Modeling"],
     },
     {
-        title: "DevOps",
         key: "devops",
-        icon: Cpu,
         skills: ["Docker", "CI/CD", "Portainer", "PM2", "GitLab CI", "Deployment Automation"],
     },
     {
-        title: "Security & Networking",
         key: "security",
-        icon: Shield,
         skills: [
             "HTTPS (Let's Encrypt)",
             "SSH",
@@ -67,9 +52,7 @@ export const techStacks = [
         ],
     },
     {
-        title: "Tooling & Misc",
         key: "tooling",
-        icon: Wrench,
         skills: [
             "Visual Studio Code",
             "Swagger",
@@ -85,9 +68,7 @@ export const techStacks = [
         ],
     },
     {
-        title: "Web Infrastructure",
         key: "infrastructure",
-        icon: Globe,
         skills: [
             "Domain Management",
             "DNS",
@@ -99,9 +80,7 @@ export const techStacks = [
         ],
     },
     {
-        title: "UX & Communication",
         key: "ux",
-        icon: MessageCircle,
         skills: [
             "Responsive Design",
             "Accessibility",

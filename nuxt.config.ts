@@ -17,6 +17,17 @@ export default defineNuxtConfig({
         port: 3000,
         // host: "0.0.0.0",
     },
+    fonts: {
+        families: [
+            {
+                name: "Bricolage Grotesque",
+                provider: "google",
+                weights: [500, 600, 700, 800],
+            },
+            { name: "Archivo", provider: "google", weights: [400, 500, 600, 700] },
+            { name: "IBM Plex Mono", provider: "google", weights: [400, 500, 600] },
+        ],
+    },
     runtimeConfig: {
         public: {},
         DISCORD_WEBHOOK_URL: process.env.DISCORD_WEBHOOK_URL,

@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-black text-white">
+    <div class="min-h-screen flex flex-col bg-bg text-ink">
         <NavBar
             class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
             :class="[
@@ -7,12 +7,10 @@
                 hideOnMobile ? '-translate-y-full md:translate-y-0' : 'translate-y-0',
             ]"
         />
-        <main class="flex-1 bg-black" :class="{ 'pt-20': !noTopPadding }">
-            <div class="animate-[fade-in_0.6s_ease-out]">
-                <NuxtPage />
-            </div>
+        <main class="flex-1" :class="{ 'pt-24': !noTopPadding }">
+            <NuxtPage />
         </main>
-        <PageFooter class="bg-zinc-950 border-t border-white/5" />
+        <PageFooter />
     </div>
 </template>
 
@@ -24,21 +22,18 @@ const scrolled = ref(false);
 const hideOnMobile = ref(false);
 let lastScrollY = 0;
 
-// Check if current page is homepage (no top padding needed)
+// The homepage hero starts at the very top, so it needs no nav offset
 const noTopPadding = computed(() => route.path === "/");
 
 const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-    // Glass effect when scrolled
     scrolled.value = currentScrollY > 50;
 
-    // Hide on mobile when scrolling down, show when scrolling up
+    // Hide the nav on mobile while scrolling down, show it again when scrolling up
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down & past 100px
         hideOnMobile.value = true;
     } else if (currentScrollY < lastScrollY) {
-        // Scrolling up
         hideOnMobile.value = false;
     }
 

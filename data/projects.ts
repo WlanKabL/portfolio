@@ -12,6 +12,7 @@ const projectConfigs = {
         link: "/projects/keeper-log",
         github: "https://github.com/WlanKabL/Cold-Blood-Cast",
         externalLink: "https://keeperlog.app",
+        brand: { color: "#34a853", panel: "#0c1f12" },
         tech: [
             "Nuxt 4",
             "Vue 3",
@@ -33,6 +34,7 @@ const projectConfigs = {
         image: "./zentrax.png",
         link: "/projects/zentrax",
         externalLink: "https://zentrax.trade",
+        brand: { color: "#8b5cf6", panel: "#160f2b" },
         tech: [
             "Nuxt 4",
             "Vue 3",
@@ -56,6 +58,7 @@ const projectConfigs = {
         image: "./FullLogoV3-White.png",
         link: "/projects/crowd-nation",
         github: "https://github.com/CrowdNation",
+        brand: { color: "#6366f1", panel: "#101129" },
         tech: ["Vue 3", "Vite", "TailwindCSS", "Pinia", "TypeScript", "SCSS"],
         externalLink: "https://crowd-nation.com",
         i18nKey: "crowd_nation_frontend",
@@ -79,11 +82,11 @@ const projectConfigs = {
     },
     universalJenga: {
         active: true,
-        previewSlot: PS.THIRD,
         lastChangedAt: "2026-01-18",
         image: "./universal-jenga.png",
         link: "/projects/universal-jenga",
         externalLink: "https://jenga.crowd-nation.com",
+        brand: { color: "#f59e0b", panel: "#1c1204" },
         tech: ["Nuxt 3", "Vue 3", "TypeScript", "Tailwind CSS", "Pinia", "i18n"],
         i18nKey: "universal_jenga",
     },
@@ -157,6 +160,7 @@ const projectConfigs = {
         link: "/projects/conformity-gate",
         github: "https://github.com/WlanKabL/conformity-gate",
         externalLink: "https://conformity-gate.com",
+        brand: { color: "#f43f4b", panel: "#160708" },
         tech: ["Nuxt 4", "Vue 3", "TypeScript", "Tailwind CSS 4", "Pinia", "JWT", "Docker"],
         i18nKey: "conformity_gate",
     },
@@ -180,5 +184,6 @@ export function getProjects(t: any): LocalizedProject[] {
         github: config.github,
         externalLink: config.externalLink,
         tech: config.tech,
+        brand: config.brand,
     }));
 }

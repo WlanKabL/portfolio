@@ -1,13 +1,291 @@
 @import "tailwindcss";
 
-/* Custom animations inspired by Apple & Linear */
-@keyframes fade-in-up {
+/* ---------------------------------------------------------------------------
+ * Design tokens — "Engineered Studio"
+ * Light technical canvas, deep ink, violet brand (WlanKabL heritage) and a
+ * yellow highlighter as the eye-catcher. Products keep their own brand
+ * colors inside dark showcase panels.
+ * Display: Bricolage Grotesque / UI: Archivo / Labels & code: IBM Plex Mono
+ * ------------------------------------------------------------------------- */
+
+@theme {
+    --color-bg: #f4f3f0;
+    --color-surface: #fbfaf8;
+    --color-sunken: #eae8e3;
+    --color-ink: #181317;
+    --color-muted: #564f55;
+    --color-faint: #8c858b;
+    --color-line: #1813171a;
+    --color-line-strong: #18131733;
+    --color-accent: #6d28d9;
+    --color-accent-bright: #8b5cf6;
+    --color-accent-soft: #6d28d914;
+    --color-highlight: #fdd23a;
+
+    /* Dark island tokens for product brand panels */
+    --color-panel-ink: #f5f5f2;
+    --color-panel-muted: #f5f5f2b3;
+    --color-panel-line: #f5f5f221;
+
+    --font-display: "Bricolage Grotesque", "Arial Black", sans-serif;
+    --font-sans: "Archivo", "Helvetica Neue", sans-serif;
+    --font-mono: "IBM Plex Mono", "Consolas", monospace;
+
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* ---------------------------------------------------------------------------
+ * Base
+ * ------------------------------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Text selection works like a highlighter pen */
+::selection {
+    background-color: var(--color-highlight);
+    color: var(--color-ink);
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-line-strong);
+    border-radius: 5px;
+    border: 2px solid var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-faint);
+}
+
+/* ---------------------------------------------------------------------------
+ * Recurring patterns
+ * ------------------------------------------------------------------------- */
+
+/* Translucent navigation backdrop once the page is scrolled */
+.glass {
+    background: color-mix(in srgb, var(--color-bg) 86%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--color-line);
+}
+
+/* Monospace section label, e.g. "01 — Products" */
+.section-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-faint);
+}
+
+.section-label .index {
+    color: var(--color-accent);
+}
+
+/* Yellow highlighter swipe behind a word — the signature eye-catcher */
+.marker {
+    position: relative;
+    z-index: 0;
+    white-space: nowrap;
+}
+
+.marker::before {
+    content: "";
+    position: absolute;
+    inset: 0.12em -0.18em -0.02em -0.14em;
+    background: var(--color-highlight);
+    transform: rotate(-1.2deg) skewX(-6deg);
+    border-radius: 0.15em 0.3em 0.2em 0.35em;
+    z-index: -1;
+}
+
+/* Small rotated personality chip */
+.sticker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-ink);
+    background: var(--color-surface);
+    border: 1px solid var(--color-line-strong);
+    border-radius: 9999px;
+    padding: 0.45rem 0.9rem;
+    box-shadow: 0 8px 20px -12px rgba(24, 19, 23, 0.35);
+}
+
+/* Hairline brand accent that grows on hover — feedback without icons */
+.hairline-hover {
+    position: relative;
+}
+
+.hairline-hover::after {
+    content: "";
+    position: absolute;
+    left: 1.75rem;
+    right: 60%;
+    bottom: 0;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--color-accent-bright), transparent);
+    opacity: 0;
+    transition:
+        opacity 0.3s ease,
+        right 0.3s ease;
+}
+
+.hairline-hover:hover::after {
+    opacity: 1;
+    right: 25%;
+}
+
+/* Animated underline for inline links */
+.link-underline {
+    position: relative;
+}
+
+.link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s var(--ease-out-quart);
+}
+
+.link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Primary action button — yellow eye-catcher with a hard offset shadow */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-highlight);
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 1.75rem;
+    border: 1px solid var(--color-ink);
+    box-shadow: 4px 4px 0 var(--color-ink);
+    transition:
+        box-shadow 0.2s var(--ease-out-quart),
+        transform 0.2s var(--ease-out-quart),
+        background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.btn-primary:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 var(--color-ink);
+}
+
+/* Secondary action — quiet violet outline */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: transparent;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1rem 1.75rem;
+    border: 1px solid currentColor;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--color-accent);
+    color: #ffffff;
+}
+
+/* Minimal line-style form inputs */
+.input-line {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--color-line-strong);
+    padding: 0.875rem 0;
+    color: var(--color-ink);
+    transition: border-color 0.3s ease;
+}
+
+.input-line::placeholder {
+    color: var(--color-faint);
+}
+
+.input-line:focus {
+    outline: none;
+    border-bottom-color: var(--color-accent);
+}
+
+/* ---------------------------------------------------------------------------
+ * Motion
+ * ------------------------------------------------------------------------- */
+
+/* Scroll reveal — elements carrying v-reveal start hidden and rise in.
+   The directive (plugins/reveal.ts) adds .revealed when they enter view. */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+        opacity 0.7s var(--ease-out-quart),
+        transform 0.7s var(--ease-out-quart);
+    transition-delay: var(--reveal-delay, 0s);
+}
+
+[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* One-time hero choreography: each line rises out of an overflow mask */
+@keyframes rise-up {
     from {
-        opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(110%);
     }
     to {
-        opacity: 1;
         transform: translateY(0);
     }
 }
@@ -21,71 +299,110 @@
     }
 }
 
-@keyframes scale-in {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
+@keyframes blink {
+    0%,
+    49% {
         opacity: 1;
-        transform: scale(1);
     }
-}
-
-@keyframes slide-in-right {
-    from {
+    50%,
+    100% {
         opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
     }
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom scrollbar - minimal like Apple */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Glassmorphism effect */
-.glass {
-    background: rgba(10, 10, 10, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-/* Smooth gradient animation */
-@keyframes gradient-shift {
+/* Gentle drift for hero stickers */
+@keyframes float-soft {
     0%,
     100% {
-        background-position: 0% 50%;
+        transform: translateY(0) rotate(var(--float-rotate, 0deg));
     }
     50% {
-        background-position: 100% 50%;
+        transform: translateY(-6px) rotate(var(--float-rotate, 0deg));
     }
 }
 
-.animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-shift 8s ease infinite;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ---------------------------------------------------------------------------
+ * Project article (rendered from localized HTML via v-html)
+ * The locale files still carry legacy utility classes — remap them so every
+ * project text follows the light theme and the product's own brand accent
+ * (--project-accent is set per project on the article wrapper).
+ * ------------------------------------------------------------------------- */
+
+.project-article {
+    color: var(--color-muted);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+}
+
+.project-article h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    margin-top: 0.5rem;
+}
+
+.project-article strong {
+    color: var(--color-ink);
+    font-weight: 600;
+}
+
+.project-article code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    color: var(--project-accent, var(--color-accent));
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+}
+
+.project-article ul,
+.project-article ol {
+    padding-left: 0.25rem;
+}
+
+.project-article li::marker {
+    color: var(--project-accent, var(--color-accent));
+}
+
+.project-article .text-indigo-400,
+.project-article .text-purple-400 {
+    color: var(--project-accent, var(--color-accent));
+}
+
+.project-article .text-white {
+    color: var(--color-ink);
+}
+
+.project-article .text-gray-300 {
+    color: var(--color-muted);
+}
+
+.project-article .text-red-400 {
+    color: #c2272f;
+}
+
+.project-article .text-green-400 {
+    color: #1d7a3f;
 }
