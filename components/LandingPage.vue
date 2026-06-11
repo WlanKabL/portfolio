@@ -92,7 +92,7 @@
                         class="polaroid relative bg-white border border-line rounded-sm p-3 pb-12 rotate-[-3deg] shadow-[0_30px_60px_-25px_rgba(24,19,23,0.45)]"
                     >
                         <img
-                            src="https://downloads.crowd-nation.com/Portfolio2.jpeg"
+                            src="https://downloads.crowd-nation.com/Portfolio2.png"
                             alt="Philipp aka WlanKabL"
                             class="w-full aspect-square object-cover"
                         />
