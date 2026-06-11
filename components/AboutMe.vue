@@ -16,7 +16,7 @@
                         class="relative bg-white border border-line rounded-sm p-3 rotate-[2deg] hover:rotate-0 transition-transform duration-500 shadow-[0_24px_60px_-30px_rgba(24,19,23,0.5)]"
                     >
                         <img
-                            src="https://downloads.crowd-nation.com/Portfolio.png"
+                            src="https://downloads.crowd-nation.com/Portfolio2.png"
                             alt="Philipp aka WlanKabL"
                             loading="lazy"
                             class="w-full aspect-square object-cover object-top"
